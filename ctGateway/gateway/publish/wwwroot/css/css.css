@@ -1,0 +1,57 @@
+table.table1
+{
+    border-collapse: collapse;
+    font-family: Futura, Arial, sans-serif;
+}
+
+    table.table1 > caption
+    {
+        font-size: larger;
+        margin: 1em auto;
+        color: brown;
+    }
+
+    table.table1 > thead > tr > th, table.table1 > tfoot > tr > th
+    {
+        background-color: DodgerBlue;
+        border: 1px solid #777;
+        color: black;
+    }
+
+    table.table1 > tbody > tr > td
+    {
+        border: 1px solid #777;
+        color: #000;
+    }
+
+    table.table1 > tbody > tr:nth-child(odd)
+    {
+        border: 1px solid #777;
+        background: #ddd;
+    }
+
+    table.table1 > tbody > tr:nth-child(even)
+    {
+        border: 1px solid #777;
+        background: #fff;
+    }
+
+    table.table1 > tbody > tr:hover
+    {
+        background: linear-gradient(#fff,#bbb);
+    }
+
+div.div_contentmenu
+{
+    border: 1px solid #777;
+    background-color: #ddd;
+    color: #0f0;
+    width: 200px;
+    height: 200px;
+    overflow: scroll;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    visibility: hidden;
+}

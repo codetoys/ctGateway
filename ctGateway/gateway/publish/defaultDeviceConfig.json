@@ -1,0 +1,118 @@
+﻿{
+  "func": "conf",
+  "data": [
+    {
+      "ignore": 0,
+      "protocolCode": "TCP_DEMO",
+      "protocolName": "TCP demo协议",
+      "resolvePropertyMap": {
+        "ip": "192.168.213.1",
+        "port": "2200",
+        "rate": "30000"
+      },
+      "confTabs": [
+        {
+          "deviceCode": "QJ57B_1A",
+          "encodeType": "hex",
+          "deviceModel": "QJ57B_1A"
+        }
+      ]
+    },
+    {
+      "ignore": 0,
+      "protocolCode": "MODBUS_TCP",
+      "protocolName": "ModbusTcp协议",
+      "resolvePropertyMap": {
+        "port": "10503",
+        "rate": "30000",
+        "ip2": "192.168.213.1",
+        "ip": "127.0.0.1"
+      },
+      "confTabs": [
+        {
+          "deviceCode": "device503",
+          "stationCode": "1",
+          "resolveParamConfigVOList": [
+            {
+              "paramCode": "code1",
+              "paramName": "工单规格",
+              "dataType": "ushort",
+              "paramAddr": "0001",
+              "functionCode": "03",
+              "transferRuleStr": "",
+              "dataLength": 1,
+              "processType": "3",
+              "reportStrategy": 1
+            },
+            {
+              "paramCode": "code2",
+              "paramName": "负值",
+              "dataType": "short",
+              "paramAddr": "0002",
+              "functionCode": "03",
+              "transferRuleStr": "",
+              "dataLength": 1,
+              "processType": "3",
+              "reportStrategy": 1
+            },
+            {
+              "paramCode": "codef0",
+              "paramName": "浮点",
+              "dataType": "float",
+              "paramAddr": "0004",
+              "functionCode": "03",
+              "transferRuleStr": "",
+              "dataLength": 1,
+              "processType": "3",
+              "reportStrategy": 1
+            },
+            {
+              "paramCode": "codef1",
+              "paramName": "浮点",
+              "dataType": "float",
+              "paramAddr": "0004",
+              "functionCode": "03",
+              "transferRuleStr": "ABCD",
+              "dataLength": 1,
+              "processType": "3",
+              "reportStrategy": 1
+            },
+            {
+              "paramCode": "codef2",
+              "paramName": "浮点",
+              "dataType": "float",
+              "paramAddr": "0004",
+              "functionCode": "03",
+              "transferRuleStr": "CDAB",
+              "dataLength": 1,
+              "processType": "3",
+              "reportStrategy": 1
+            },
+            {
+              "paramCode": "codef3",
+              "paramName": "浮点",
+              "dataType": "float",
+              "paramAddr": "0004",
+              "functionCode": "03",
+              "transferRuleStr": "BADC",
+              "dataLength": 1,
+              "processType": "3",
+              "reportStrategy": 1
+            },
+            {
+              "paramCode": "codef4",
+              "paramName": "浮点",
+              "dataType": "float",
+              "paramAddr": "0004",
+              "functionCode": "03",
+              "transferRuleStr": "DCBA",
+              "dataLength": 1,
+              "processType": "3",
+              "reportStrategy": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

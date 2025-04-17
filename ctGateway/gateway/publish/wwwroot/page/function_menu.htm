@@ -1,0 +1,189 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>ct嵌入式WEB服务</title>
+    <link href="/css/css.css" rel="stylesheet" type="text/css" />
+    <script language="JavaScript">
+        function switchmenu() {
+            if ("none" == document.getElementById("menu").style.display) {
+                document.getElementById("menu").style.display = "";
+            }
+            else {
+                document.getElementById("menu").style.display = "none";
+            }
+        }
+    </script>
+    <script language="JavaScript">
+        function allPrpos(obj) {
+            // 用来保存所有的属性名称和值
+            var props = "";
+            // 开始遍历
+            for (var p in obj) { // 方法
+                if (typeof (obj[p]) == " function ") {
+                    // obj[p]();
+                } else { // p 为属性名称，obj[p]为对应属性的值
+                    props += p + " = " + obj[p] + " /t ";
+                }
+            } // 最后显示所有的属性
+            alert(props);
+        }
+        function mainFrame_resize() {
+            if (mainFrame.document.body.scrollHeight > mainTD.offsetHeight) {
+                document.getElementById("mainFrame").height = mainFrame.document.body.scrollHeight;
+            }
+            else document.getElementById("mainFrame").height = mainTD.offsetHeight;
+            if (mainFrame.document.body.scrollWidth > mainTD.offsetWidth) {
+                document.getElementById("mainFrame").width = mainFrame.document.body.scrollWidth;
+            }
+            else document.getElementById("mainFrame").width = mainTD.offsetWidth;
+        }
+    </script>
+    <script language="JavaScript">
+        //以下代码实现树
+        var myRs = new Array(), selectItem;
+        function compare(a, b) {
+            return parseInt(a[1]) - parseInt(b[1]);
+        }
+        function InsertItemByArray(a) { myRs[myRs.length++] = a; }
+        function hasSub(n) {
+            for (var i = 0; i < myRs.length; i++) {
+                if (myRs[i][1] == n) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        function pxClick(e) {
+            var subid = e.attributes['subid'].nodeValue;
+            if ("" == document.getElementById(subid).style.display) {
+                document.getElementById(subid).style.display = 'none';
+                e.innerHTML = "[+]";
+            }
+            else {
+                document.getElementById(subid).style.display = '';
+                e.innerHTML = "[-]";
+            }
+        }
+        function drawTree(n) {
+            if (n == 0) {
+                myRs.sort(compare)
+            }
+            if (0 == n) document.write("<div id=\"sub_" + n + "\">\n");
+            else document.write("<div id=\"sub_" + n + "\" style=\"margin-left:32px;\">\n");
+            for (var i = 0; i < myRs.length; i++) {
+                if (myRs[i][1] == n) {
+                    //alert(n + " " + myRs[i]+"<BR>\n");
+                    document.write("<div id=\"" + myRs[i][0] + "\">");
+                    if (hasSub(myRs[i][0])) {
+                        document.write("<span id=\"px_" + myRs[i][0] + "\" subid=\"sub_" + myRs[i][0] + "\" onclick=\"pxClick(this)\">[-]</span>&nbsp;");
+                    }
+                    else {
+                        document.write("&nbsp;&nbsp;&nbsp;&nbsp;");
+                    }
+                    document.write("<code><nobr><a target=\"mainFrame\" href=\"" + myRs[i][3] + "\">" + myRs[i][1] + " " + myRs[i][0] + " " + myRs[i][2] + "</a></nobr></code>");
+                    document.write("</div>\n");
+
+                    drawTree(myRs[i][0]);
+                }
+            }
+            document.write("</div>\n");
+        }
+        function loadmenu() {
+            //获取目录项内容
+            var menuitems = new Array;
+            {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("GET", "mb_menu_item.xml", false);
+                xmlhttp.send();//alert(xmlhttp.responseText);
+                var doc = xmlhttp.responseXML;
+                var x = doc.documentElement.childNodes;
+
+                for (i = 0; i < x.length; i++)
+                {
+                    if (x[i].nodeType != 1) continue;
+                    var a = new Array;
+                    for (j = 0; j < x[i].childNodes.length; ++j) 
+                    {
+                        if (x[i].childNodes[j].nodeType != 1) continue;
+                        a[a.length++] = x[i].childNodes[j].childNodes[0].nodeValue;
+                    }
+                    //alert(a.toString());
+                    menuitems[menuitems.length++] = a;
+                }
+            }
+            //获取目录结构
+            {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("GET", "mb_menu.xml", false);
+                xmlhttp.send();
+                var doc = xmlhttp.responseXML;
+                var x = doc.documentElement.childNodes;
+
+                for (i = 0; i < x.length; i++) 
+                {
+                    if (x[i].nodeType != 1) continue;
+                    var a = new Array;
+                    a.length = 4;
+                    //alert(x[i].nodeName);
+                    for (j = 0; j < x[i].childNodes.length; ++j)
+                    {
+                        //alert(x[i].childNodes[j].nodeName);
+                        if (x[i].childNodes[j].nodeName=="MENU_ID")a[0] = x[i].childNodes[j].childNodes[0].nodeValue;
+                        if (x[i].childNodes[j].nodeName=="PARENT_MENU_ID")a[1] = x[i].childNodes[j].childNodes[0].nodeValue;
+                    }
+                    //alert(menuitems);
+                    for (j = 0; j < menuitems.length; ++j)
+                    {
+                        //alert(menuitems[j]);
+                        //alert(a);
+                        if (menuitems[j][0] == a[0])
+                        {
+                            a[2] = menuitems[j][1];
+                            a[3] = menuitems[j][2];
+                            break;
+                        }
+                    }
+                    //alert(a.toString());
+                    InsertItemByArray(a);
+                }
+            }
+        }
+        function showmenu() {
+            loadmenu();
+            drawTree(0);
+        }
+    </script>
+</head>
+<body id="body" onload="mainFrame_resize();" onresize="mainFrame_resize();">
+    <button type="button" onclick="switchmenu();">菜单</button>
+    <HR />
+    <table height="100%">
+        <tr>
+            <td valign="top">
+                <div id="menu">
+                    <div>
+                        <script language="JavaScript">
+                            showmenu();
+                        </script>
+                    </div>
+                    <p />
+                    <p />
+                    <input id="menu_id" type="text" value="0" /><br>
+                    <button onclick="alert(document.getElementById(menu_id.value).innerHTML)">
+                        节点HTML
+                    </button>
+                    <button onclick='alert(document.getElementById("sub_"+menu_id.value).innerHTML)'>
+                        子节点HTML
+                    </button>
+                    <button onclick="window.location.reload();">
+                        刷新
+                    </button>
+                </div>
+            </td>
+            <td width="100%" id="mainTD"><iframe id="mainFrame" name="mainFrame" frameborder="1" onload="mainFrame_resize();" />
+            <td>
+        </tr>
+    </table>
+</body>
+</html>

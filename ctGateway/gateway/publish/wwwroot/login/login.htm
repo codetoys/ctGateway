@@ -1,0 +1,116 @@
+﻿<!DOCTYPE HTML>
+<html style="width:90%;height:80%;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="/css/css.css" rel="stylesheet" type="text/css" />
+    <title>ct嵌入式WEB服务 - 登录</title>
+
+    <script type="text/jscript" language="javascript">
+
+        function Authen(location, name, pass)
+        {
+            var auth;
+
+            try
+            {
+                auth = new ActiveXObject('Msxml2.XMLHTTP');
+            } catch (e)
+            {
+                try
+                {
+                    auth = new ActiveXObject('Microsoft.XMLHTTP');
+                } catch (e)
+                {
+                    auth = new XMLHttpRequest();
+                }
+            }
+
+
+            auth.open("get", location, false, name, pass);
+            auth.send();
+
+            switch (auth.status)
+            { //检测auth.send以后的状态，
+                case 200: //状态为：200代表用户名密码正确
+                    document.cookie = "logon_user=" + name;
+                    window.location.href = location; //浏览器转向
+                    return true;
+                    break;
+                case 401: //状态为：401代表用户名密码不正确，身份验证错误
+                    alert("账号无效或密码错误。"); //报错
+                    return false;
+                    break;
+                default: //其它状态，如服务器无法访问
+                    alert(auth.status);
+                    alert("对不起，服务器发生错误，请稍后再试！"); //报错
+                    return false;
+                    break;
+            }
+        }
+    </script>
+
+</head>
+<body style="width:100%;height:80%;">
+    <noscript>
+        注意：本站点使用JavaScript技术，但您的浏览器不支持或限制了JavaScript，本站点的功能可能无法正常使用。<br>
+        请更换或升级浏览器或修改安全设置，建议使用IE5以上浏览器。<p>
+    </noscript>
+    <table style="width:100%;height:100%;">
+        <tr>
+            <td width="100%" align="center">
+                <table cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td align="center" valign="middle">
+                            <table width="522" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td>请输入账号和密码登录： </td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <!--用于登录的表单-->
+                                        <form id="logon" action="../page/function_menu.htm" method="get">
+                                            <table class="table1">
+                                                <tr>
+                                                    <td>帐 &nbsp;号 </td>
+                                                    <td>
+                                                        <input name="textfield" type="text" id="textfield" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>密 &nbsp;码 </td>
+                                                    <td>
+                                                        <input name="textfield2" type="password" id="textfield2" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&nbsp;</td>
+                                                    <td>
+                                                        <input type="submit" onclick="Authen(logon.action,textfield.value,textfield2.value);return false" value="登录" />
+                                                        <input type="submit" onclick="logon.action='../index.html';Authen(logon.action,textfield.value,textfield2.value);return false" value="快速入口" />
+                                                        <input type="reset" onclick="logon.reset();return false" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        <tr>
+            <td valign="bottom">
+                <hr />
+                <br>
+                <code>Powered by Embeded Web Server , Copyright &copy; 2004-2024 ct ,All rights reserved.</code>
+                <br>
+                <code>本站点由嵌入式WEB服务器支持 , 版权所有 &copy; 2004-2024 ct ,保留所有权利.</code>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

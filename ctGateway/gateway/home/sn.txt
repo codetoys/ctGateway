@@ -1,0 +1,1 @@
+type:"GW-5G",imei:"GW-5G-VM-DELL"

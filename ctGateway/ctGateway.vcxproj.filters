@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="readme.txt" />
+    <Text Include="gateway\home\sn.txt" />
+    <Text Include="gateway\home\sysInfo.txt" />
+    <Text Include="third\ctfc\src\shmdb\sqltest.txt" />
+    <Text Include="gateway\gwprotocol\readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="third\ctfc\src\env\makefile.mk" />
+    <None Include="third\ctfc\src\env\rebuild.sh" />
+    <None Include="third\ctfc\src\env\run.sh" />
+    <None Include="third\ctfc\src\httpd\makefile.mk" />
+    <None Include="third\ctfc\src\httpd\rebuild.sh" />
+    <None Include="third\ctfc\src\httpd\run.sh" />
+    <None Include="third\ctfc\src\makeall.sh" />
+    <None Include="gateway\makeall.sh" />
+    <None Include="gateway\gwmain\makefile.mk" />
+    <None Include="gateway\gwmain\rebuild.sh" />
+    <None Include="gateway\gwmain\run.sh" />
+    <None Include="third\ctfc\platform\_copysrc.sh" />
+    <None Include="third\ctfc\platform\_foreach.sh" />
+    <None Include="third\ctfc\platform\_make_dir_list.sh" />
+    <None Include="third\ctfc\platform\_makecpp.sh" />
+    <None Include="third\ctfc\platform\_release_one.sh" />
+    <None Include="third\ctfc\platform\arm.mk" />
+    <None Include="third\ctfc\platform\arm64.mk" />
+    <None Include="third\ctfc\platform\config.mk" />
+    <None Include="third\ctfc\platform\debug.mk" />
+    <None Include="third\ctfc\platform\fast.mk" />
+    <None Include="third\ctfc\platform\linux.mk" />
+    <None Include="third\ctfc\platform\makefile.mk" />
+    <None Include="third\ctfc\src\httpd\wwwroot\css\css.css" />
+    <None Include="third\ctfc\src\httpd\wwwroot\login\login.htm" />
+    <None Include="third\ctfc\src\httpd\wwwroot\page\developing.htm" />
+    <None Include="third\ctfc\src\httpd\wwwroot\page\function_menu.htm" />
+    <None Include="third\ctfc\src\httpd\wwwroot\index.html" />
+    <None Include="third\ctfc\src\CodeTemplate\makefile.mk" />
+    <None Include="third\ctfc\src\CodeTemplate\rebuild.sh" />
+    <None Include="third\ctfc\src\CodeTemplate\run.sh" />
+    <None Include="third\ctfc\src\CodeTemplate\simplesample.ct" />
+    <None Include="third\ctfc\src\CCTModel_UniversalDB\_t_UniversalDB.h.ct" />
+    <None Include="third\ctfc\src\CCTModel_UniversalDB\_t_UniversalDB_sequence.h.ct" />
+    <None Include="third\ctfc\src\CCTModel_UniversalDB\_t_UniversalDB_table.h.ct" />
+    <None Include="third\ctfc\src\CCTModel_UniversalDB\makefile.mk" />
+    <None Include="third\ctfc\src\CCTModel_UniversalDB\rebuild.sh" />
+    <None Include="third\ctfc\src\CCTModel_UniversalDB\run.sh" />
+    <None Include="third\ctfc\src\shmfc\makefile.mk" />
+    <None Include="third\ctfc\src\shmfc\rebuild.sh" />
+    <None Include="third\ctfc\src\shmfc\run.sh" />
+    <None Include="third\ctfc\etc\ctfc.ini" />
+    <None Include="third\ctfc\src\othertest\run.sh" />
+    <None Include="third\ctfc\src\othertest\makefile.mk" />
+    <None Include="third\ctfc\src\othertest\rebuild.sh" />
+    <None Include="third\ctfc\src\shmdb\exportall.sql" />
+    <None Include="third\ctfc\src\shmdb\makefile.mk" />
+    <None Include="third\ctfc\src\shmdb\rebuild.sh" />
+    <None Include="third\ctfc\src\shmdb\TestCase.csv" />
+    <None Include="third\ctfc\src\shmdb\run.sh" />
+    <None Include="gateway\gwprotocol\makefile.mk" />
+    <None Include="gateway\gwBuiltIn\makefile.mk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="third\ctfc\src\env\CommandSet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\env\env.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\env\myLog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\env\myUtil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\Archive.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\BitSet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\Buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\CharSetConv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\ColumnData.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\CSV.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\FastFileIndex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\function.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\htmldoc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\IDataSource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\JSTemplate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\meta.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\mimetype.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\mydir.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\myexception.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\mymutex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\mymutex1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\mymutex2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\mymutex3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\myNestedTable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\myprocess.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\myProcPseudo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\myshm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\mysocket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\myZIP.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\sstring.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\std_error_code.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\httpd\mycgi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\httpd\myhttpbase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\httpd\myhttpclient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\httpd\myhttpd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\httpd\myhttpserver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\httpd\myhttpserver_admin_page.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\httpd\myhttpserver_struct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\httpd\myhttpshell.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\httpd\mysocketserver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\httpd\myThread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\httpd\myUserManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwmain\DataManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwmain\gwAppConfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwmain\gwconfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwmain\gwdefine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwmain\gwmain.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwmain\LedControl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwmain\LocalConfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwmain\MqttSvr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\uuid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\WorkThread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\LockedList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\myOpenSSL.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\CodeTemplate\CodeTemplate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\CCTModel_UniversalDB\CCTModel_UniversalDB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmArray.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmBinaryPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmHash.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmIActiveObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmListSet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmListSetGroup.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmLRU.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmMap_NoMutex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmMultiList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmMultiListTree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmSet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmSet_Array.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmSet_Mutex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmSet_NoMutex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmStringPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmStringPool2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmUniversalData.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\myMultiProcess.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\myMultiProcessServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\myMultiProcessServerGroup.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmstd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmfctest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\IActiveObject_Outside.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmEnv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\semmgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmenvmgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmtools.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\snap7\snap7.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\myGmSSL.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\env\envtest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\othertest\othertest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\myGmSSL_sm4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\myGmSSL_sm3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmfc\shmfctest2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\myGmSSL_tls.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmdb\shm_DB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmdb\shm_DBCore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmdb\shm_DBMgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\shmdb\shm_DBSql.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\VirtualDB\IDatabase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\VirtualDB\ISql.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\VirtualDB\VirtualDB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\cJSON\cJSON.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\cJSON_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\function\myGmSSL_aes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwmain\PreFilledKey.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwmain\testso.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwmain\testso2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\interface\IProtocol.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwmain\ProtocolSvr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwprotocol\ProtocolDemo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwBuiltIn\CModbus.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwBuiltIn\ConnectionBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwBuiltIn\ConnectionSerialPort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwBuiltIn\ConnectionTcp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwBuiltIn\DeviceParam.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwBuiltIn\ProtocolParam.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwBuiltIn\ProtocolStdWork.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwBuiltIn\ProtocolSvrModbus.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwBuiltIn\ProtocolSvrTunnel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwBuiltIn\gwmain_test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwBuiltIn\SerialPort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\interface\gwChannel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\interface\gwValue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\interface\gwUtil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\interface\ProtocolCode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwBuiltIn\ChannelParam.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwBuiltIn\ProtocolSvrModbus_MCGS.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwmain\ProtocolMgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\ctfc\src\httpd\mySSLTLS.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway\gwmain\PlatformCT.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="third\ctfc\src\env\env_t.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\ctfc\src\env\myLog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\ctfc\src\env\myUtil.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\ctfc\src\httpd\myhttpd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\ctfc\src\httpd\myhttpd_t.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\ctfc\src\httpd\myhttpserver_admin_page.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\ctfc\src\httpd\myThread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwmain\gwAppConfig.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwmain\gwconfig.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwmain\gwmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwmain\gwmain_t.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwmain\gwUtil.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwmain\LedControl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwmain\LocalConfig.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwmain\MqttSvr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwmain\gwdefine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\ctfc\src\CodeTemplate\CodeTemplate_t.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\ctfc\src\CCTModel_UniversalDB\CCTModel_UniversalDB_t.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\ctfc\src\shmfc\shmfc_t.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\ctfc\src\shmfc\shmEnv.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\snap7\snap7.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\ctfc\src\othertest\othertest_t.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\ctfc\src\shmdb\shm_DB.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\ctfc\src\shmdb\shm_DBCore.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\ctfc\src\shmdb\shm_DBMgr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\ctfc\src\shmdb\shmdb_t.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\cJSON\cJSON.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwmain\_cJSON.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwmain\testso.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwmain\testso2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwprotocol\protocol_demo_t.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwprotocol\ProtocolDemo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwmain\IProtocol.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwmain\ProtocolSvr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwBuiltIn\DeviceParam.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwBuiltIn\ProtocolParam.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwBuiltIn\ProtocolStdWork.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwBuiltIn\ProtocolSvrModbus.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwBuiltIn\ProtocolSvrTunnel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwBuiltIn\gwmain_test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwBuiltIn\ChannelParam.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\ctfc\src\env\env_test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwmain\ProtocolMgr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\ctfc\src\httpd\mySSLTLS.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gateway\gwmain\PlatformCT.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="third\ctfc\src\httpd\wwwroot\page\mb_menu.xml" />
+    <Xml Include="third\ctfc\src\httpd\wwwroot\page\mb_menu_item.xml" />
+  </ItemGroup>
+</Project>

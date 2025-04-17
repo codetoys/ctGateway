@@ -1,0 +1,9 @@
+﻿
+{
+	"func": "appConfig",
+	"data": {
+		"max_log_file_size": 1000000,
+		"max_data_file_size": 10000000,
+		"useGmSSL": 1
+	}
+}

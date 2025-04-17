@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="gateway\gwprotocol\readme.txt" />
+    <Text Include="gateway\home\sn.txt" />
+    <Text Include="gateway\home\sysInfo.txt" />
+    <Text Include="readme.txt" />
+    <Text Include="third\ctfc\src\shmdb\sqltest.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="gateway\gwBuiltIn\makefile.mk" />
+    <None Include="gateway\gwmain\makefile.mk" />
+    <None Include="gateway\gwmain\rebuild.sh" />
+    <None Include="gateway\gwmain\run.sh" />
+    <None Include="gateway\gwprotocol\makefile.mk" />
+    <None Include="gateway\makeall.sh" />
+    <None Include="third\ctfc\etc\ctfc.ini" />
+    <None Include="third\ctfc\platform\arm.mk" />
+    <None Include="third\ctfc\platform\arm64.mk" />
+    <None Include="third\ctfc\platform\config.mk" />
+    <None Include="third\ctfc\platform\debug.mk" />
+    <None Include="third\ctfc\platform\fast.mk" />
+    <None Include="third\ctfc\platform\linux.mk" />
+    <None Include="third\ctfc\platform\makefile.mk" />
+    <None Include="third\ctfc\platform\_copysrc.sh" />
+    <None Include="third\ctfc\platform\_foreach.sh" />
+    <None Include="third\ctfc\platform\_makecpp.sh" />
+    <None Include="third\ctfc\platform\_make_dir_list.sh" />
+    <None Include="third\ctfc\platform\_release_one.sh" />
+    <None Include="third\ctfc\src\CCTModel_UniversalDB\makefile.mk" />
+    <None Include="third\ctfc\src\CCTModel_UniversalDB\rebuild.sh" />
+    <None Include="third\ctfc\src\CCTModel_UniversalDB\run.sh" />
+    <None Include="third\ctfc\src\CCTModel_UniversalDB\_t_UniversalDB.h.ct" />
+    <None Include="third\ctfc\src\CCTModel_UniversalDB\_t_UniversalDB_sequence.h.ct" />
+    <None Include="third\ctfc\src\CCTModel_UniversalDB\_t_UniversalDB_table.h.ct" />
+    <None Include="third\ctfc\src\CodeTemplate\makefile.mk" />
+    <None Include="third\ctfc\src\CodeTemplate\rebuild.sh" />
+    <None Include="third\ctfc\src\CodeTemplate\run.sh" />
+    <None Include="third\ctfc\src\CodeTemplate\simplesample.ct" />
+    <None Include="third\ctfc\src\env\makefile.mk" />
+    <None Include="third\ctfc\src\env\rebuild.sh" />
+    <None Include="third\ctfc\src\env\run.sh" />
+    <None Include="third\ctfc\src\httpd\makefile.mk" />
+    <None Include="third\ctfc\src\httpd\rebuild.sh" />
+    <None Include="third\ctfc\src\httpd\run.sh" />
+    <None Include="third\ctfc\src\httpd\wwwroot\css\css.css" />
+    <None Include="third\ctfc\src\httpd\wwwroot\index.html" />
+    <None Include="third\ctfc\src\httpd\wwwroot\login\login.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="third\ctfc\src\httpd\wwwroot\page\developing.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="third\ctfc\src\httpd\wwwroot\page\function_menu.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="third\ctfc\src\makeall.sh" />
+    <None Include="third\ctfc\src\othertest\makefile.mk" />
+    <None Include="third\ctfc\src\othertest\rebuild.sh" />
+    <None Include="third\ctfc\src\othertest\run.sh" />
+    <None Include="third\ctfc\src\shmdb\exportall.sql" />
+    <None Include="third\ctfc\src\shmdb\makefile.mk" />
+    <None Include="third\ctfc\src\shmdb\rebuild.sh" />
+    <None Include="third\ctfc\src\shmdb\run.sh" />
+    <None Include="third\ctfc\src\shmdb\TestCase.csv" />
+    <None Include="third\ctfc\src\shmfc\makefile.mk" />
+    <None Include="third\ctfc\src\shmfc\rebuild.sh" />
+    <None Include="third\ctfc\src\shmfc\run.sh" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gateway\gwBuiltIn\ChannelParam.h" />
+    <ClInclude Include="gateway\gwBuiltIn\CModbus.h" />
+    <ClInclude Include="gateway\gwBuiltIn\ConnectionBase.h" />
+    <ClInclude Include="gateway\gwBuiltIn\ConnectionSerialPort.h" />
+    <ClInclude Include="gateway\gwBuiltIn\ConnectionTcp.h" />
+    <ClInclude Include="gateway\gwBuiltIn\DeviceParam.h" />
+    <ClInclude Include="gateway\gwBuiltIn\gwmain_test.h" />
+    <ClInclude Include="gateway\gwBuiltIn\ProtocolParam.h" />
+    <ClInclude Include="gateway\gwBuiltIn\ProtocolStdWork.h" />
+    <ClInclude Include="gateway\gwBuiltIn\ProtocolSvrModbus.h" />
+    <ClInclude Include="gateway\gwBuiltIn\ProtocolSvrModbus_MCGS.h" />
+    <ClInclude Include="gateway\gwBuiltIn\ProtocolSvrTunnel.h" />
+    <ClInclude Include="gateway\gwBuiltIn\SerialPort.h" />
+    <ClInclude Include="gateway\gwmain\DataManager.h" />
+    <ClInclude Include="gateway\gwmain\gwAppConfig.h" />
+    <ClInclude Include="gateway\gwmain\gwconfig.h" />
+    <ClInclude Include="gateway\gwmain\gwdefine.h" />
+    <ClInclude Include="gateway\gwmain\gwmain.h" />
+    <ClInclude Include="gateway\gwmain\LedControl.h" />
+    <ClInclude Include="gateway\gwmain\LocalConfig.h" />
+    <ClInclude Include="gateway\gwmain\MqttSvr.h" />
+    <ClInclude Include="gateway\gwmain\PlatformCT.h" />
+    <ClInclude Include="gateway\gwmain\PreFilledKey.h" />
+    <ClInclude Include="gateway\gwmain\ProtocolMgr.h" />
+    <ClInclude Include="gateway\gwmain\ProtocolSvr.h" />
+    <ClInclude Include="gateway\gwmain\testso.h" />
+    <ClInclude Include="gateway\gwmain\testso2.h" />
+    <ClInclude Include="gateway\gwprotocol\ProtocolDemo.h" />
+    <ClInclude Include="gateway\interface\gwChannel.h" />
+    <ClInclude Include="gateway\interface\gwUtil.h" />
+    <ClInclude Include="gateway\interface\gwValue.h" />
+    <ClInclude Include="gateway\interface\IProtocol.h" />
+    <ClInclude Include="gateway\interface\ProtocolCode.h" />
+    <ClInclude Include="third\cJSON\cJSON.h" />
+    <ClInclude Include="third\ctfc\src\CCTModel_UniversalDB\CCTModel_UniversalDB.h" />
+    <ClInclude Include="third\ctfc\src\CodeTemplate\CodeTemplate.h" />
+    <ClInclude Include="third\ctfc\src\env\CommandSet.h" />
+    <ClInclude Include="third\ctfc\src\env\env.h" />
+    <ClInclude Include="third\ctfc\src\env\envtest.h" />
+    <ClInclude Include="third\ctfc\src\env\myLog.h" />
+    <ClInclude Include="third\ctfc\src\env\myUtil.h" />
+    <ClInclude Include="third\ctfc\src\function\Archive.h" />
+    <ClInclude Include="third\ctfc\src\function\BitSet.h" />
+    <ClInclude Include="third\ctfc\src\function\Buffer.h" />
+    <ClInclude Include="third\ctfc\src\function\CharSetConv.h" />
+    <ClInclude Include="third\ctfc\src\function\cJSON_util.h" />
+    <ClInclude Include="third\ctfc\src\function\ColumnData.h" />
+    <ClInclude Include="third\ctfc\src\function\config.h" />
+    <ClInclude Include="third\ctfc\src\function\CSV.h" />
+    <ClInclude Include="third\ctfc\src\function\FastFileIndex.h" />
+    <ClInclude Include="third\ctfc\src\function\function.h" />
+    <ClInclude Include="third\ctfc\src\function\htmldoc.h" />
+    <ClInclude Include="third\ctfc\src\function\IDataSource.h" />
+    <ClInclude Include="third\ctfc\src\function\JSTemplate.h" />
+    <ClInclude Include="third\ctfc\src\function\LockedList.h" />
+    <ClInclude Include="third\ctfc\src\function\meta.h" />
+    <ClInclude Include="third\ctfc\src\function\mimetype.h" />
+    <ClInclude Include="third\ctfc\src\function\mydir.h" />
+    <ClInclude Include="third\ctfc\src\function\myexception.h" />
+    <ClInclude Include="third\ctfc\src\function\myGmSSL.h" />
+    <ClInclude Include="third\ctfc\src\function\myGmSSL_aes.h" />
+    <ClInclude Include="third\ctfc\src\function\myGmSSL_sm3.h" />
+    <ClInclude Include="third\ctfc\src\function\myGmSSL_sm4.h" />
+    <ClInclude Include="third\ctfc\src\function\myGmSSL_tls.h" />
+    <ClInclude Include="third\ctfc\src\function\mymutex.h" />
+    <ClInclude Include="third\ctfc\src\function\mymutex1.h" />
+    <ClInclude Include="third\ctfc\src\function\mymutex2.h" />
+    <ClInclude Include="third\ctfc\src\function\mymutex3.h" />
+    <ClInclude Include="third\ctfc\src\function\myNestedTable.h" />
+    <ClInclude Include="third\ctfc\src\function\myOpenSSL.h" />
+    <ClInclude Include="third\ctfc\src\function\myprocess.h" />
+    <ClInclude Include="third\ctfc\src\function\myProcPseudo.h" />
+    <ClInclude Include="third\ctfc\src\function\myshm.h" />
+    <ClInclude Include="third\ctfc\src\function\mysocket.h" />
+    <ClInclude Include="third\ctfc\src\function\myZIP.h" />
+    <ClInclude Include="third\ctfc\src\function\sstring.h" />
+    <ClInclude Include="third\ctfc\src\function\std_error_code.h" />
+    <ClInclude Include="third\ctfc\src\function\uuid.h" />
+    <ClInclude Include="third\ctfc\src\function\WorkThread.h" />
+    <ClInclude Include="third\ctfc\src\httpd\mycgi.h" />
+    <ClInclude Include="third\ctfc\src\httpd\myhttpbase.h" />
+    <ClInclude Include="third\ctfc\src\httpd\myhttpclient.h" />
+    <ClInclude Include="third\ctfc\src\httpd\myhttpd.h" />
+    <ClInclude Include="third\ctfc\src\httpd\myhttpserver.h" />
+    <ClInclude Include="third\ctfc\src\httpd\myhttpserver_admin_page.h" />
+    <ClInclude Include="third\ctfc\src\httpd\myhttpserver_struct.h" />
+    <ClInclude Include="third\ctfc\src\httpd\myhttpshell.h" />
+    <ClInclude Include="third\ctfc\src\httpd\mysocketserver.h" />
+    <ClInclude Include="third\ctfc\src\httpd\mySSLTLS.h" />
+    <ClInclude Include="third\ctfc\src\httpd\myThread.h" />
+    <ClInclude Include="third\ctfc\src\httpd\myUserManager.h" />
+    <ClInclude Include="third\ctfc\src\othertest\othertest.h" />
+    <ClInclude Include="third\ctfc\src\shmdb\shm_DB.h" />
+    <ClInclude Include="third\ctfc\src\shmdb\shm_DBCore.h" />
+    <ClInclude Include="third\ctfc\src\shmdb\shm_DBMgr.h" />
+    <ClInclude Include="third\ctfc\src\shmdb\shm_DBSql.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\IActiveObject_Outside.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\semmgr.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmArray.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmBinaryPool.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmEnv.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmfctest2.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmHash.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmIActiveObject.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmListSet.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmListSetGroup.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmLRU.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmMap_NoMutex.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmMultiList.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmMultiListTree.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmSet.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmSet_Array.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmSet_Mutex.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmSet_NoMutex.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmStringPool.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmStringPool2.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmUniversalData.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmenvmgr.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\myMultiProcess.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\myMultiProcessServer.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\myMultiProcessServerGroup.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmstd.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmfctest.h" />
+    <ClInclude Include="third\ctfc\src\shmfc\shmtools.h" />
+    <ClInclude Include="third\ctfc\src\VirtualDB\IDatabase.h" />
+    <ClInclude Include="third\ctfc\src\VirtualDB\ISql.h" />
+    <ClInclude Include="third\ctfc\src\VirtualDB\VirtualDB.h" />
+    <ClInclude Include="third\snap7\snap7.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gateway\gwBuiltIn\ChannelParam.cpp" />
+    <ClCompile Include="gateway\gwBuiltIn\DeviceParam.cpp" />
+    <ClCompile Include="gateway\gwBuiltIn\gwmain_test.cpp" />
+    <ClCompile Include="gateway\gwBuiltIn\ProtocolParam.cpp" />
+    <ClCompile Include="gateway\gwBuiltIn\ProtocolStdWork.cpp" />
+    <ClCompile Include="gateway\gwBuiltIn\ProtocolSvrModbus.cpp" />
+    <ClCompile Include="gateway\gwBuiltIn\ProtocolSvrTunnel.cpp" />
+    <ClCompile Include="gateway\gwmain\gwAppConfig.cpp" />
+    <ClCompile Include="gateway\gwmain\gwconfig.cpp" />
+    <ClCompile Include="gateway\gwmain\gwdefine.cpp" />
+    <ClCompile Include="gateway\gwmain\gwmain.cpp" />
+    <ClCompile Include="gateway\gwmain\gwmain_t.cpp" />
+    <ClCompile Include="gateway\gwmain\gwUtil.cpp" />
+    <ClCompile Include="gateway\gwmain\IProtocol.cpp" />
+    <ClCompile Include="gateway\gwmain\LedControl.cpp" />
+    <ClCompile Include="gateway\gwmain\LocalConfig.cpp" />
+    <ClCompile Include="gateway\gwmain\MqttSvr.cpp" />
+    <ClCompile Include="gateway\gwmain\PlatformCT.cpp" />
+    <ClCompile Include="gateway\gwmain\ProtocolMgr.cpp" />
+    <ClCompile Include="gateway\gwmain\ProtocolSvr.cpp" />
+    <ClCompile Include="gateway\gwmain\testso.cpp" />
+    <ClCompile Include="gateway\gwmain\testso2.cpp" />
+    <ClCompile Include="gateway\gwmain\_cJSON.cpp" />
+    <ClCompile Include="gateway\gwprotocol\ProtocolDemo.cpp" />
+    <ClCompile Include="gateway\gwprotocol\protocol_demo_t.cpp" />
+    <ClCompile Include="third\cJSON\cJSON.c" />
+    <ClCompile Include="third\ctfc\src\CCTModel_UniversalDB\CCTModel_UniversalDB_t.cpp" />
+    <ClCompile Include="third\ctfc\src\CodeTemplate\CodeTemplate_t.cpp" />
+    <ClCompile Include="third\ctfc\src\env\env_t.cpp" />
+    <ClCompile Include="third\ctfc\src\env\env_test.cpp" />
+    <ClCompile Include="third\ctfc\src\env\myLog.cpp" />
+    <ClCompile Include="third\ctfc\src\env\myUtil.cpp" />
+    <ClCompile Include="third\ctfc\src\httpd\myhttpd.cpp" />
+    <ClCompile Include="third\ctfc\src\httpd\myhttpd_t.cpp" />
+    <ClCompile Include="third\ctfc\src\httpd\myhttpserver_admin_page.cpp" />
+    <ClCompile Include="third\ctfc\src\httpd\mySSLTLS.cpp" />
+    <ClCompile Include="third\ctfc\src\httpd\myThread.cpp" />
+    <ClCompile Include="third\ctfc\src\othertest\othertest_t.cpp" />
+    <ClCompile Include="third\ctfc\src\shmdb\shmdb_t.cpp" />
+    <ClCompile Include="third\ctfc\src\shmdb\shm_DB.cpp" />
+    <ClCompile Include="third\ctfc\src\shmdb\shm_DBCore.cpp" />
+    <ClCompile Include="third\ctfc\src\shmdb\shm_DBMgr.cpp" />
+    <ClCompile Include="third\ctfc\src\shmfc\shmEnv.cpp" />
+    <ClCompile Include="third\ctfc\src\shmfc\shmfc_t.cpp" />
+    <ClCompile Include="third\snap7\snap7.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="third\ctfc\src\httpd\wwwroot\page\mb_menu.xml" />
+    <Xml Include="third\ctfc\src\httpd\wwwroot\page\mb_menu_item.xml" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{130aa499-7989-4d39-9055-6aa56d085917}</ProjectGuid>
+    <RootNamespace>Gateway</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>ctGateway</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(projectdir)\third\ctfc\src\env\;$(projectdir)\third\ctfc\src\function\;$(projectdir)\third\;$(projectdir)\third\ctfc\src\httpd\;$(projectdir)\gateway;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(projectdir)\third\ctfc\src\env\;$(projectdir)\third\ctfc\src\function\;$(projectdir)\third\;$(projectdir)\third\ctfc\src\httpd\;$(projectdir)\gateway;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(projectdir)\third\ctfc\src\env\;$(projectdir)\third\ctfc\src\function\;$(projectdir)\third\;$(projectdir)\third\ctfc\src\httpd\;$(projectdir)\gateway;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(projectdir)\third\ctfc\src\env\;$(projectdir)\third\ctfc\src\function\;$(projectdir)\third\;$(projectdir)\third\ctfc\src\httpd\;$(projectdir)\gateway;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
