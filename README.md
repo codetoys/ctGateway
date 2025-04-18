@@ -3,21 +3,30 @@ IOT gateway C++ OpenSSL GmSSL
 
 ## ctGateway
 ### introduction
-The gateway program is implemented in C++,Use the UTF-8 character set.
-Support Modbus and transparent transmission, MQTT and MQTTS.
-Log files and data files are limited in size to ensure that there is no disk full failure.
-The data is saved instantly to ensure that the power is not lost.
-The data sequence number and confirmation mechanism ensure that there is no data loss from the gateway to the platform.
-The storage capacity of the network is different depending on the amount of data, and the gateway supports data compression.
+The gateway program is implemented in C++,Use the UTF-8 character set.<br>
+Support Modbus and transparent transmission, MQTT and MQTTS.<br>
+Log files and data files are limited in size to ensure that there is no disk full failure.<br>
+The data is saved instantly to ensure that the power is not lost.<br>
+The data sequence number and confirmation mechanism ensure that there is no data loss from the gateway to the platform.<br>
+The storage capacity of the network is different depending on the amount of data, and the gateway supports data compression.<br>
 
 ### Source
-subdirectory ctGateway
-Gateway program, C++, Linux.
-The sln file can be opened with Visual Studio 2022, but only used to edit file.
-How to compile the project see [readme.txt](ctGateway/readme.txt) in subdirectory ctGateway.
+subdirectory ctGateway<br>
+Gateway program, C++, Linux.<br>
+The sln file can be opened with Visual Studio 2022, but only used to edit file.<br>
+How to compile the project see [readme.txt](ctGateway/readme.txt) in subdirectory ctGateway.<br>
 
 ### Copyright
-Please see the file [LICENSE](./LICENSE) for copyright.
+Please see the file [LICENSE](./LICENSE) for copyright.<br>
 
-Copyright notices for third-party software used in this software:
-See [third-party-LICENSE.txt](./third-party-LICENSE.txt)
+Copyright notices for third-party software used in this software:<br>
+See [third-party-LICENSE.txt](./third-party-LICENSE.txt)<br>
+
+## ManageTools
+### introduction
+Supporting management tools.(a mqtt client)<br>
+C# .Net 8.0<br>
+The basic functionality depends MQTT only.<br>
+
+### Copyright
+No copyright permission, The program is for testing purposes only.
