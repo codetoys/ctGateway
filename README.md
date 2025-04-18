@@ -28,5 +28,4 @@ Supporting management tools.(a mqtt client)<br>
 C# .Net 8.0<br>
 The basic functionality depends MQTT only.<br>
 
-### Copyright
-No copyright permission, The program is for testing purposes only.
+The program is for testing purposes only.<br>
