@@ -1,0 +1,13 @@
+﻿{
+	"func": "connt",
+	"data": {
+		"comment": "本机测试",
+		"type": "MQTTS",
+		"platform": "localtest",
+		"hostname": "www.test2.com",
+		"port": "8883",
+		"userid": "user",
+		"upwd": "user1234",
+		"ntp": "time.windows.com"
+	}
+}
