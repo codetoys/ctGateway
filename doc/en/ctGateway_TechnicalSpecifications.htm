@@ -1,0 +1,1457 @@
+
+<!-- saved from url=(0073)file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:等线;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"等线 Light";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:新宋体;
+	panose-1:2 1 6 9 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@等线 Light";}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@新宋体";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:等线;}
+h1
+	{mso-style-link:"标题 1 字符";
+	margin-top:17.0pt;
+	margin-right:0cm;
+	margin-bottom:16.5pt;
+	margin-left:21.6pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-21.6pt;
+	line-height:240%;
+	page-break-after:avoid;
+	font-size:22.0pt;
+	font-family:等线;}
+h2
+	{mso-style-link:"标题 2 字符";
+	margin-top:13.0pt;
+	margin-right:0cm;
+	margin-bottom:13.0pt;
+	margin-left:28.8pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-28.8pt;
+	line-height:173%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"等线 Light";}
+h3
+	{mso-style-link:"标题 3 字符";
+	margin-top:13.0pt;
+	margin-right:0cm;
+	margin-bottom:13.0pt;
+	margin-left:36.0pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-36.0pt;
+	line-height:173%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:等线;}
+h4
+	{mso-style-link:"标题 4 字符";
+	margin-top:14.0pt;
+	margin-right:0cm;
+	margin-bottom:14.5pt;
+	margin-left:43.2pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-43.2pt;
+	line-height:156%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"等线 Light";}
+h5
+	{mso-style-link:"标题 5 字符";
+	margin-top:14.0pt;
+	margin-right:0cm;
+	margin-bottom:14.5pt;
+	margin-left:50.4pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-50.4pt;
+	line-height:156%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:等线;}
+h6
+	{mso-style-link:"标题 6 字符";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.2pt;
+	margin-left:57.6pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-57.6pt;
+	line-height:133%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"等线 Light";}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-link:"标题 7 字符";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.2pt;
+	margin-left:64.8pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-64.8pt;
+	line-height:133%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:等线;
+	font-weight:bold;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-link:"标题 8 字符";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.2pt;
+	margin-left:72.0pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-72.0pt;
+	line-height:133%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"等线 Light";}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-link:"标题 9 字符";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.2pt;
+	margin-left:79.2pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-79.2pt;
+	line-height:133%;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"等线 Light";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:等线;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:21.0pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:等线;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"标题 字符";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:center;
+	font-size:16.0pt;
+	font-family:"等线 Light";
+	font-weight:bold;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-link:"副标题 字符";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:center;
+	line-height:130%;
+	font-size:16.0pt;
+	font-family:等线;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:21.0pt;
+	font-size:10.5pt;
+	font-family:等线;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"等线 Light";
+	color:#2F5496;}
+span.a
+	{mso-style-name:"标题 字符";
+	mso-style-link:标题;
+	font-family:"等线 Light";
+	font-weight:bold;}
+span.1
+	{mso-style-name:"标题 1 字符";
+	mso-style-link:"标题 1";
+	font-weight:bold;}
+span.2
+	{mso-style-name:"标题 2 字符";
+	mso-style-link:"标题 2";
+	font-family:"等线 Light";
+	font-weight:bold;}
+span.a0
+	{mso-style-name:"副标题 字符";
+	mso-style-link:副标题;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:等线;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang="ZH-CN" link="#0563C1" vlink="#954F72" style="word-wrap:break-word;
+text-justify-trim:punctuation">
+
+<div class="WordSection1" style="layout-grid:15.6pt">
+
+<p class="MsoTitle"><a name="_Toc196346362" _msttexthash="859508" _msthash="0"><span lang="EN-US" _istranslated="1">ctGateway</span> Gateway Technical Sheet</a></p>
+
+<p class="MsoSubtitle"><a name="_Toc196346363" _msttexthash="292747" _msthash="1"><span lang="EN-US" _istranslated="1">2025.4.23 </span>Version <span lang="EN-US" _istranslated="1">1.0</span></a></p>
+
+<p class="MsoTitle"><a name="_Toc196346364" _msttexthash="240370" _msthash="2">Update history</a></p>
+
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none">
+ <tbody><tr>
+  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
+  background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="44447" _msthash="3">Time</span></p>
+  </td>
+  <td width="340" valign="top" style="width:9.0cm;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="99710" _msthash="4">content</span></p>
+  </td>
+  <td width="119" valign="top" style="width:89.0pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="97344" _msthash="5">chapter</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="63791" _msthash="6">2025.4.23</span></p>
+  </td>
+  <td width="340" valign="top" style="width:9.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="3718572" _msthash="7">The supported protocols add the basic functions of <span lang="EN-US" _istranslated="1">smart meters DLT645</span>, <span lang="EN-US" _istranslated="1">S7</span> and <span lang="EN-US" _istranslated="1">OPC-UA</span></p>
+  </td>
+  <td width="119" valign="top" style="width:89.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="15509" _msthash="8">3.4</span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoTocHeading" align="center" style="text-align:center" _msttexthash="141843" _msthash="9">directory</p>
+
+<p class="MsoToc1"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346362"><font _mstmutation="1" _msttexthash="859508" _msthash="10">ctGateway <span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Gateway Technical Sheet</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="11">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4459" _msthidden="1" _msthash="12">1</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346363"><font _mstmutation="1" _msttexthash="292747" _msthash="13">2025.4.23 <span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Version 1.0</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="4186" _msthidden="1" _msthash="14">. </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4459" _msthidden="1" _msthash="15">1</span></a></span></p>
+
+<p class="MsoToc1"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346364"><span lang="EN-US"><span lang="EN-US" _msttexthash="240370" _msthash="16">Update history</span></span><span style="color:windowtext;display:none;
+text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="17">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4459" _msthidden="1" _msthash="18">1</span></a></span></p>
+
+<p class="MsoToc1"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346365"><font _mstmutation="1" _msttexthash="133653" _msthash="19"><span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span> 1 <span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Overview</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="20">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4550" _msthidden="1" _msthash="21">2</span></a></span></p>
+
+<p class="MsoToc1"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346366"><font _mstmutation="1" _msttexthash="223613" _msthash="22"><span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span> 2 <span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Core Concepts</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="23">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4550" _msthidden="1" _msthash="24">2</span></a></span></p>
+
+<p class="MsoToc1"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346367"><font _mstmutation="1" _msttexthash="131261" _msthash="25"><span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span> 3 <span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Features</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="26">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4550" _msthidden="1" _msthash="27">2</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346368"><font _mstmutation="1" _msttexthash="409474" _msthash="28">3.1<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Supported Systems</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="29">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4550" _msthidden="1" _msthash="30">2</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346369"><font _mstmutation="1" _msttexthash="1496859" _msthash="31">3.2<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Supported Platform Communication Carriers</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="32">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4641" _msthidden="1" _msthash="33">3</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346370"><font _mstmutation="1" _msttexthash="478478" _msthash="34">3.3<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Supported Platforms</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="35">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4641" _msthidden="1" _msthash="36">3</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346371"><font _mstmutation="1" _msttexthash="723294" _msthash="37">3.4<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Supported Device Protocols</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="38">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4641" _msthidden="1" _msthash="39">3</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346372"><font _mstmutation="1" _msttexthash="1192022" _msthash="40">3.5<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Supported Data Acquisition Functions</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="41">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4641" _msthidden="1" _msthash="42">3</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346373"><font _mstmutation="1" _msttexthash="3172195" _msthash="43">3.6<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Kunlun Tongtai touch screen device information export file support</span></span></font><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="44">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4732" _msthidden="1" _msthash="45">4</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346374"><font _mstmutation="1" _msttexthash="246740" _msthash="46">3.7<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Compression</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="47">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4732" _msthidden="1" _msthash="48">4</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346375"><font _mstmutation="1" _msttexthash="219726" _msthash="49">3.8<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Encryption</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="50">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4732" _msthidden="1" _msthash="51">4</span></a></span></p>
+
+<p class="MsoToc1"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346376"><font _mstmutation="1" _msttexthash="518921" _msthash="52"><span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span> 4 <span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Performance Indicators</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="53">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4732" _msthidden="1" _msthash="54">4</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346377"><font _mstmutation="1" _msttexthash="174109" _msthash="55">4.1<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Real-time</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="56">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4732" _msthidden="1" _msthash="57">4</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346378"><font _mstmutation="1" _msttexthash="716027" _msthash="58">4.2<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Number of Supported Devices</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="59">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4823" _msthidden="1" _msthash="60">5</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346379"><font _mstmutation="1" _msttexthash="431015" _msthash="61">4.3<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Traffic Estimation</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="62">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4823" _msthidden="1" _msthash="63">5</span></a></span></p>
+
+<p class="MsoToc1"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346380"><font _mstmutation="1" _msttexthash="569660" _msthash="64"><span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span> 5 <span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Composition of Documents</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="65">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4823" _msthidden="1" _msthash="66">5</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346381"><font _mstmutation="1" _msttexthash="238498" _msthash="67">5.1<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">System Files</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="68">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4823" _msthidden="1" _msthash="69">5</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346382"><font _mstmutation="1" _msttexthash="263588" _msthash="70">5.2<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Program Files</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="71">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4823" _msthidden="1" _msthash="72">5</span></a></span></p>
+
+<p class="MsoToc1"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346383"><font _mstmutation="1" _msttexthash="247208" _msthash="73"><span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span> 6 <span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Design Details</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="74">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4914" _msthidden="1" _msthash="75">6</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346384"><font _mstmutation="1" _msttexthash="363090" _msthash="76">6.1<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Device Discovery</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="77">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4914" _msthidden="1" _msthash="78">6</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346385"><font _mstmutation="1" _msttexthash="176852" _msthash="79">6.2<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span>LED <span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Status</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="80">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4914" _msthidden="1" _msthash="81">6</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346386"><font _mstmutation="1" _msttexthash="242892" _msthash="82">6.3<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Reset Button</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="83">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4914" _msthidden="1" _msthash="84">6</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346387"><font _mstmutation="1" _msttexthash="385333" _msthash="85">6.4<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Data Serial Number</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="86">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="5005" _msthidden="1" _msthash="87">7</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346388"><font _mstmutation="1" _msttexthash="897728" _msthash="88">6.5<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">No loss of data when power is lost</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="89">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="5005" _msthidden="1" _msthash="90">7</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346389"><font _mstmutation="1" _msttexthash="2029677" _msthash="91">6.6<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Data will not be lost when the network is disconnected</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="92">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="5005" _msthidden="1" _msthash="93">7</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346390"><font _mstmutation="1" _msttexthash="326924" _msthash="94">6.7<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Online Upgrades</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="95">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="5005" _msthidden="1" _msthash="96">7</span></a></span></p>
+
+<p class="MsoToc2"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_TechnicalSpecifications.htm#_Toc196346391"><font _mstmutation="1" _msttexthash="428350" _msthash="97">6.8<span style="font-size:11.0pt;color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Reliability Design</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="98">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="5005" _msthidden="1" _msthash="99">7</span></a></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<h1><a name="_Toc196346365" _msttexthash="133653" _msthash="100"><span lang="EN-US" _istranslated="1"><span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span>1</span> Overview</a></h1>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="34637070" _msthash="101">The gateway program is implemented in <span lang="EN-US" _istranslated="1">C++</span> and uses <span lang="EN-US" _istranslated="1">the utf-8</span> character set, which the platform <span lang="EN-US" _istranslated="1">must use.</span> If the device channel data is a string, you can specify the transmission mode or automatically convert the character set through parameter configuration.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="2274493" _msthash="102"><span lang="EN-US" _istranslated="1">It supports Modbus</span>, transparent transmission, <span lang="EN-US" _istranslated="1">MQTT</span> and <span lang="EN-US" _istranslated="1">MQTTS</span>.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="4327752" _msthash="103">Log files and data files are limited in size to ensure that there is no disk full failure.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="2451865" _msthash="104">The data is saved instantly to ensure that the power is not lost.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="7840300" _msthash="105">The data sequence number and confirmation mechanism ensure that there is no data loss from the gateway to the platform.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="8534227" _msthash="106">The storage capacity of the network is different depending on the amount of data, and the gateway supports data compression.</p>
+
+<h1><a name="_Toc196346366" _msttexthash="223613" _msthash="107"><span lang="EN-US" _istranslated="1"><span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span>2</span> Core Concepts</a></h1>
+
+<p class="MsoNormal"><span lang="EN-US"><img width="563" height="325" src="./ctGateway_TechnicalSpecifications_files/image001.png"></span></p>
+
+<h1><a name="_Toc196346367" _msttexthash="131261" _msthash="108"><span lang="EN-US" _istranslated="1"><span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span>3</span> Features</a></h1>
+
+<h2><a name="_Toc196346368" _msttexthash="409474" _msthash="109"><span lang="EN-US" _istranslated="1">3.1<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Supported Systems</a></h2>
+
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none">
+ <tbody><tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="209196" _msthash="110">serial number</span></p>
+  </td>
+  <td width="104" valign="top" style="width:77.95pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="83031" _msthash="111">system</span></p>
+  </td>
+  <td width="189" valign="top" style="width:5.0cm;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="245791" _msthash="112">Support status</span></p>
+  </td>
+  <td width="213" valign="top" style="width:159.9pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="163722" _msthash="113">illustrate</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4459" _msthash="114">1</span></p>
+  </td>
+  <td width="104" valign="top" style="width:77.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="146120" _msthash="115">Linux/Arm64</span></p>
+  </td>
+  <td width="189" valign="top" style="width:5.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="1066767" _msthash="116">Priority support, full functionality</p>
+  </td>
+  <td width="213" valign="top" style="width:159.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="4334720" _msthash="117">In the lite version of <span lang="EN-US" _istranslated="1">Linux</span>, the dependent libraries need to be compiled by themselves</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4550" _msthash="118">2</span></p>
+  </td>
+  <td width="104" valign="top" style="width:77.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="123396" _msthash="119">Linux/Arm</span></p>
+  </td>
+  <td width="189" valign="top" style="width:5.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="3167528" _msthash="120">Complete basic tests, be able to run, and be able to report <span lang="EN-US" _istranslated="1">modbus_tcp</span> data</p>
+  </td>
+  <td width="213" valign="top" style="width:159.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="2177253" _msthash="121">Full <span lang="EN-US" _istranslated="1">Linux</span>, you can install the required packages directly</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4641" _msthash="122">3</span></p>
+  </td>
+  <td width="104" valign="top" style="width:77.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+  </td>
+  <td width="189" valign="top" style="width:5.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+  </td>
+  <td width="213" valign="top" style="width:159.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<h2><a name="_Toc196346369" _msttexthash="1496859" _msthash="123"><span lang="EN-US" _istranslated="1">3.2<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Supported Platform Communication Carriers</a></h2>
+
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none">
+ <tbody><tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="209196" _msthash="124">serial number</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="489034" _msthash="125">The name of the agreement</span></p>
+  </td>
+  <td width="226" valign="top" style="width:169.6pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="245791" _msthash="126">Support status</span></p>
+  </td>
+  <td width="138" valign="top" style="width:103.7pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="163722" _msthash="127">illustrate</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4459" _msthash="128">1</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="36179" _msthash="129">MQTT</span></p>
+  </td>
+  <td width="226" valign="top" style="width:169.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="174174" _msthash="130">Already: <span lang="EN-US" _istranslated="1">MQTT</span></p>
+  <p class="MsoNormal" _msttexthash="194675" _msthash="131">Already: <span lang="EN-US" _istranslated="1">MQTTS</span></p>
+  </td>
+  <td width="138" valign="top" style="width:103.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4550" _msthash="132">2</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="35516" _msthash="133">HTTP</span></p>
+  </td>
+  <td width="226" valign="top" style="width:169.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="52455" _msthash="134">Plan:</p>
+  </td>
+  <td width="138" valign="top" style="width:103.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="537472" _msthash="135">Dependent on the platform</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<h2><a name="_Toc196346370" _msttexthash="478478" _msthash="136"><span lang="EN-US" _istranslated="1">3.3<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Supported Platforms</a></h2>
+
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none">
+ <tbody><tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="209196" _msthash="137">serial number</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="457782" _msthash="138">The name of the platform</span></p>
+  </td>
+  <td width="189" valign="top" style="width:5.0cm;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="358228" _msthash="139">Supported features</span></p>
+  </td>
+  <td width="175" valign="top" style="width:131.55pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="163722" _msthash="140">illustrate</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4459" _msthash="141">1</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="207922" _msthash="142">Demo platform</p>
+  </td>
+  <td width="189" valign="top" style="width:5.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="298480" _msthash="143">All instructions</p>
+  </td>
+  <td width="175" valign="top" style="width:131.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="1174667" _msthash="144">That is, the supporting management tools</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4550" _msthash="145">2</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+  </td>
+  <td width="189" valign="top" style="width:5.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+  </td>
+  <td width="175" valign="top" style="width:131.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h2><a name="_Toc196346371" _msttexthash="723294" _msthash="146"><span lang="EN-US" _istranslated="1">3.4<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Supported Device Protocols</a></h2>
+
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none">
+ <tbody><tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="209196" _msthash="147">serial number</span></p>
+  </td>
+  <td width="85" valign="top" style="width:63.8pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="489034" _msthash="148">The name of the agreement</span></p>
+  </td>
+  <td width="217" valign="top" style="width:163.0pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="245791" _msthash="149">Support status</span></p>
+  </td>
+  <td width="204" valign="top" style="width:152.8pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="163722" _msthash="150">illustrate</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4459" _msthash="151">1</span></p>
+  </td>
+  <td width="85" valign="top" style="width:63.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="77662" _msthash="152">Modbus</span></p>
+  </td>
+  <td width="217" valign="top" style="width:163.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="434759" _msthash="153">Already: <span lang="EN-US" _istranslated="1">TCP,</span> <span lang="EN-US" _istranslated="1">RTU</span>, <span lang="EN-US" _istranslated="1">RTU_TCP</span></p>
+  <p class="MsoNormal" _msttexthash="189163" _msthash="154">Not sure: <span lang="EN-US" _istranslated="1">ASCII</span></p>
+  </td>
+  <td width="204" valign="top" style="width:152.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="4331275" _msthash="155">The protocol libraries currently in use do not support <span lang="EN-US" _istranslated="1">Modbus-ASCII</span> and are rarely used</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4550" _msthash="156">2</span></p>
+  </td>
+  <td width="85" valign="top" style="width:63.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="588185" _msthash="157">Transparent transmission</p>
+  </td>
+  <td width="217" valign="top" style="width:163.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="340899" _msthash="158">Already: <span lang="EN-US" _istranslated="1">TCP,</span> serial</p>
+  </td>
+  <td width="204" valign="top" style="width:152.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="561418" _msthash="159">Escalate any data received</p>
+  <p class="MsoNormal" _msttexthash="1008098" _msthash="160">Deliver any data through the platform</p>
+  <p class="MsoNormal" _msttexthash="1130246" _msthash="161">Send instructions at regular intervals</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4641" _msthash="162">3</span></p>
+  </td>
+  <td width="85" valign="top" style="width:63.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="185653" _msthash="163">Smart meters</p>
+  </td>
+  <td width="217" valign="top" style="width:163.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="544284" _msthash="164">Already: <span lang="EN-US" _istranslated="1">DLT645-1997</span>, <span lang="EN-US" _istranslated="1">DLT645-2007</span></p>
+  </td>
+  <td width="204" valign="top" style="width:152.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4732" _msthash="165">4</span></p>
+  </td>
+  <td width="85" valign="top" style="width:63.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="121329" _msthash="166">Siemens <span lang="EN-US" _istranslated="1">S7</span></p>
+  </td>
+  <td width="217" valign="top" style="width:163.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="46384" _msthash="167">Soon</p>
+  </td>
+  <td width="204" valign="top" style="width:152.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="6546839" _msthash="168">The basic function modules have been incorporated, and the configuration part has not yet been implemented</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4641" _msthash="169">3</span></p>
+  </td>
+  <td width="85" valign="top" style="width:63.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="43693" _msthash="170">OPCUA</span></p>
+  </td>
+  <td width="217" valign="top" style="width:163.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="46384" _msthash="171">Soon</p>
+  </td>
+  <td width="204" valign="top" style="width:152.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="6546839" _msthash="172">The basic function modules have been incorporated, and the configuration part has not yet been implemented</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4732" _msthash="173">4</span></p>
+  </td>
+  <td width="85" valign="top" style="width:63.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="142233" _msthash="174">customize</p>
+  </td>
+  <td width="217" valign="top" style="width:163.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="47073" _msthash="175">plan</p>
+  </td>
+  <td width="204" valign="top" style="width:152.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="206427" _msthash="176">Customizable</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h2><a name="_Toc196346372" _msttexthash="1192022" _msthash="177"><span lang="EN-US" _istranslated="1">3.5<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Supported Data Acquisition Functions</a></h2>
+
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none">
+ <tbody><tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="209196" _msthash="178">serial number</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="45981" _msthash="179">name</span></p>
+  </td>
+  <td width="161" valign="top" style="width:120.5pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="245791" _msthash="180">Support status</span></p>
+  </td>
+  <td width="204" valign="top" style="width:152.8pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="163722" _msthash="181">illustrate</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4459" _msthash="182">1</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="450216" _msthash="183">Periodical escalation</p>
+  </td>
+  <td width="161" valign="top" style="width:120.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="96447" _msthash="184">already</p>
+  </td>
+  <td width="204" valign="top" style="width:152.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="463723" _msthash="185">Report at a set interval</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4550" _msthash="186">2</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="314808" _msthash="187">Change escalation</p>
+  </td>
+  <td width="161" valign="top" style="width:120.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="96447" _msthash="188">already</p>
+  </td>
+  <td width="204" valign="top" style="width:152.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="5830253" _msthash="189">At a set period (milliseconds, less than each acquisition time is equivalent to a cyclic acquisition)</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4641" _msthash="190">3</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="417027" _msthash="191">Dependent escalation</p>
+  </td>
+  <td width="161" valign="top" style="width:120.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="96447" _msthash="192">already</p>
+  </td>
+  <td width="204" valign="top" style="width:152.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="6755346" _msthash="193">Report when the dependent channel is reported (usually the dependent channel is of the change reporting type)</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4732" _msthash="194">4</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="657722" _msthash="195">Recapture all when you change</p>
+  </td>
+  <td width="161" valign="top" style="width:120.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="96447" _msthash="196">already</p>
+  </td>
+  <td width="204" valign="top" style="width:152.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h2><a name="_Toc196346373" _msttexthash="3172195" _msthash="197"><span lang="EN-US" _istranslated="1">3.6<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Kunlun Tongtai touch screen device information export file support</a></h2>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="29386747" _msthash="198">It supports direct import of the export file of Kunlun Tongtai touch screen, and currently directly imports the <span lang="EN-US" _istranslated="1">csv</span> file corresponding to <span lang="EN-US" style="font-size:9.5pt;font-family:新宋体;color:#2E75B6" _istranslated="1">deviceCode</span>, and automatically converts local encoding to <span lang="EN-US" _istranslated="1">UTF-8</span> (do not convert encoding in advance).</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="25379289" _msthash="199">The original value of the channel acquisition frequency is usually <span lang="EN-US" _istranslated="1">1</span>, which means that it is not specially set (it follows the period setting of the device). Modify to implement specific features for the following scopes:</p>
+
+<p class="MsoListParagraph" style="margin-left:43.0pt;text-indent:-22.0pt" _msttexthash="6668688" _msthash="200"><span lang="EN-US" style="font-family:Wingdings" _istranslated="1">l<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span><span lang="EN-US" _istranslated="1">1XX</span> represents differential upload, where <span lang="EN-US" _istranslated="1">XX</span> represents the percentage. <span lang="EN-US" _istranslated="1">100</span> represents different uploads.</p>
+
+<p class="MsoListParagraph" style="margin-left:43.0pt;text-indent:-22.0pt" _msttexthash="1684137" _msthash="201"><span lang="EN-US" style="font-family:Wingdings" _istranslated="1">l<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span><span lang="EN-US" _istranslated="1">2XX</span> represents the difference when uploading all.</p>
+
+<p class="MsoListParagraph" style="margin-left:43.0pt;text-indent:-22.0pt" _msttexthash="5749354" _msthash="202"><span lang="EN-US" style="font-family:Wingdings" _istranslated="1">l<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span><span lang="EN-US" _istranslated="1">5XXXX</span> represents the dependent upload, and <span lang="EN-US" _istranslated="1">XXXX</span> represents the dependent channel sequence number.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="2723214" _msthash="203">Currently, the channel sequence number is <span lang="EN-US" _istranslated="1">channelNo</span> and <span lang="EN-US" _istranslated="1">paramCode</span>.</p>
+
+<h2><a name="_Toc196346374" _msttexthash="246740" _msthash="204"><span lang="EN-US" _istranslated="1">3.7<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Compression</a></h2>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="7367581" _msthash="205">Data compression is supported to reduce data traffic. Compression is not enabled by default. Use <span lang="EN-US" _istranslated="1">zlib</span> compression.</p>
+
+<h2><a name="_Toc196346375" _msttexthash="219726" _msthash="206"><span lang="EN-US" _istranslated="1">3.8<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Encryption</a></h2>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="17367454" _msthash="207">Prevent insecure transmission processes through encryption. By default, registration, heartbeat, and reporting data are not encrypted. Use <span lang="EN-US" _istranslated="1">AES256-CBC</span> encryption or <span lang="EN-US" _istranslated="1">SM4</span> encryption</p>
+
+<h1><a name="_Toc196346376" _msttexthash="518921" _msthash="208"><span lang="EN-US" _istranslated="1"><span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span>4</span> Performance Indicators</a></h1>
+
+<h2><a name="_Toc196346377" _msttexthash="174109" _msthash="209"><span lang="EN-US" _istranslated="1">4.1<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Real-time</a></h2>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="16051893" _msthash="210">The gateway operates in the mode of setting the minimum period activation <span lang="EN-US" _istranslated="1">+</span> event trigger, and the time control unit is milliseconds, which meets the real-time requirements.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="19738524" _msthash="211">The delivery operation is received in the event trigger mode and runs preferentially in the next round of scanning, and the maximum delay <span lang="EN-US" _istranslated="1">=</span> network transmission time <span lang="EN-US" _istranslated="1">+</span> one round of scanning time.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="27012492" _msthash="212">One round of scan time <span lang="EN-US" _istranslated="1">is about =</span> number of channels <span lang="EN-US" _istranslated="1">* 15</span> ms (this is the measured result, <span lang="EN-US" _istranslated="1">185</span> channels are less than <span lang="EN-US" _istranslated="1">3</span> seconds, and the hold register is about <span lang="EN-US" _istranslated="1">15</span> ms per read, and most of the time taken is indeed in the read operation itself).</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="13466752" _msthash="213">Continuous address read optimization is supported. Successive addresses can be collected at one time, which can significantly shorten the collection time.</p>
+
+<h2><a name="_Toc196346378" _msttexthash="716027" _msthash="214"><span lang="EN-US" _istranslated="1">4.2<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Number of Supported Devices</a></h2>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="5404061" _msthash="215">There is no limit to the number of devices and channels in the program, only the hardware interface.</p>
+
+<h2><a name="_Toc196346379" _msttexthash="431015" _msthash="216"><span lang="EN-US" _istranslated="1">4.3<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Traffic Estimation</a></h2>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="739271" _msthash="217">Data compression is supported.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="12561328" _msthash="218">The reported data of <span lang="EN-US" _istranslated="1">the measured 185</span> channels is about <span lang="EN-US" _istranslated="1">10K</span>. According to the usual collection frequency of once per minute, one day <span lang="EN-US" _istranslated="1">= 60 * 24 * 10K = 14 M</span>, one month <span lang="EN-US" _istranslated="1">= 420 M</span>.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="3988543" _msthash="219">This type of data generally has a high compression ratio, which can be reduced <span lang="EN-US" _istranslated="1">by 80-90%.</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="51430704" _msthash="220">The compression rate of a piece of data of about <span lang="EN-US" _istranslated="1">10K</span> is <span lang="EN-US" _istranslated="1">90%,</span> and <span lang="EN-US" _istranslated="1">85%</span> after using <span lang="EN-US" _istranslated="1">base64</span> encoding (<span lang="EN-US" _istranslated="1">base64</span> encoding will increase by one-third), and data compression of less than <span lang="EN-US" _istranslated="1">200</span> bytes is meaningless (the program can choose the transmission mode according to the actual effect, which needs to be supported by the platform).</p>
+
+<h1><a name="_Toc196346380" _msttexthash="569660" _msthash="221"><span lang="EN-US" _istranslated="1"><span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span>5</span> Composition of Documents</a></h1>
+
+<h2><a name="_Toc196346381" _msttexthash="238498" _msthash="222"><span lang="EN-US" _istranslated="1">5.1<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>System Files</a></h2>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="3301623" _msthash="223">System files are provided by the hardware and vary from gateway to gateway.</p>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="1235897" _msthash="224">Here's what happens for a piece of hardware:</p>
+
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none">
+ <tbody><tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="209196" _msthash="225">serial number</span></p>
+  </td>
+  <td width="132" valign="top" style="width:99.25pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="314223" _msthash="226">The name of the file</span></p>
+  </td>
+  <td width="161" valign="top" style="width:120.45pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="118937" _msthash="227">function</span></p>
+  </td>
+  <td width="213" valign="top" style="width:159.9pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="163722" _msthash="228">illustrate</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4459" _msthash="229">1</span></p>
+  </td>
+  <td width="132" valign="top" style="width:99.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="190242" _msthash="230">/home/sn.txt</span></p>
+  </td>
+  <td width="161" valign="top" style="width:120.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="346814" _msthash="231">Model Serial number</p>
+  </td>
+  <td width="213" valign="top" style="width:159.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="180336" _msthash="232">Static files</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4550" _msthash="233">2</span></p>
+  </td>
+  <td width="132" valign="top" style="width:99.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="331318" _msthash="234">/home/sysInfo.txt</span></p>
+  </td>
+  <td width="161" valign="top" style="width:120.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="738933" _msthash="235"><span lang="EN-US" _istranslated="1">SIM</span> card number Signal strength</p>
+  </td>
+  <td width="213" valign="top" style="width:159.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="203684" _msthash="236">Dynamic files</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4641" _msthash="237">3</span></p>
+  </td>
+  <td width="132" valign="top" style="width:99.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="353626" _msthash="238">/home/run/start.sh</span></p>
+  </td>
+  <td width="161" valign="top" style="width:120.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="267033" _msthash="239">Start the script</p>
+  </td>
+  <td width="213" valign="top" style="width:159.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="3204383" _msthash="240">Executed at system startup (content provided by the application system)</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4732" _msthash="241">4</span></p>
+  </td>
+  <td width="132" valign="top" style="width:99.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="579150" _msthash="242">/home/run/publish.tar.bz2</span></p>
+  </td>
+  <td width="161" valign="top" style="width:120.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="290264" _msthash="243">Original program</p>
+  </td>
+  <td width="213" valign="top" style="width:159.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="1553513" _msthash="244">Normal program runs automatically when it fails</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4823" _msthash="245">5</span></p>
+  </td>
+  <td width="132" valign="top" style="width:99.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="613145" _msthash="246">/home/backup/ led_gpio.txt</span></p>
+  </td>
+  <td width="161" valign="top" style="width:120.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+  </td>
+  <td width="213" valign="top" style="width:159.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="610636" _msthash="247"><span lang="EN-US" _istranslated="1">LED Operating Instructions</span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h2><a name="_Toc196346382" _msttexthash="263588" _msthash="248"><span lang="EN-US" _istranslated="1">5.2<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Program Files</a></h2>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="4045730" _msthash="249">All files of the program itself are based on a single directory "<span lang="EN-US" _istranslated="1">/home/root/publish</span>".</p>
+
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none">
+ <tbody><tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="209196" _msthash="250">serial number</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="314223" _msthash="251">The name of the file</span></p>
+  </td>
+  <td width="151" valign="top" style="width:4.0cm;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="118937" _msthash="252">function</span></p>
+  </td>
+  <td width="213" valign="top" style="width:159.9pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#5B9BD5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="163722" _msthash="253">illustrate</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4459" _msthash="254">1</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="149747" _msthash="255">gwmian.exe</span></p>
+  </td>
+  <td width="151" valign="top" style="width:4.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="181480" _msthash="256">Main program</p>
+  </td>
+  <td width="213" valign="top" style="width:159.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="3232801" _msthash="257"><span lang="EN-US" _istranslated="1">-auto </span>gateway auto-start script is used, prohibiting interactive input</p>
+  <p class="MsoNormal" _msttexthash="5110768" _msthash="258"><span lang="EN-US" _istranslated="1">-test </span>to start the built-in <span lang="EN-US" _istranslated="1">modbusTCP</span> test service (available for default device acquisition)</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4550" _msthash="259">2</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="247676" _msthash="260">appConfig.json</span></p>
+  </td>
+  <td width="151" valign="top" style="width:4.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="322946" _msthash="261">App configuration</p>
+  </td>
+  <td width="213" valign="top" style="width:159.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="374374" _msthash="262">file size limits, etc</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4641" _msthash="263">3</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="307177" _msthash="264">northConfig.json</span></p>
+  </td>
+  <td width="151" valign="top" style="width:4.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="990730" _msthash="265">Platform Configuration (Northbound)</p>
+  </td>
+  <td width="213" valign="top" style="width:159.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="801775" _msthash="266">Platform connection parameters</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4732" _msthash="267">4</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="548015" _msthash="268">defaultNorthConfig.json</span></p>
+  </td>
+  <td width="151" valign="top" style="width:4.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="459498" _msthash="269">Default configuration</p>
+  </td>
+  <td width="213" valign="top" style="width:159.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4823" _msthash="270">5</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="330512" _msthash="271">DeviceConfig.json</span></p>
+  </td>
+  <td width="151" valign="top" style="width:4.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="886522" _msthash="272">Device Configuration (Southbound)</p>
+  </td>
+  <td width="213" valign="top" style="width:159.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="802412" _msthash="273">Data acquisition configuration</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="4914" _msthash="274">6</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="149786" _msthash="275">gwmain.log</span></p>
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="239421" _msthash="276">gwmain.log.log</span></p>
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="332085" _msthash="277">gwmain.log.log.bz2</span></p>
+  </td>
+  <td width="151" valign="top" style="width:4.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="95615" _msthash="278">log file</p>
+  </td>
+  <td width="213" valign="top" style="width:159.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="2691650" _msthash="279">The total file size does not exceed the limits configured by the app</p>
+  <p class="MsoNormal" _msttexthash="2177370" _msthash="280"><span lang="EN-US" _istranslated="1">gwmain.log.log</span> will be compressed into <span lang="EN-US" _istranslated="1">gwmain.log.log.bz2</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="5005" _msthash="281">7</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="105053" _msthash="282">data.dat</span></p>
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="116870" _msthash="283">data2.dat</span></p>
+  </td>
+  <td width="151" valign="top" style="width:4.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="132483" _msthash="284">Data files</p>
+  </td>
+  <td width="213" valign="top" style="width:159.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="2691650" _msthash="285">The total file size does not exceed the limits configured by the app</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td width="47" valign="top" style="width:35.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="5096" _msthash="286">8</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="31187" _msthash="287">SSL/</span></p>
+  </td>
+  <td width="151" valign="top" style="width:4.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="457834" _msthash="288">Certificate documents</p>
+  </td>
+  <td width="213" valign="top" style="width:159.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="2142712" _msthash="289">Certificate file for <span lang="EN-US" _istranslated="1">MQTTS</span>, one subdirectory per platform</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<h1><a name="_Toc196346383" _msttexthash="247208" _msthash="290"><span lang="EN-US" _istranslated="1"><span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span>6</span> Design Details</a></h1>
+
+<h2><a name="_Toc196346384" _msttexthash="363090" _msthash="291"><span lang="EN-US" _istranslated="1">6.1<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Device Discovery</a></h2>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="26717418" _msthash="292">In order for devices with unknown <span lang="EN-US" _istranslated="1">IP</span> addresses to be discovered, the device periodically sends <span lang="EN-US" _istranslated="1">UDP</span> broadcasts to port <span lang="EN-US" _istranslated="1">9999</span> (the physical network and all configured network segments, depending on the network management device).</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="20890662" _msthash="293"><span lang="EN-US" _istranslated="1">A PC</span> directly connected to the network cable can use the packet capture tool to see the source information and discover the device. The current means rely on the installation of third-party libraries.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="1069484" _msthash="294">Plan: <span lang="EN-US" _istranslated="1">PC</span> configurator implementation.</p>
+
+<h2><a name="_Toc196346385" _msttexthash="176852" _msthash="295"><span lang="EN-US" _istranslated="1">6.2<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span><span lang="EN-US" _istranslated="1">LED</span> Status</a></h2>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="4828811" _msthash="296">A certain piece of hardware has <span lang="EN-US" _istranslated="1">9</span> <span lang="EN-US" _istranslated="1">LEDs</span>, all of which are green, and have the following features:</p>
+
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none">
+ <tbody><tr>
+  <td width="184" valign="top" style="width:138.25pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="140517" _msthash="297">System use</p>
+  </td>
+  <td width="184" valign="top" style="width:138.25pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="573937" _msthash="298">Device <span lang="EN-US" _istranslated="1">2</span> connection status</p>
+  </td>
+  <td width="184" valign="top" style="width:138.3pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="574444" _msthash="299">Device <span lang="EN-US" _istranslated="1">5</span> connection status</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="184" valign="top" style="width:138.25pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="140517" _msthash="300">System use</p>
+  </td>
+  <td width="184" valign="top" style="width:138.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="573768" _msthash="301">Device <span lang="EN-US" _istranslated="1">1</span> connection status</p>
+  </td>
+  <td width="184" valign="top" style="width:138.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="574275" _msthash="302">Device <span lang="EN-US" _istranslated="1">4</span> connection status</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="184" valign="top" style="width:138.25pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="140517" _msthash="303">System use</p>
+  </td>
+  <td width="184" valign="top" style="width:138.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="630097" _msthash="304">Platform connection status</p>
+  </td>
+  <td width="184" valign="top" style="width:138.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="574106" _msthash="305">Device <span lang="EN-US" _istranslated="1">3</span> connection status</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="4406506" _msthash="306">The three on the left are used by the system, and the remaining six are used by the program.</font></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="190034" _msthash="307">Status Table:</font></p>
+
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none">
+ <tbody><tr>
+  <td width="66" valign="top" style="width:49.4pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="389441" _msthash="308">Always extinguished</p>
+  </td>
+  <td width="123" valign="top" style="width:92.15pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="95589" _msthash="309">Solid on</p>
+  </td>
+  <td width="223" valign="top" style="width:166.95pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="115401" _msthash="310">flashing</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="66" valign="top" style="width:49.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="118859" _msthash="311">platform</p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="204243" _msthash="312">Not connected</p>
+  </td>
+  <td width="123" valign="top" style="width:92.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="626457" _msthash="313">Registration is successful</p>
+  </td>
+  <td width="223" valign="top" style="width:166.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="560534" _msthash="314">Connected, not registered</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="66" valign="top" style="width:49.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="141011" _msthash="315">equipment</p>
+  </td>
+  <td width="142" valign="top" style="width:106.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="697827" _msthash="316">The interface is not connected</p>
+  </td>
+  <td width="123" valign="top" style="width:92.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="482508" _msthash="317">The device reads the data</p>
+  </td>
+  <td width="223" valign="top" style="width:166.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="2007434" _msthash="318">The device does not read data (the interface is connected)</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="3106545" _msthash="319">The flashes are on and off for one second each, and the cycle keeps on and on.</font></p>
+
+<h2><a name="_Toc196346386" _msttexthash="242892" _msthash="320"><span lang="EN-US" _istranslated="1">6.3<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Reset Button</a></h2>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="1028534" _msthash="321">The manufacturer has not yet finished.</p>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="6178315" _msthash="322">It is planned to provide two functions: northbound configuration restoration and factory reset reset.</p>
+
+<h2><a name="_Toc196346387" _msttexthash="385333" _msthash="323"><span lang="EN-US" _istranslated="1">6.4<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Data Serial Number</a></h2>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="16346291" _msthash="324">The data serial number identifies a piece of data, and <span lang="EN-US" _istranslated="1">1</span> starts to increment. The gateway records the confirmed serial number, the next serial number, and the serial number sent.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="2300389" _msthash="325">The data serial number is the basis for achieving no data loss.</p>
+
+<h2><a name="_Toc196346388" _msttexthash="897728" _msthash="326"><span lang="EN-US" _istranslated="1">6.5<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>No loss of data when power is lost</a></h2>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="5200559" _msthash="327">The data is saved first and then sent, so as to ensure that the power is not lost without data loss.</p>
+
+<h2><a name="_Toc196346389" _msttexthash="2029677" _msthash="328"><span lang="EN-US" _istranslated="1">6.6<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Data will not be lost when the network is disconnected</a></h2>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="87208875" _msthash="329">Since <span lang="EN-US" _istranslated="1">MQTT</span> between the gateway and the platform does not save data and is not directly discarded by subscribers, and <span lang="EN-US" _istranslated="1">MQTT</span> cannot ensure that data is not lost when the power is off, the gateway confirms that the platform has received the data through the platform acknowledgment message. The platform does not need to confirm every piece of data instantly, but only needs to confirm it before the gateway storage is full.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="15100345" _msthash="330">The gateway can clear the confirmed data only after receiving confirmation from the platform. The historical data platform that exists on the gateway can be refrieved.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="8399950" _msthash="331">If the gateway store is full, the consequences are uncertain. The gateway may stop writing new data, or it may delete old data.</p>
+
+<h2><a name="_Toc196346390" _msttexthash="326924" _msthash="332"><span lang="EN-US" _istranslated="1">6.7<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Online Upgrades</a></h2>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="15494882" _msthash="333">The startup script copies the program files to a temporary storage space (this space is not storage, it is lost in case of power failure), so the program can file can be copied.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="20710495" _msthash="334">Save a copy of the original file to prevent the upgrade from becoming bricked if it fails (the probability of the upgrade failing seems to be quite high due to the large file being split and transferred).</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="8269924" _msthash="335">Currently, the upgrade is manual, select the file to upload to the gateway, and then send the restart command to take effect.</p>
+
+<h2><a name="_Toc196346391" _msttexthash="428350" _msthash="336"><span lang="EN-US" _istranslated="1">6.8<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Reliability Design</a></h2>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="11217219" _msthash="337">This program uses a variety of mechanisms to prevent hardware from hanging. It is recommended that the hardware itself has a watchdog mechanism.</p>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="2336750" _msthash="338">There are several layers of protection at the software level:</p>
+
+<p class="MsoListParagraph" style="margin-left:39.0pt;text-indent:-18.0pt" _msttexthash="7850128" _msthash="339">1. Start the script<span lang="EN-US" _istranslated="1">,<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>the program fails to run the factory configuration, to ensure that the device does not lose contact</p>
+
+<p class="MsoListParagraph" style="margin-left:39.0pt;text-indent:-18.0pt" _msttexthash="14401933" _msthash="340">2. The main program has two processes<span lang="EN-US" _istranslated="1">,<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>one monitors the other work, and the monitoring process decides how to deal with it according to the status of the work process</p>
+
+<p class="MsoListParagraph" style="margin-left:39.0pt;text-indent:-18.0pt" _msttexthash="2872779" _msthash="341"><span lang="EN-US" _istranslated="1">3.<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Timed out failed to connect to the platform and restart the gateway</p>
+
+<p class="MsoListParagraph" style="margin-left:39.0pt;text-indent:-18.0pt" _msttexthash="4084821" _msthash="342"><span lang="EN-US" _istranslated="1">4.<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Timed out without receiving any message from the platform to restart the gateway</p>
+
+<p class="MsoListParagraph" style="margin-left:39.0pt;text-indent:-18.0pt" _msttexthash="2098538" _msthash="343"><span lang="EN-US" _istranslated="1">5.<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>There was a storage write error deleting the old log file</p>
+
+<p class="MsoNormal" style="margin-left:21.0pt"><span lang="EN-US">&nbsp;</span></p>
+
+</div>
+
+
+
+
+</body></html>

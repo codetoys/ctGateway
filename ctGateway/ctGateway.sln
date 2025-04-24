@@ -7,9 +7,26 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ctGateway", "ctGateway.vcxp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gitroot", "gitroot", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 	ProjectSection(SolutionItems) = preProject
+		..\index.html = ..\index.html
 		..\LICENSE = ..\LICENSE
 		..\README.md = ..\README.md
 		..\third-party-LICENSE.txt = ..\third-party-LICENSE.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{4EAF5024-DB47-48FB-9E59-BFC13B5B1A00}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zh", "zh", "{5F1226FA-F782-4DAE-950F-01657793BCF4}"
+	ProjectSection(SolutionItems) = preProject
+		..\doc\zh\ctGateway_MaintenanceManual.htm = ..\doc\zh\ctGateway_MaintenanceManual.htm
+		..\doc\zh\ctGateway_PlatformInterfaceProtocol.htm = ..\doc\zh\ctGateway_PlatformInterfaceProtocol.htm
+		..\doc\zh\ctGateway_TechnicalSpecifications.htm = ..\doc\zh\ctGateway_TechnicalSpecifications.htm
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "en", "en", "{2617574C-435B-4B74-AB90-F2ECFE5A1E37}"
+	ProjectSection(SolutionItems) = preProject
+		..\doc\en\ctGateway_MaintenanceManual.htm = ..\doc\en\ctGateway_MaintenanceManual.htm
+		..\doc\en\ctGateway_PlatformInterfaceProtocol.htm = ..\doc\en\ctGateway_PlatformInterfaceProtocol.htm
+		..\doc\en\ctGateway_TechnicalSpecifications.htm = ..\doc\en\ctGateway_TechnicalSpecifications.htm
 	EndProjectSection
 EndProject
 Global
@@ -31,6 +48,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4EAF5024-DB47-48FB-9E59-BFC13B5B1A00} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{5F1226FA-F782-4DAE-950F-01657793BCF4} = {4EAF5024-DB47-48FB-9E59-BFC13B5B1A00}
+		{2617574C-435B-4B74-AB90-F2ECFE5A1E37} = {4EAF5024-DB47-48FB-9E59-BFC13B5B1A00}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {98CB5850-851D-4114-BBBF-2447BF2CA4BD}
