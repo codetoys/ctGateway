@@ -32,7 +32,7 @@ The basic functionality depends MQTT only.<br>
 The program is for testing purposes only.<br>
 
 ## Document
-Please see the file [index.html](./index.html) , English and Chinese.<br>
+Please see the file [index.html](https://codetoys.github.io/ctGateway/index.html) , English and Chinese.<br>
 
 # ctGateway Chinese Simplified 简体中文
 物联网网关 C++ OpenSSL GmSSL Arm/Arm64
@@ -68,4 +68,4 @@ C# .Net 8.0<br>
 这个程序仅用作测试目的<br>
 
 ## 文档
-请看文件 [index.html](./index.html) ，英文和中文。<br>
+请看文件 [index.html](https://codetoys.github.io/ctGateway/index.html) ，英文和中文。<br>
