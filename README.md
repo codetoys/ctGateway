@@ -1,5 +1,6 @@
 # ctGateway
-IOT gateway C++ OpenSSL GmSSL
+IOT gateway C++ OpenSSL GmSSL Linux Arm/Arm64
+Open Source , Modular and Scalable
 
 ## ctGateway
 ### introduction
@@ -31,10 +32,11 @@ The basic functionality depends MQTT only.<br>
 The program is for testing purposes only.<br>
 
 ## Document
-Please see the file [index.html](./index.html) , english and chinese.<br>
+Please see the file [index.html](./index.html) , English and Chinese.<br>
 
-# ctGateway 简体中文
-物联网网关 C++ OpenSSL GmSSL
+# ctGateway Chinese Simplified 简体中文
+物联网网关 C++ OpenSSL GmSSL Arm/Arm64
+开源 模块化 可扩展
 
 ## ctGateway
 ### 介绍

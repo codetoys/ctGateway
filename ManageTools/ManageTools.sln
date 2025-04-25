@@ -4,11 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决方案项", "{385DA751-AEB8-4684-9313-8DA91E5E3F97}"
-	ProjectSection(SolutionItems) = preProject
-		mysql.sql = mysql.sql
-		readme.txt = readme.txt
-		备用代码.txt = 备用代码.txt
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManageTools", "ManageTools\ManageTools.csproj", "{AFD5759E-3035-44C5-A9B6-951ABFC758FE}"
 EndProject
