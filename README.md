@@ -62,7 +62,7 @@ Please see the file [index.html](https://codetoys.github.io/ctGateway/index.html
 请看文件 [index.html](https://codetoys.github.io/ctGateway/index.html) ，英文和中文。<br>
 
 ### Quick Guide 快速指南
-1. Quick Guide 编译和运行<br>
+1. Compile and run 编译和运行<br>
 Linux or Linux virtual machine, MQTT broker(server), [Developer Guide](https://codetoys.github.io/ctGateway/doc/en/ctGateway_DeveloperGuide.htm)<br>
 Linux 或 Linux 虚拟机, MQTT 代理(服务器), [开发指南](https://codetoys.github.io/ctGateway/doc/zh/ctGateway_DeveloperGuide.htm)<br>
 2. North Config MQTT config 北向配置 MQTT配置<br>
