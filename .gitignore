@@ -4,3 +4,6 @@
 /ManageTools/ManageTools/obj
 /ManageTools/ManageTools/ManageTools.csproj.user
 /ManageTools/.vs
+/ManageTools/ServerDemon/ServerDemon.csproj.user
+/ManageTools/ServerDemon/bin
+/ManageTools/ServerDemon/obj

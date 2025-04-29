@@ -20,6 +20,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zh", "zh", "{5F1226FA-F782-
 		..\doc\zh\ctGateway_DeveloperGuide.htm = ..\doc\zh\ctGateway_DeveloperGuide.htm
 		..\doc\zh\ctGateway_MaintenanceManual.htm = ..\doc\zh\ctGateway_MaintenanceManual.htm
 		..\doc\zh\ctGateway_PlatformInterfaceProtocol.htm = ..\doc\zh\ctGateway_PlatformInterfaceProtocol.htm
+		..\doc\zh\ctGateway_ServerDemonAndMySql.htm = ..\doc\zh\ctGateway_ServerDemonAndMySql.htm
 		..\doc\zh\ctGateway_TechnicalSpecifications.htm = ..\doc\zh\ctGateway_TechnicalSpecifications.htm
 	EndProjectSection
 EndProject
@@ -28,6 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "en", "en", "{2617574C-435B-
 		..\doc\en\ctGateway_DeveloperGuide.htm = ..\doc\en\ctGateway_DeveloperGuide.htm
 		..\doc\en\ctGateway_MaintenanceManual.htm = ..\doc\en\ctGateway_MaintenanceManual.htm
 		..\doc\en\ctGateway_PlatformInterfaceProtocol.htm = ..\doc\en\ctGateway_PlatformInterfaceProtocol.htm
+		..\doc\en\ctGateway_ServerDemonAndMySql.htm = ..\doc\en\ctGateway_ServerDemonAndMySql.htm
 		..\doc\en\ctGateway_TechnicalSpecifications.htm = ..\doc\en\ctGateway_TechnicalSpecifications.htm
 	EndProjectSection
 EndProject

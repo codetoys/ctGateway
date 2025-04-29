@@ -4,8 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决方案项", "{385DA751-AEB8-4684-9313-8DA91E5E3F97}"
+	ProjectSection(SolutionItems) = preProject
+		mysql.sql = mysql.sql
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManageTools", "ManageTools\ManageTools.csproj", "{AFD5759E-3035-44C5-A9B6-951ABFC758FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerDemon", "ServerDemon\ServerDemon.csproj", "{3E442E14-C6B9-A498-31EC-FA1A45516F3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +22,10 @@ Global
 		{AFD5759E-3035-44C5-A9B6-951ABFC758FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFD5759E-3035-44C5-A9B6-951ABFC758FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFD5759E-3035-44C5-A9B6-951ABFC758FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E442E14-C6B9-A498-31EC-FA1A45516F3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E442E14-C6B9-A498-31EC-FA1A45516F3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E442E14-C6B9-A498-31EC-FA1A45516F3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E442E14-C6B9-A498-31EC-FA1A45516F3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

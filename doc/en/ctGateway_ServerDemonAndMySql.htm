@@ -1,0 +1,2786 @@
+
+<!-- saved from url=(0069)file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:黑体;
+	panose-1:2 1 6 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:等线;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"等线 Light";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@等线 Light";}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@黑体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:等线;}
+h1
+	{mso-style-link:"标题 1 字符";
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:21.6pt;
+	text-indent:-21.6pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:24.0pt;
+	font-family:"等线 Light";
+	color:#0F4761;
+	font-weight:normal;}
+h2
+	{mso-style-link:"标题 2 字符";
+	margin-top:8.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:28.8pt;
+	text-indent:-28.8pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:20.0pt;
+	font-family:"等线 Light";
+	color:#0F4761;
+	font-weight:normal;}
+h3
+	{mso-style-link:"标题 3 字符";
+	margin-top:8.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:36.0pt;
+	text-indent:-36.0pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"等线 Light";
+	color:#0F4761;
+	font-weight:normal;}
+h4
+	{mso-style-link:"标题 4 字符";
+	margin-top:4.0pt;
+	margin-right:0cm;
+	margin-bottom:2.0pt;
+	margin-left:43.2pt;
+	text-indent:-43.2pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:等线;
+	color:#0F4761;
+	font-weight:normal;}
+h5
+	{mso-style-link:"标题 5 字符";
+	margin-top:4.0pt;
+	margin-right:0cm;
+	margin-bottom:2.0pt;
+	margin-left:50.4pt;
+	text-indent:-50.4pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:等线;
+	color:#0F4761;
+	font-weight:normal;}
+h6
+	{mso-style-link:"标题 6 字符";
+	margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:57.6pt;
+	text-indent:-57.6pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:等线;
+	color:#0F4761;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-link:"标题 7 字符";
+	margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:64.8pt;
+	text-indent:-64.8pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:等线;
+	color:#595959;
+	font-weight:bold;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-link:"标题 8 字符";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:72.0pt;
+	text-indent:-72.0pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:等线;
+	color:#595959;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-link:"标题 9 字符";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:79.2pt;
+	text-indent:-79.2pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:等线;
+	color:#595959;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:等线;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:21.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:等线;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"标题 字符";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	text-align:center;
+	font-size:28.0pt;
+	font-family:"等线 Light";
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"标题 字符";
+	margin:0cm;
+	text-align:center;
+	font-size:28.0pt;
+	font-family:"等线 Light";
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"标题 字符";
+	margin:0cm;
+	text-align:center;
+	font-size:28.0pt;
+	font-family:"等线 Light";
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"标题 字符";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	text-align:center;
+	font-size:28.0pt;
+	font-family:"等线 Light";
+	letter-spacing:-.5pt;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-link:"副标题 字符";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	text-align:center;
+	line-height:115%;
+	font-size:14.0pt;
+	font-family:"等线 Light";
+	color:#595959;
+	letter-spacing:.75pt;}
+a:link, span.MsoHyperlink
+	{color:#467886;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#96607D;
+	text-decoration:underline;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:等线;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:等线;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:等线;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:等线;}
+p.MsoQuote, li.MsoQuote, div.MsoQuote
+	{mso-style-link:"引用 字符";
+	margin-top:8.0pt;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	text-align:center;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:等线;
+	color:#404040;
+	font-style:italic;}
+p.MsoIntenseQuote, li.MsoIntenseQuote, div.MsoIntenseQuote
+	{mso-style-link:"明显引用 字符";
+	margin-top:18.0pt;
+	margin-right:43.2pt;
+	margin-bottom:18.0pt;
+	margin-left:43.2pt;
+	text-align:center;
+	line-height:115%;
+	border:none;
+	padding:0cm;
+	font-size:11.0pt;
+	font-family:等线;
+	color:#0F4761;
+	font-style:italic;}
+span.MsoIntenseEmphasis
+	{color:#0F4761;
+	font-style:italic;}
+span.MsoIntenseReference
+	{font-variant:small-caps;
+	color:#0F4761;
+	letter-spacing:.25pt;
+	font-weight:bold;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"等线 Light";
+	color:#0F4761;}
+span.1
+	{mso-style-name:"标题 1 字符";
+	mso-style-link:"标题 1";
+	font-family:"等线 Light";
+	color:#0F4761;}
+span.2
+	{mso-style-name:"标题 2 字符";
+	mso-style-link:"标题 2";
+	font-family:"等线 Light";
+	color:#0F4761;}
+span.3
+	{mso-style-name:"标题 3 字符";
+	mso-style-link:"标题 3";
+	font-family:"等线 Light";
+	color:#0F4761;}
+span.4
+	{mso-style-name:"标题 4 字符";
+	mso-style-link:"标题 4";
+	font-family:"Times New Roman",serif;
+	color:#0F4761;}
+span.5
+	{mso-style-name:"标题 5 字符";
+	mso-style-link:"标题 5";
+	font-family:"Times New Roman",serif;
+	color:#0F4761;}
+span.6
+	{mso-style-name:"标题 6 字符";
+	mso-style-link:"标题 6";
+	font-family:"Times New Roman",serif;
+	color:#0F4761;
+	font-weight:bold;}
+span.7
+	{mso-style-name:"标题 7 字符";
+	mso-style-link:"标题 7";
+	font-family:"Times New Roman",serif;
+	color:#595959;
+	font-weight:bold;}
+span.8
+	{mso-style-name:"标题 8 字符";
+	mso-style-link:"标题 8";
+	font-family:"Times New Roman",serif;
+	color:#595959;}
+span.9
+	{mso-style-name:"标题 9 字符";
+	mso-style-link:"标题 9";
+	font-family:"等线 Light";
+	color:#595959;}
+span.a
+	{mso-style-name:"标题 字符";
+	mso-style-link:标题;
+	font-family:"等线 Light";
+	letter-spacing:-.5pt;}
+span.a0
+	{mso-style-name:"副标题 字符";
+	mso-style-link:副标题;
+	font-family:"等线 Light";
+	color:#595959;
+	letter-spacing:.75pt;}
+span.a1
+	{mso-style-name:"引用 字符";
+	mso-style-link:引用;
+	color:#404040;
+	font-style:italic;}
+span.a2
+	{mso-style-name:"明显引用 字符";
+	mso-style-link:明显引用;
+	color:#0F4761;
+	font-style:italic;}
+.MsoChpDefault
+	{font-size:11.0pt;
+	font-family:等线;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang="ZH-CN" link="#467886" vlink="#96607D" style="word-wrap:break-word;
+text-justify-trim:punctuation">
+
+<div class="WordSection1" style="layout-grid:15.6pt">
+
+<p class="MsoTitle"><span lang="EN-US" _msttexthash="404157" _msthash="0">ServerDemon and MySql</span></p>
+
+<p class="MsoTocHeading" _msttexthash="141843" _msthash="1">directory</p>
+
+<p class="MsoToc1"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827007"><font _mstmutation="1" _msttexthash="133653" _msthash="2"><span style="color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span> 1 <span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Overview</span></span></font><span style="color:windowtext;display:none;
+text-decoration:none" _msttexthash="20332" _msthidden="1" _msthash="3">.... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4459" _msthidden="1" _msthash="4">1</span></a></span></p>
+
+<p class="MsoToc1"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827008"><font _mstmutation="1" _msttexthash="70512" _msthash="5">2<span style="color:windowtext;text-decoration:none" _mstmutation="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>MySql</font><span style="color:windowtext;display:none;text-decoration:none"> </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4459" _msthidden="1" _msthash="6">1</span></a></span></p>
+
+<p class="MsoToc1"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827009"><font _mstmutation="1" _msttexthash="309751" _msthash="7"><span style="color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span> 3 <span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Database Scripts</span></span></font><span style="color:windowtext;display:none;
+text-decoration:none" _msttexthash="20332" _msthidden="1" _msthash="8">.... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4459" _msthidden="1" _msthash="9">1</span></a></span></p>
+
+<p class="MsoToc1"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827010"><font _mstmutation="1" _msttexthash="270530" _msthash="10"><span style="font-family:黑体" _mstmutation="1" _istranslated="1"></span><span style="color:windowtext;text-decoration:
+none" _mstmutation="1" _istranslated="1"> </span> 4 <span lang="EN-US" style="font-family:黑体" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Database Design</span></span></font><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="20332" _msthidden="1" _msthash="11">.... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="9659" _msthidden="1" _msthash="12">12</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827011"><font _mstmutation="1" _msttexthash="268710" _msthash="13">4.1<span style="color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" style="font-family:黑体" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Table Summary</span></span></font><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="20332" _msthidden="1" _msthash="14">.... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="9659" _msthidden="1" _msthash="15">12</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827012"><font _mstmutation="1" _msttexthash="205569" _msthash="16">4.2<span style="color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Concept Map</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="20332" _msthidden="1" _msthash="17">.... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="9763" _msthidden="1" _msthash="18">13</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827013"><font _mstmutation="1" _msttexthash="187616" _msthash="19">4.3<span style="color:windowtext;text-decoration:none" _mstmutation="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>gw_config</font><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="8970" _msthidden="1" _msthash="20">.. </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="9763" _msthidden="1" _msthash="21">13</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827014"><font _mstmutation="1" _msttexthash="338897" _msthash="22">4.4<span style="color:windowtext;text-decoration:none" _mstmutation="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>gw_report_info</font><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="8970" _msthidden="1" _msthash="23">.. </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="9867" _msthidden="1" _msthash="24">14</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827015"><font _mstmutation="1" _msttexthash="369369" _msthash="25">4.5<span style="color:windowtext;text-decoration:none" _mstmutation="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>gw_message_list</font><span style="color:windowtext;display:none;text-decoration:none"> </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="9867" _msthidden="1" _msthash="26">14</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827016"><font _mstmutation="1" _msttexthash="121121" _msthash="27">4.6<span style="color:windowtext;text-decoration:none" _mstmutation="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>gw_key</font><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4186" _msthidden="1" _msthash="28">. </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="9971" _msthidden="1" _msthash="29">15</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827017"><font _mstmutation="1" _msttexthash="244426" _msthash="30"><span lang="EN-AU" _mstmutation="1" _istranslated="1">4.7</span><span style="color:windowtext;
+text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-AU" _mstmutation="1" _istranslated="1">tenant_info</span></font><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="8970" _msthidden="1" _msthash="31">.. </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="9971" _msthidden="1" _msthash="32">15</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827018"><font _mstmutation="1" _msttexthash="192153" _msthash="33">4.8<span style="color:windowtext;text-decoration:none" _mstmutation="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>tenant_gw</font><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="8970" _msthidden="1" _msthash="34">.. </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="10075" _msthidden="1" _msthash="35">16</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827019"><font _mstmutation="1" _msttexthash="514631" _msthash="36">4.9<span style="color:windowtext;text-decoration:none" _mstmutation="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>tenant_north_config</font><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="8970" _msthidden="1" _msthash="37">.. </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="10075" _msthidden="1" _msthash="38">16</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827020"><font _mstmutation="1" _msttexthash="591617" _msthash="39">4.10<span style="color:windowtext;text-decoration:none" _mstmutation="1">&nbsp;&nbsp;&nbsp;&nbsp; </span>tenant_sourth_config</font><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="8970" _msthidden="1" _msthash="40">.. </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="10075" _msthidden="1" _msthash="41">16</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827021"><font _mstmutation="1" _msttexthash="667121" _msthash="42">4.11<span style="color:windowtext;text-decoration:none" _mstmutation="1">&nbsp;&nbsp;&nbsp;&nbsp; </span>tenant_hardware_config</font><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="8970" _msthidden="1" _msthash="43">.. </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="10179" _msthidden="1" _msthash="44">17</span></a></span></p>
+
+<p class="MsoToc1"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827022"><font _mstmutation="1" _msttexthash="258440" _msthash="45"><span style="color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span> 5 <span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Examples of use</span></span></font><span style="color:windowtext;display:none;
+text-decoration:none" _msttexthash="20332" _msthidden="1" _msthash="46">.... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="10179" _msthidden="1" _msthash="47">17</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827023"><font _mstmutation="1" _msttexthash="9614098" _msthash="48">5.1<span style="color:windowtext;text-decoration:none" _mstmutation="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang="EN-US" _mstmutation="1"><span lang="EN-US">编译ServerDemon</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="4186" _msthidden="1" _msthash="49">. </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="10179" _msthidden="1" _msthash="50">17</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827024"><font _mstmutation="1" _msttexthash="10042032" _msthash="51">5.2<span style="color:windowtext;text-decoration:none" _mstmutation="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang="EN-US" _mstmutation="1"><span lang="EN-US">运行ServerDemon</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="4186" _msthidden="1" _msthash="52">. </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="10179" _msthidden="1" _msthash="53">17</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827025"><font _mstmutation="1" _msttexthash="19591871" _msthash="54">5.3<span style="color:windowtext;text-decoration:none" _mstmutation="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang="EN-US" _mstmutation="1"><span lang="EN-US">从ManageTools</span></span><span lang="EN-US" _mstmutation="1"><span lang="EN-US">查看</span></span></font><span style="color:windowtext;display:none;
+text-decoration:none" _msttexthash="20332" _msthidden="1" _msthash="55">.... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="10387" _msthidden="1" _msthash="56">19</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_ServerDemonAndMySql.htm#_Toc196827026"><font _mstmutation="1" _msttexthash="296946" _msthash="57">5.4<span style="color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">View</span></span> <span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">from MySql</span></span></font><span style="color:windowtext;display:none;
+text-decoration:none" _msttexthash="20332" _msthidden="1" _msthash="58">.... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="9542" _msthidden="1" _msthash="59">20</span></a></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<h1><a name="_Toc196827007" _msttexthash="133653" _msthash="60"><span lang="EN-US" _istranslated="1"><span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span>1</span> Overview</a></h1>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="23476050" _msthash="61">Located in the <span lang="EN-US" _istranslated="1">ManageTools</span> solution, <span lang="EN-US" _istranslated="1">ServerDemon</span> is a <span lang="EN-US" _istranslated="1">C#</span>-based, cross-platform console application that can be deployed as an on-server server for <span lang="EN-US" _istranslated="1">Windows</span> and <span lang="EN-US" _istranslated="1">Linux</span>, and there are also cases where <span lang="EN-US" _istranslated="1">docker</span> is used.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="36027706" _msthash="62">The function of <span lang="EN-US" _istranslated="1">ServerDemon</span> is very simple, save all messages received by <span lang="EN-US" _istranslated="1">MQTT</span> to the <span lang="EN-US" _istranslated="1">MySql</span> database. The database schema is simple, involving only a few simple tables, but it's strong enough to support querying data by criteria such as gateway and message category.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="13864682" _msthash="63">The code of <span lang="EN-US" _istranslated="1">ServerDemon</span> is very simple, mainly the connection between <span lang="EN-US" _istranslated="1">MQTT</span> and <span lang="EN-US" _istranslated="1">MySql</span>, and the connection parameters are in the code, which can be modified as needed.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="6931873" _msthash="64">There is a <span lang="EN-US" _istranslated="1">MySql</span> icon button on the <span lang="EN-US" _istranslated="1">ManageTool</span> interface, which can be clicked to query the database information.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="15431286" _msthash="65">There is also an <span lang="EN-US" _istranslated="1">InfluxDB</span> icon button on the <span lang="EN-US" _istranslated="1">ManageTool</span> interface, and if you enable <span lang="EN-US" _istranslated="1">the InfluxDB</span> related code in the <span lang="EN-US" _istranslated="1">ServerDemon</span> code, you can also insert data into <span lang="EN-US" _istranslated="1">InfluxDB.</span></p>
+
+<h1><a name="_Toc196827008" _msttexthash="70512" _msthash="66"><span lang="EN-US">2<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang="EN-US">MySql</span></a></h1>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="22421763" _msthash="67">In order to quickly verify the system, you can install <span lang="EN-US" _istranslated="1">the MySql</span> database locally, and version <span lang="EN-US" _istranslated="1">9.01</span> is recommended (of course, it does not use any rare database features at all, and either version should be fine).</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="10808200" _msthash="68">The default connection mode in the source code is: <span lang="EN-US" _istranslated="1">127.0.0.1</span>, the default port, database name "<span lang="EN-US" _istranslated="1">gateway</span>", and the username and password are "<span lang="EN-US" _istranslated="1">user1</span>".</p>
+
+<h1><a name="_Toc196827009" _msttexthash="309751" _msthash="69"><span lang="EN-US" _istranslated="1"><span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span>3</span> Database Scripts</a></h1>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="8363394" _msthash="70">CREATE DATABASE&nbsp; IF NOT EXISTS `gateway`
+/*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016
+DEFAULT ENCRYPTION='N' */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="211926" _msthash="71">USE `gateway`;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1319864" _msthash="72">-- MySQL dump 10.13&nbsp; Distrib 8.0.38, for
+Win64 (x86_64)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="818610" _msthash="73">-- Host: 127.0.0.1&nbsp;&nbsp;&nbsp; Database: gateway</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--
+------------------------------------------------------</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="361634" _msthash="74">-- Server version 9.0.1</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="2190578" _msthash="75">/*!40101 SET
+@OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="2377557" _msthash="76">/*!40101 SET
+@OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="2182700" _msthash="77">/*!40101 SET
+@OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="375271" _msthash="78">/*!50503 SET NAMES utf8 */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="980265" _msthash="79">/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="549185" _msthash="80">/*!40103 SET TIME_ZONE='+00:00' */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="2271048" _msthash="81">/*!40014 SET
+@OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="3401814" _msthash="82">/*!40014 SET
+@OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="2851225" _msthash="83">/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO'
+*/;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1580332" _msthash="84">/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES,
+SQL_NOTES=0 */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1138553" _msthash="85">-- Table structure for table `gw_config`</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="709995" _msthash="86">DROP TABLE IF EXISTS `gw_config`;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="2118558" _msthash="87">/*!40101 SET @saved_cs_client&nbsp;&nbsp;&nbsp;&nbsp; =
+@@character_set_client */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1327846" _msthash="88">/*!50503 SET character_set_client = utf8mb4
+*/;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="479297" _msthash="89">CREATE TABLE `gw_config` (</span></p>
+
+<p class="MsoNormal" _msttexthash="66146886" _msthash="90"><span lang="EN-US">&nbsp; `gw_sn` varchar(30) NOT NULL COMMENT '</span>网关序列号<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal" _msttexthash="1250119" _msthash="91"><span lang="EN-US" _istranslated="1"> 'gw_model' varchar(30) DEFAULT NULL
+KWORD '</span>SAEED<span lang="EN-US" _istranslated="1">',</span></p>
+
+<p class="MsoNormal" _msttexthash="146292484" _msthash="92"><span lang="EN-US">&nbsp; `gw_iccid` varchar(30) DEFAULT NULL
+COMMENT 'ICCID</span>（如果有）<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal" _msttexthash="75035922" _msthash="93"><span lang="EN-US">&nbsp; `sw_version` varchar(45) DEFAULT NULL
+COMMENT '</span>软件版本<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal" _msttexthash="163734285" _msthash="94"><span lang="EN-US">&nbsp; `confirmed_data_sequence` int DEFAULT
+NULL COMMENT '</span>已确认的数据序列<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal" _msttexthash="100908691" _msthash="95"><span lang="EN-US">&nbsp; `last_data_sequence` int DEFAULT NULL
+COMMENT '</span>最新数据序列<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal" _msttexthash="1181375" _msthash="96"><span lang="EN-US" _istranslated="1"> 'use_gm' int DEFAULT NULL COMMENT '</span>synopsis<span lang="EN-US" _istranslated="1">',</span></p>
+
+<p class="MsoNormal" _msttexthash="1239927" _msthash="97"><span lang="EN-US" _istranslated="1"> 'key_seq' int DEFAULT NULL COMMENT '</span>??????(??????<span lang="EN-US" _istranslated="1">)',</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="339781" _msthash="98">&nbsp; PRIMARY KEY (`gw_sn`)</span></p>
+
+<p class="MsoNormal"><font _mstmutation="1" _msttexthash="345235176" _msthash="99"><span lang="EN-US" _mstmutation="1">) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci COMMENT='</span>网关配置（平台侧）</font><span lang="EN-US">';</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1986790" _msthash="100">/*!40101 SET character_set_client =
+@saved_cs_client */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="962780" _msthash="101">-- Dumping data for table `gw_config`</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="615030" _msthash="102">LOCK TABLES `gw_config` WRITE;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1209676" _msthash="103">/*!40000 ALTER TABLE `gw_config` DISABLE
+KEYS */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="3621436" _msthash="104">INSERT INTO 'gw_config' VALUES
+('GW-5G-VM-DELL','GW-5G',ZERO,ZERO,ZERO,ZERO,ZERO,ZERO);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1161927" _msthash="105">/*!40000 ALTER TABLE `gw_config` ENABLE
+KEYS */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="160238" _msthash="106">UNLOCK TABLES;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="981877" _msthash="107">-- Table structure for table `gw_key`</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="578409" _msthash="108">DROP TABLE IF EXISTS `gw_key`;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="2118558" _msthash="109">/*!40101 SET @saved_cs_client&nbsp;&nbsp;&nbsp;&nbsp; =
+@@character_set_client */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1327846" _msthash="110">/*!50503 SET character_set_client = utf8mb4
+*/;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="371930" _msthash="111">CREATE TABLE `gw_key` (</span></p>
+
+<p class="MsoNormal" _msttexthash="66146886" _msthash="112"><span lang="EN-US">&nbsp; `gw_sn` varchar(30) NOT NULL COMMENT '</span>网关序列号<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal" _msttexthash="33840352" _msthash="113"><span lang="EN-US">&nbsp; `gw_key_seq` int NOT NULL COMMENT 'key</span>标识<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1069237" _msthash="114"> 'gw_key' varchar(128) DEFAULT NULL
+HOW 'key',</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="878111" _msthash="115">&nbsp; PRIMARY KEY (`gw_sn`,`gw_key_seq`)</span></p>
+
+<p class="MsoNormal"><font _mstmutation="1" _msttexthash="106892422" _msthash="116"><span lang="EN-US" _mstmutation="1">) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci COMMENT='</span>网关<span lang="EN-US" _mstmutation="1">key</span>信息</font><span lang="EN-US">';</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1986790" _msthash="117">/*!40101 SET character_set_client =
+@saved_cs_client */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="817843" _msthash="118">-- Dumping data for table `gw_key`</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="495430" _msthash="119">LOCK TABLES `gw_key` WRITE;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1038882" _msthash="120">/*!40000 ALTER TABLE `gw_key` DISABLE KEYS
+*/;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="4844294" _msthash="121">INSERT INTO `gw_key` VALUES
+('GW-5G-VM-DELL',0,'123'),('GW-5G-VM-DELL',1,'12345'),('GW-5G-VM-DELL',2,'1234567');</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="994136" _msthash="122">/*!40000 ALTER TABLE `gw_key` ENABLE KEYS
+*/;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="160238" _msthash="123">UNLOCK TABLES;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1513460" _msthash="124">-- Table structure for table
+`gw_message_list`</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1030354" _msthash="125">DROP TABLE IF EXISTS `gw_message_list`;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="2118558" _msthash="126">/*!40101 SET @saved_cs_client&nbsp;&nbsp;&nbsp;&nbsp; =
+@@character_set_client */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1327846" _msthash="127">/*!50503 SET character_set_client = utf8mb4
+*/;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="747474" _msthash="128">CREATE TABLE `gw_message_list` (</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="625651" _msthash="129">&nbsp; `id` int NOT NULL AUTO_INCREMENT,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="658983" _msthash="130">&nbsp; `gw_sn` varchar(30) DEFAULT NULL,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="616512" _msthash="131">&nbsp; `func` varchar(30) DEFAULT NULL,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="704704" _msthash="132">&nbsp; `ts_str` varchar(30) DEFAULT NULL,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1455831" _msthash="133"> 'insert_time' datetime DEFAULT
+CURRENT_TIMESTAMP,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="688129" _msthash="134">&nbsp; `topic` varchar(255) DEFAULT NULL,</span></p>
+
+<p class="MsoNormal" _msttexthash="3281590" _msthash="135"><span lang="EN-US" _istranslated="1"> 'message' mediumtext COMMENT '</span>Message body, extra-long part is discarded<span lang="EN-US" _istranslated="1">',</span></p>
+
+<p class="MsoNormal" _msttexthash="66147627" _msthash="136"><span lang="EN-US" _istranslated="1"> 'uid' varchar(45) DEFAULT NULL COMMENT '</span>消息标识<span lang="EN-US" _istranslated="1">',</span></p>
+
+<p class="MsoNormal" _msttexthash="220530284" _msthash="137"><span lang="EN-US">&nbsp; `respond_for_uid` varchar(45) DEFAULT
+NULL COMMENT '</span>如果是应答，针对的<span lang="EN-US">uid',</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="521599" _msthash="138">&nbsp; `data_seq` int DEFAULT NULL,</span></p>
+
+<p class="MsoNormal" _msttexthash="4903340" _msthash="139"><span lang="EN-US" _istranslated="1"> `summary` varchar(255) DEFAULT NULL
+COMMENT '</span>Summary, parts that exceed length are discarded<span lang="EN-US" _istranslated="1">',</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="251433" _msthash="140">&nbsp; PRIMARY KEY (`id`),</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="913354" _msthash="141">&nbsp; KEY `i_sn` (`gw_sn`,`insert_time`)</span></p>
+
+<p class="MsoNormal"><font _mstmutation="1" _msttexthash="210043223" _msthash="142"><span lang="EN-US" _mstmutation="1">) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT
+CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='</span>网关消息列表</font><span lang="EN-US">';</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1986790" _msthash="143">/*!40101 SET character_set_client =
+@saved_cs_client */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1312337" _msthash="144">-- Dumping data for table `gw_message_list`</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="907049" _msthash="145">LOCK TABLES `gw_message_list` WRITE;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1609075" _msthash="146">/*!40000 ALTER TABLE `gw_message_list`
+DISABLE KEYS */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1555320" _msthash="147">/*!40000 ALTER TABLE `gw_message_list`
+ENABLE KEYS */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="160238" _msthash="148">UNLOCK TABLES;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1456403" _msthash="149">-- Table structure for table
+`gw_report_info`</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="980629" _msthash="150">DROP TABLE IF EXISTS `gw_report_info`;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="2118558" _msthash="151">/*!40101 SET @saved_cs_client&nbsp;&nbsp;&nbsp;&nbsp; =
+@@character_set_client */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1327846" _msthash="152">/*!50503 SET character_set_client = utf8mb4
+*/;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="704938" _msthash="153">CREATE TABLE `gw_report_info` (</span></p>
+
+<p class="MsoNormal" _msttexthash="66146886" _msthash="154"><span lang="EN-US">&nbsp; `gw_sn` varchar(30) NOT NULL COMMENT '</span>网关序列号<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal" _msttexthash="1250119" _msthash="155"><span lang="EN-US" _istranslated="1"> 'gw_model' varchar(30) DEFAULT NULL
+KWORD '</span>SAEED<span lang="EN-US" _istranslated="1">',</span></p>
+
+<p class="MsoNormal" _msttexthash="146292484" _msthash="156"><span lang="EN-US">&nbsp; `gw_iccid` varchar(30) DEFAULT NULL
+COMMENT 'ICCID</span>（如果有）<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal" _msttexthash="75035922" _msthash="157"><span lang="EN-US">&nbsp; `sw_version` varchar(45) DEFAULT NULL
+COMMENT '</span>软件版本<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal" _msttexthash="163734285" _msthash="158"><span lang="EN-US">&nbsp; `confirmed_data_sequence` int DEFAULT
+NULL COMMENT '</span>已确认的数据序列<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal" _msttexthash="100908691" _msthash="159"><span lang="EN-US">&nbsp; `last_data_sequence` int DEFAULT NULL
+COMMENT '</span>最新数据序列<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal" _msttexthash="203746283" _msthash="160"><span lang="EN-US">&nbsp; `start_time` varchar(30) DEFAULT NULL
+COMMENT '</span>启动时间（程序）<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal" _msttexthash="7639983" _msthash="161"><span lang="EN-US" _istranslated="1"> `last_time` varchar(30) DEFAULT NULL
+COMMENT '</span>The time of the last reported information (including the reported data)<span lang="EN-US" _istranslated="1">'</span></p>
+
+<p class="MsoNormal" _msttexthash="2953730" _msthash="162"><span lang="EN-US" _istranslated="1"> `last_data_time` varchar(30) DEFAULT NULL
+COMMENT '</span>WHEN DATA WAS LAST REPORTED<span lang="EN-US" _istranslated="1">',</span></p>
+
+<p class="MsoNormal" _msttexthash="1181375" _msthash="163"><span lang="EN-US" _istranslated="1"> 'use_gm' int DEFAULT NULL COMMENT '</span>synopsis<span lang="EN-US" _istranslated="1">',</span></p>
+
+<p class="MsoNormal" _msttexthash="1239927" _msthash="164"><span lang="EN-US" _istranslated="1"> 'key_seq' int DEFAULT NULL COMMENT '</span>??????(??????<span lang="EN-US" _istranslated="1">)',</span></p>
+
+<p class="MsoNormal" _msttexthash="1482806" _msthash="165"><span lang="EN-US" _istranslated="1"> 'current_key_seq' int DEFAULT NULL
+KWORD '</span>???(??????<span lang="EN-US" _istranslated="1">)',</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="339781" _msthash="166">&nbsp; PRIMARY KEY (`gw_sn`)</span></p>
+
+<p class="MsoNormal"><font _mstmutation="1" _msttexthash="116149488" _msthash="167"><span lang="EN-US" _mstmutation="1">) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci COMMENT='</span>网关列表</font><span lang="EN-US">';</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1986790" _msthash="168">/*!40101 SET character_set_client =
+@saved_cs_client */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1258751" _msthash="169">-- Dumping data for table `gw_report_info`</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="860288" _msthash="170">LOCK TABLES `gw_report_info` WRITE;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1546428" _msthash="171">/*!40000 ALTER TABLE `gw_report_info`
+DISABLE KEYS */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1493674" _msthash="172">/*!40000 ALTER TABLE `gw_report_info`
+ENABLE KEYS */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="160238" _msthash="173">UNLOCK TABLES;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1148225" _msthash="174">-- Table structure for table `tenant_gw`</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="717847" _msthash="175">DROP TABLE IF EXISTS `tenant_gw`;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="2118558" _msthash="176">/*!40101 SET @saved_cs_client&nbsp;&nbsp;&nbsp;&nbsp; =
+@@character_set_client */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1327846" _msthash="177">/*!50503 SET character_set_client = utf8mb4
+*/;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="485589" _msthash="178">CREATE TABLE `tenant_gw` (</span></p>
+
+<p class="MsoNormal" _msttexthash="62595936" _msthash="179"><span lang="EN-US" _istranslated="1"> 'tenant_name' varchar(64) NOT NULL
+HOW '</span>租户名称<span lang="EN-US" _istranslated="1">',</span></p>
+
+<p class="MsoNormal" _msttexthash="66146886" _msthash="180"><span lang="EN-US">&nbsp; `gw_sn` varchar(30) NOT NULL COMMENT '</span>网关序列号<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal" _msttexthash="134964518" _msthash="181"><span lang="EN-US">&nbsp; `gw_north_config_name` varchar(64)
+DEFAULT NULL COMMENT '</span>网关北向配置<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal" _msttexthash="137244432" _msthash="182"><span lang="EN-US">&nbsp; `gw_source_config_name` varchar(64)
+DEFAULT NULL COMMENT '</span>网关南向配置<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal" _msttexthash="148499819" _msthash="183"><span lang="EN-US">&nbsp; `gw_hardware_config_name` varchar(64)
+DEFAULT NULL COMMENT '</span>网关硬件配置<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="920088" _msthash="184">&nbsp; PRIMARY KEY (`tenant_name`,`gw_sn`)</span></p>
+
+<p class="MsoNormal"><font _mstmutation="1" _msttexthash="148618691" _msthash="185"><span lang="EN-US" _mstmutation="1">) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci COMMENT='</span>租户的网关</font><span lang="EN-US">';</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1986790" _msthash="186">/*!40101 SET character_set_client =
+@saved_cs_client */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="971672" _msthash="187">-- Dumping data for table `tenant_gw`</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="621062" _msthash="188">LOCK TABLES `tenant_gw` WRITE;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1217788" _msthash="189">/*!40000 ALTER TABLE `tenant_gw` DISABLE
+KEYS */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1170039" _msthash="190">/*!40000 ALTER TABLE `tenant_gw` ENABLE
+KEYS */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="160238" _msthash="191">UNLOCK TABLES;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1989572" _msthash="192">-- Table structure for table
+`tenant_hardware_config`</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1446406" _msthash="193">DROP TABLE IF EXISTS
+`tenant_hardware_config`;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="2118558" _msthash="194">/*!40101 SET @saved_cs_client&nbsp;&nbsp;&nbsp;&nbsp; =
+@@character_set_client */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1327846" _msthash="195">/*!50503 SET character_set_client = utf8mb4
+*/;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1105715" _msthash="196">CREATE TABLE `tenant_hardware_config` (</span></p>
+
+<p class="MsoNormal" _msttexthash="62595936" _msthash="197"><span lang="EN-US" _istranslated="1"> 'tenant_name' varchar(64) NOT NULL
+HOW '</span>租户名称<span lang="EN-US" _istranslated="1">',</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1253850" _msthash="198">&nbsp; `hardware_config_name` varchar(64) NOT
+NULL,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1539655" _msthash="199">&nbsp; `hardware_cinfig_data` varchar(16000)
+DEFAULT NULL,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1849692" _msthash="200">&nbsp; PRIMARY KEY
+(`tenant_name`,`hardware_config_name`)</span></p>
+
+<p class="MsoNormal"><font _mstmutation="1" _msttexthash="128115065" _msthash="201"><span lang="EN-US" _mstmutation="1">) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci COMMENT='</span>硬件配置</font><span lang="EN-US">';</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1986790" _msthash="202">/*!40101 SET character_set_client =
+@saved_cs_client */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1760408" _msthash="203">-- Dumping data for table
+`tenant_hardware_config`</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1293617" _msthash="204">LOCK TABLES `tenant_hardware_config` WRITE;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="2116829" _msthash="205">/*!40000 ALTER TABLE
+`tenant_hardware_config` DISABLE KEYS */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="2056067" _msthash="206">/*!40000 ALTER TABLE
+`tenant_hardware_config` ENABLE KEYS */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="160238" _msthash="207">UNLOCK TABLES;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1262027" _msthash="208">-- Table structure for table `tenant_info`</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="814437" _msthash="209">DROP TABLE IF EXISTS `tenant_info`;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="2118558" _msthash="210">/*!40101 SET @saved_cs_client&nbsp;&nbsp;&nbsp;&nbsp; =
+@@character_set_client */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1327846" _msthash="211">/*!50503 SET character_set_client = utf8mb4
+*/;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="565617" _msthash="212">CREATE TABLE `tenant_info` (</span></p>
+
+<p class="MsoNormal" _msttexthash="62595936" _msthash="213"><span lang="EN-US" _istranslated="1"> 'tenant_name' varchar(64) NOT NULL
+HOW '</span>租户名称<span lang="EN-US" _istranslated="1">',</span></p>
+
+<p class="MsoNormal" _msttexthash="56355793" _msthash="214"><span lang="EN-US" _istranslated="1"> 'tenant_contact' varchar(45) DEFAULT NULL
+HOW '</span>联系人<span lang="EN-US" _istranslated="1">',</span></p>
+
+<p class="MsoNormal" _msttexthash="51901876" _msthash="215"><span lang="EN-US">&nbsp; `tenant_phone_number` varchar(45) DEFAULT
+NULL COMMENT '</span>电话<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="563992" _msthash="216">&nbsp; PRIMARY KEY (`tenant_name`)</span></p>
+
+<p class="MsoNormal"><font _mstmutation="1" _msttexthash="107779867" _msthash="217"><span lang="EN-US" _mstmutation="1">) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci COMMENT='</span>租户信息</font><span lang="EN-US">';</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1986790" _msthash="218">/*!40101 SET character_set_client =
+@saved_cs_client */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1077440" _msthash="219">-- Dumping data for table `tenant_info`</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="709176" _msthash="220">LOCK TABLES `tenant_info` WRITE;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1340586" _msthash="221">/*!40000 ALTER TABLE `tenant_info` DISABLE
+KEYS */;</span></p>
+
+<p class="MsoNormal"><font _mstmutation="1" _msttexthash="116166570" _msthash="222"><span lang="EN-US" _mstmutation="1">INSERT INTO `tenant_info` VALUES
+('default_tenant','</span>联系人<span lang="EN-US" _mstmutation="1">','</span>电话</font><span lang="EN-US">');</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1290835" _msthash="223">/*!40000 ALTER TABLE `tenant_info` ENABLE
+KEYS */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="160238" _msthash="224">UNLOCK TABLES;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1785654" _msthash="225">-- Table structure for table
+`tenant_north_config`</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1266668" _msthash="226">DROP TABLE IF EXISTS `tenant_north_config`;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="2118558" _msthash="227">/*!40101 SET @saved_cs_client&nbsp;&nbsp;&nbsp;&nbsp; =
+@@character_set_client */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1327846" _msthash="228">/*!50503 SET character_set_client = utf8mb4
+*/;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="949416" _msthash="229">CREATE TABLE `tenant_north_config` (</span></p>
+
+<p class="MsoNormal" _msttexthash="62595936" _msthash="230"><span lang="EN-US" _istranslated="1"> 'tenant_name' varchar(64) NOT NULL
+HOW '</span>租户名称<span lang="EN-US" _istranslated="1">',</span></p>
+
+<p class="MsoNormal" _msttexthash="86518094" _msthash="231"><span lang="EN-US">&nbsp; `north_config_name` varchar(32) NOT NULL
+COMMENT '</span>配置名称<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1566409" _msthash="232"> 'north_type' varchar(45) DEFAULT NULL
+HOW 'MQTT/MQTTS',</span></p>
+
+<p class="MsoNormal" _msttexthash="26187122" _msthash="233"><span lang="EN-US">&nbsp; `host` varchar(45) DEFAULT NULL COMMENT '</span>地址<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal" _msttexthash="24989952" _msthash="234"><span lang="EN-US" _istranslated="1"> 'port' int DEFAULT NULL COMMENT '</span>端口<span lang="EN-US" _istranslated="1">',</span></p>
+
+<p class="MsoNormal" _msttexthash="44655533" _msthash="235"><span lang="EN-US" _istranslated="1"> 'user' varchar(45) DEFAULT NULL COMMENT '</span>用户名<span lang="EN-US" _istranslated="1">',</span></p>
+
+<p class="MsoNormal" _msttexthash="31656963" _msthash="236"><span lang="EN-US" _istranslated="1"> 'passowrd' varchar(45) DEFAULT NULL
+HOW '</span>密码<span lang="EN-US" _istranslated="1">',</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1646905" _msthash="237">&nbsp; PRIMARY KEY
+(`tenant_name`,`north_config_name`)</span></p>
+
+<p class="MsoNormal"><font _mstmutation="1" _msttexthash="213169632" _msthash="238"><span lang="EN-US" _mstmutation="1">) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci COMMENT='</span>租户的北向配置</font><span lang="EN-US">';</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1986790" _msthash="239">/*!40101 SET character_set_client =
+@saved_cs_client */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1567839" _msthash="240">-- Dumping data for table
+`tenant_north_config`</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1124955" _msthash="241">LOCK TABLES `tenant_north_config` WRITE;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1898013" _msthash="242">/*!40000 ALTER TABLE `tenant_north_config`
+DISABLE KEYS */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1840254" _msthash="243">/*!40000 ALTER TABLE `tenant_north_config`
+ENABLE KEYS */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="160238" _msthash="244">UNLOCK TABLES;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1789788" _msthash="245">-- Table structure for table
+`tenant_south_config`</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1270074" _msthash="246">DROP TABLE IF EXISTS `tenant_south_config`;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="2118558" _msthash="247">/*!40101 SET @saved_cs_client&nbsp;&nbsp;&nbsp;&nbsp; =
+@@character_set_client */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1327846" _msthash="248">/*!50503 SET character_set_client = utf8mb4
+*/;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="952198" _msthash="249">CREATE TABLE `tenant_south_config` (</span></p>
+
+<p class="MsoNormal" _msttexthash="62595936" _msthash="250"><span lang="EN-US" _istranslated="1"> 'tenant_name' varchar(64) NOT NULL
+HOW '</span>租户名称<span lang="EN-US" _istranslated="1">',</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1088477" _msthash="251">&nbsp; `south_config_name` varchar(64) NOT NULL,</span></p>
+
+<p class="MsoNormal" _msttexthash="72629713" _msthash="252"><span lang="EN-US">&nbsp; `south_config_data` mediumtext COMMENT '</span>配置数据<span lang="EN-US">',</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1650415" _msthash="253">&nbsp; PRIMARY KEY
+(`tenant_name`,`south_config_name`)</span></p>
+
+<p class="MsoNormal"><font _mstmutation="1" _msttexthash="188691217" _msthash="254"><span lang="EN-US" _mstmutation="1" _istranslated="1">) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci COMMENT='</span>南向配置(数采)</font><span lang="EN-US">';</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1986790" _msthash="255">/*!40101 SET character_set_client =
+@saved_cs_client */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1571661" _msthash="256">-- Dumping data for table
+`tenant_south_config`</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">--</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1127633" _msthash="257">LOCK TABLES `tenant_south_config` WRITE;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1901523" _msthash="258">/*!40000 ALTER TABLE `tenant_south_config`
+DISABLE KEYS */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1843764" _msthash="259">/*!40000 ALTER TABLE `tenant_south_config`
+ENABLE KEYS */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="160238" _msthash="260">UNLOCK TABLES;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="901394" _msthash="261">/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="807417" _msthash="262">/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1820182" _msthash="263">/*!40014 SET
+FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="1260038" _msthash="264">/*!40014 SET
+UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="2074137" _msthash="265">/*!40101 SET
+CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="2253953" _msthash="266">/*!40101 SET
+CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="2066441" _msthash="267">/*!40101 SET
+COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="911521" _msthash="268">/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" _msttexthash="728130" _msthash="269">-- Dump completed on 2025-04-29 12:03:05</span></p>
+
+<h1><a name="_Toc183096294"></a><a name="_Toc196827010" _msttexthash="270530" _msthash="270"><span lang="EN-US" style="font-size:16.0pt;line-height:115%;font-family:黑体" _istranslated="1"><span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span>4</span> <span style="font-size:16.0pt;line-height:115%;font-family:黑体" _istranslated="1">Database Design</span></a></h1>
+
+<h2><a name="_Toc183096295"></a><a name="_Toc196827011" _msttexthash="268710" _msthash="271"><span lang="EN-US" _istranslated="1">4.1<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span><span style="font-family:黑体" _istranslated="1">Table Summary</span></a></h2>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="margin-left:5.4pt;border-collapse:collapse;border:none">
+ <tbody><tr>
+  <td width="161" valign="top" style="width:120.5pt;border:solid windowtext 1.0pt;
+  background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="45981" _msthash="272">name</span></p>
+  </td>
+  <td width="321" valign="top" style="width:241.0pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span style="color:black" _msttexthash="163722" _msthash="273">illustrate</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width="161" valign="top" style="width:120.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="135200" _msthash="274">gw_config</span></p>
+  </td>
+  <td width="321" valign="top" style="width:241.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="1024868" _msthash="275">Gateway Configuration (Platform Side)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="161" valign="top" style="width:120.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="264485" _msthash="276">gw_report_info</span></p>
+  </td>
+  <td width="321" valign="top" style="width:241.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="2348775" _msthash="277">Gateway Reporting Information (Gateway-Side Configuration)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="161" valign="top" style="width:120.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="291369" _msthash="278">gw_message_list</span></p>
+  </td>
+  <td width="321" valign="top" style="width:241.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="497159" _msthash="279">List of gateway messages</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="161" valign="top" style="width:120.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="80093" _msthash="280">gw_key</span></p>
+  </td>
+  <td width="321" valign="top" style="width:241.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="500929" _msthash="281">Gateway <span lang="EN-US" _istranslated="1">key</span> information</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="161" valign="top" style="width:120.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="182728" _msthash="282">tenant_info</span></p>
+  </td>
+  <td width="321" valign="top" style="width:241.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="80366" _msthash="283">tenant</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="161" valign="top" style="width:120.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="138372" _msthash="284">tenant_gw</span></p>
+  </td>
+  <td width="321" valign="top" style="width:241.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="452322" _msthash="285">Tenant-owned gateways</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="161" valign="top" style="width:120.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="419471" _msthash="286">tenant_north_config</span></p>
+  </td>
+  <td width="321" valign="top" style="width:241.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="1276678" _msthash="287">Platform Connectivity Configuration (<span lang="EN-US" _istranslated="1">MQTT)</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width="161" valign="top" style="width:120.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="458484" _msthash="288">tenant_sourth_config</span></p>
+  </td>
+  <td width="321" valign="top" style="width:241.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="1364727" _msthash="289">Device connection configuration (<span lang="EN-US" _istranslated="1">MODBUS</span>, etc.)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="161" valign="top" style="width:120.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" _msttexthash="525070" _msthash="290">tenant_hardware_config</span></p>
+  </td>
+  <td width="321" valign="top" style="width:241.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" _msttexthash="579618" _msthash="291">Hardware Configuration (<span lang="EN-US" _istranslated="1">IP</span>)</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h2><a name="_Toc183096296"></a><a name="_Toc196827012" _msttexthash="205569" _msthash="292"><span lang="EN-US" _istranslated="1">4.2<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Concept Map</a></h2>
+
+<p class="MsoNormal"><span lang="EN-AU"><img width="556" height="322" src="./ctGateway_ServerDemonAndMySql_files/image001.png"></span></p>
+
+<h2><a name="_Toc183096297"></a><a name="_Toc196827013" _msttexthash="187616" _msthash="293"><span lang="EN-US">4.3<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="EN-US">gw_config</span></a></h2>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="8286304" _msthash="294">The configuration information on the gateway platform may be inconsistent with the actual configuration of the gateway.</p>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="margin-left:5.4pt;border-collapse:collapse;border:none">
+ <tbody><tr style="height:13.9pt">
+  <td width="181" nowrap="" valign="bottom" style="width:135.95pt;border:solid windowtext 1.0pt;
+  background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="95953" _msthash="295">Listing</span></p>
+  </td>
+  <td width="41" nowrap="" valign="bottom" style="width:30.8pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="66014" _msthash="296">empty</span></p>
+  </td>
+  <td width="119" nowrap="" valign="bottom" style="width:89.45pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="49374" _msthash="297">type</span></p>
+  </td>
+  <td width="140" nowrap="" valign="bottom" style="width:104.75pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="163722" _msthash="298">illustrate</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="181" nowrap="" valign="bottom" style="width:135.95pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="563381" _msthash="299">confirmed_data_sequence</span></p>
+  </td>
+  <td width="41" nowrap="" valign="bottom" style="width:30.8pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="300">YES</span></p>
+  </td>
+  <td width="119" nowrap="" valign="bottom" style="width:89.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="34567" _msthash="301">int</span></p>
+  </td>
+  <td width="140" nowrap="" valign="bottom" style="width:104.75pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="416572" _msthash="302">Confirmed data series</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="181" nowrap="" valign="bottom" style="width:135.95pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="112060" _msthash="303">gw_iccid</span></p>
+  </td>
+  <td width="41" nowrap="" valign="bottom" style="width:30.8pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="304">YES</span></p>
+  </td>
+  <td width="119" nowrap="" valign="bottom" style="width:89.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="132574" _msthash="305">varchar(30)</span></p>
+  </td>
+  <td width="140" nowrap="" valign="bottom" style="width:104.75pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal" _msttexthash="340158" _msthash="306"><span lang="EN-US" style="line-height:115%;color:black" _istranslated="1">ICCID</span> <span style="line-height:115%;color:black" _istranslated="1">(if available).</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="181" nowrap="" valign="bottom" style="width:135.95pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="115232" _msthash="307">gw_model</span></p>
+  </td>
+  <td width="41" nowrap="" valign="bottom" style="width:30.8pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="308">YES</span></p>
+  </td>
+  <td width="119" nowrap="" valign="bottom" style="width:89.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="132574" _msthash="309">varchar(30)</span></p>
+  </td>
+  <td width="140" nowrap="" valign="bottom" style="width:104.75pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="58825" _msthash="310">Model</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="181" nowrap="" valign="bottom" style="width:135.95pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="63544" _msthash="311">gw_sn</span></p>
+  </td>
+  <td width="41" nowrap="" valign="bottom" style="width:30.8pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="15314" _msthash="312">NO</span></p>
+  </td>
+  <td width="119" nowrap="" valign="bottom" style="width:89.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="132574" _msthash="313">varchar(30)</span></p>
+  </td>
+  <td width="140" nowrap="" valign="bottom" style="width:104.75pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="422344" _msthash="314">Gateway serial number</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="181" nowrap="" valign="bottom" style="width:135.95pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="98046" _msthash="315">key_seq</span></p>
+  </td>
+  <td width="41" nowrap="" valign="bottom" style="width:30.8pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="316">YES</span></p>
+  </td>
+  <td width="119" nowrap="" valign="bottom" style="width:89.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="34567" _msthash="317">int</span></p>
+  </td>
+  <td width="140" nowrap="" valign="bottom" style="width:104.75pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="254982" _msthash="318">Key ID (set value)</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="181" nowrap="" valign="bottom" style="width:135.95pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="381342" _msthash="319">last_data_sequence</span></p>
+  </td>
+  <td width="41" nowrap="" valign="bottom" style="width:30.8pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="320">YES</span></p>
+  </td>
+  <td width="119" nowrap="" valign="bottom" style="width:89.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="34567" _msthash="321">int</span></p>
+  </td>
+  <td width="140" nowrap="" valign="bottom" style="width:104.75pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="420602" _msthash="322">The latest data series</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="181" nowrap="" valign="bottom" style="width:135.95pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="164593" _msthash="323">sw_version</span></p>
+  </td>
+  <td width="41" nowrap="" valign="bottom" style="width:30.8pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="324">YES</span></p>
+  </td>
+  <td width="119" nowrap="" valign="bottom" style="width:89.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133809" _msthash="325">varchar(45)</span></p>
+  </td>
+  <td width="140" nowrap="" valign="bottom" style="width:104.75pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="290615" _msthash="326">Software Version</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="181" nowrap="" valign="bottom" style="width:135.95pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="78507" _msthash="327">use_gm</span></p>
+  </td>
+  <td width="41" nowrap="" valign="bottom" style="width:30.8pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="328">YES</span></p>
+  </td>
+  <td width="119" nowrap="" valign="bottom" style="width:89.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="34567" _msthash="329">int</span></p>
+  </td>
+  <td width="140" nowrap="" valign="bottom" style="width:104.75pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="1016860" _msthash="330">Whether or not to use national secrets</span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal" _msttexthash="106548" _msthash="331"><span lang="EN-US" _istranslated="1"> PK:</span><span lang="EN-US" _istranslated="1">gw_sn</span></p>
+
+<h2><a name="_Toc183096298"></a><a name="_Toc196827014" _msttexthash="338897" _msthash="332"><span lang="EN-US" _istranslated="1">4.4<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span><span lang="EN-US" _istranslated="1">gw_report_info</span></a></h2>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="13373139" _msthash="333">The information reported by the gateway is consistent with the actual information of the gateway but may not be consistent with the platform configuration.</p>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="margin-left:5.4pt;border-collapse:collapse;border:none">
+ <tbody><tr style="height:13.9pt">
+  <td width="178" nowrap="" valign="bottom" style="width:133.6pt;border:solid windowtext 1.0pt;
+  background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="95953" _msthash="334">Listing</span></p>
+  </td>
+  <td width="37" nowrap="" valign="bottom" style="width:28.0pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="66014" _msthash="335">empty</span></p>
+  </td>
+  <td width="85" nowrap="" valign="bottom" style="width:63.45pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="49374" _msthash="336">type</span></p>
+  </td>
+  <td width="204" nowrap="" valign="bottom" style="width:153.3pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="163722" _msthash="337">illustrate</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="178" nowrap="" valign="bottom" style="width:133.6pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="563381" _msthash="338">confirmed_data_sequence</span></p>
+  </td>
+  <td width="37" nowrap="" valign="bottom" style="width:28.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="339">YES</span></p>
+  </td>
+  <td width="85" nowrap="" valign="bottom" style="width:63.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="34567" _msthash="340">int</span></p>
+  </td>
+  <td width="204" nowrap="" valign="bottom" style="width:153.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="416572" _msthash="341">Confirmed data series</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="178" nowrap="" valign="bottom" style="width:133.6pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="294190" _msthash="342">current_key_seq</span></p>
+  </td>
+  <td width="37" nowrap="" valign="bottom" style="width:28.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="343">YES</span></p>
+  </td>
+  <td width="85" nowrap="" valign="bottom" style="width:63.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="34567" _msthash="344">int</span></p>
+  </td>
+  <td width="204" nowrap="" valign="bottom" style="width:153.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="536913" _msthash="345">Current Key ID (Usage Value)</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="178" nowrap="" valign="bottom" style="width:133.6pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="112060" _msthash="346">gw_iccid</span></p>
+  </td>
+  <td width="37" nowrap="" valign="bottom" style="width:28.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="347">YES</span></p>
+  </td>
+  <td width="85" nowrap="" valign="bottom" style="width:63.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="132574" _msthash="348">varchar(30)</span></p>
+  </td>
+  <td width="204" nowrap="" valign="bottom" style="width:153.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal" _msttexthash="340158" _msthash="349"><span lang="EN-US" style="line-height:115%;color:black" _istranslated="1">ICCID</span> <span style="line-height:115%;color:black" _istranslated="1">(if available).</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="178" nowrap="" valign="bottom" style="width:133.6pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="115232" _msthash="350">gw_model</span></p>
+  </td>
+  <td width="37" nowrap="" valign="bottom" style="width:28.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="351">YES</span></p>
+  </td>
+  <td width="85" nowrap="" valign="bottom" style="width:63.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="132574" _msthash="352">varchar(30)</span></p>
+  </td>
+  <td width="204" nowrap="" valign="bottom" style="width:153.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="58825" _msthash="353">Model</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="178" nowrap="" valign="bottom" style="width:133.6pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="63544" _msthash="354">gw_sn</span></p>
+  </td>
+  <td width="37" nowrap="" valign="bottom" style="width:28.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="15314" _msthash="355">NO</span></p>
+  </td>
+  <td width="85" nowrap="" valign="bottom" style="width:63.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="132574" _msthash="356">varchar(30)</span></p>
+  </td>
+  <td width="204" nowrap="" valign="bottom" style="width:153.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="422344" _msthash="357">Gateway serial number</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="178" nowrap="" valign="bottom" style="width:133.6pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="98046" _msthash="358">key_seq</span></p>
+  </td>
+  <td width="37" nowrap="" valign="bottom" style="width:28.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="359">YES</span></p>
+  </td>
+  <td width="85" nowrap="" valign="bottom" style="width:63.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="34567" _msthash="360">int</span></p>
+  </td>
+  <td width="204" nowrap="" valign="bottom" style="width:153.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="254982" _msthash="361">Key ID (set value)</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="178" nowrap="" valign="bottom" style="width:133.6pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="381342" _msthash="362">last_data_sequence</span></p>
+  </td>
+  <td width="37" nowrap="" valign="bottom" style="width:28.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="363">YES</span></p>
+  </td>
+  <td width="85" nowrap="" valign="bottom" style="width:63.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="34567" _msthash="364">int</span></p>
+  </td>
+  <td width="204" nowrap="" valign="bottom" style="width:153.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="420602" _msthash="365">The latest data series</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="178" nowrap="" valign="bottom" style="width:133.6pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="257205" _msthash="366">last_data_time</span></p>
+  </td>
+  <td width="37" nowrap="" valign="bottom" style="width:28.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="367">YES</span></p>
+  </td>
+  <td width="85" nowrap="" valign="bottom" style="width:63.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="132574" _msthash="368">varchar(30)</span></p>
+  </td>
+  <td width="204" nowrap="" valign="bottom" style="width:153.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="848536" _msthash="369">The last time the data was reported</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="178" nowrap="" valign="bottom" style="width:133.6pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="137410" _msthash="370">last_time</span></p>
+  </td>
+  <td width="37" nowrap="" valign="bottom" style="width:28.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="371">YES</span></p>
+  </td>
+  <td width="85" nowrap="" valign="bottom" style="width:63.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="132574" _msthash="372">varchar(30)</span></p>
+  </td>
+  <td width="204" nowrap="" valign="bottom" style="width:153.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="3142048" _msthash="373">The last time the information was reported (including the reported data)</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="178" nowrap="" valign="bottom" style="width:133.6pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="161083" _msthash="374">start_time</span></p>
+  </td>
+  <td width="37" nowrap="" valign="bottom" style="width:28.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="375">YES</span></p>
+  </td>
+  <td width="85" nowrap="" valign="bottom" style="width:63.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="132574" _msthash="376">varchar(30)</span></p>
+  </td>
+  <td width="204" nowrap="" valign="bottom" style="width:153.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="412464" _msthash="377">Startup Time (Program)</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="178" nowrap="" valign="bottom" style="width:133.6pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="164593" _msthash="378">sw_version</span></p>
+  </td>
+  <td width="37" nowrap="" valign="bottom" style="width:28.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="379">YES</span></p>
+  </td>
+  <td width="85" nowrap="" valign="bottom" style="width:63.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133809" _msthash="380">varchar(45)</span></p>
+  </td>
+  <td width="204" nowrap="" valign="bottom" style="width:153.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="290615" _msthash="381">Software Version</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="178" nowrap="" valign="bottom" style="width:133.6pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="78507" _msthash="382">use_gm</span></p>
+  </td>
+  <td width="37" nowrap="" valign="bottom" style="width:28.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="383">YES</span></p>
+  </td>
+  <td width="85" nowrap="" valign="bottom" style="width:63.45pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="34567" _msthash="384">int</span></p>
+  </td>
+  <td width="204" nowrap="" valign="bottom" style="width:153.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="1016860" _msthash="385">Whether or not to use national secrets</span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal" _msttexthash="106548" _msthash="386"><span lang="EN-US" _istranslated="1"> PK:</span><span lang="EN-US" _istranslated="1">gw_sn</span></p>
+
+<p class="MsoNormal"><span lang="EN-AU">&nbsp;</span></p>
+
+<h2><a name="_Toc183096299"></a><a name="_Toc196827015" _msttexthash="369369" _msthash="387"><span lang="EN-US">4.5<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="EN-US">gw_message_list</span></a></h2>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="1908218" _msthash="388">Gateway messages (extra-long messages are truncated).</p>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="margin-left:5.4pt;border-collapse:collapse;border:none">
+ <tbody><tr style="height:13.9pt">
+  <td width="128" nowrap="" valign="bottom" style="width:96.2pt;border:solid windowtext 1.0pt;
+  background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="95953" _msthash="389">Listing</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:50.75pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="66014" _msthash="390">empty</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="49374" _msthash="391">type</span></p>
+  </td>
+  <td width="200" nowrap="" valign="bottom" style="width:150.0pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="163722" _msthash="392">illustrate</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="128" nowrap="" valign="bottom" style="width:96.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="114530" _msthash="393">data_seq</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:50.75pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="394">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="34567" _msthash="395">int</span></p>
+  </td>
+  <td width="200" nowrap="" valign="bottom" style="width:150.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt"></td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="128" nowrap="" valign="bottom" style="width:96.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="47190" _msthash="396">func</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:50.75pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="397">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="132574" _msthash="398">varchar(30)</span></p>
+  </td>
+  <td width="200" nowrap="" valign="bottom" style="width:150.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt"></td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="128" nowrap="" valign="bottom" style="width:96.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="63544" _msthash="399">gw_sn</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:50.75pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="400">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="132574" _msthash="401">varchar(30)</span></p>
+  </td>
+  <td width="200" nowrap="" valign="bottom" style="width:150.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt"></td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="128" nowrap="" valign="bottom" style="width:96.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="19955" _msthash="402">id</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:50.75pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="15314" _msthash="403">NO</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="34567" _msthash="404">int</span></p>
+  </td>
+  <td width="200" nowrap="" valign="bottom" style="width:150.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="253799" _msthash="405">Auto-increment</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="128" nowrap="" valign="bottom" style="width:96.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="184613" _msthash="406">insert_time</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:50.75pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="407">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="115661" _msthash="408">datetime</span></p>
+  </td>
+  <td width="200" nowrap="" valign="bottom" style="width:150.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt"></td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="128" nowrap="" valign="bottom" style="width:96.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="95836" _msthash="409">message</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:50.75pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="410">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="162110" _msthash="411">Medium text</span></p>
+  </td>
+  <td width="200" nowrap="" valign="bottom" style="width:150.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="1624545" _msthash="412">The message body, the extra-long part is discarded</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="128" nowrap="" valign="bottom" style="width:96.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="290017" _msthash="413">respond_for_uid</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:50.75pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="414">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133809" _msthash="415">varchar(45)</span></p>
+  </td>
+  <td width="200" nowrap="" valign="bottom" style="width:150.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="661596" _msthash="416">If it is an answer, the <span lang="EN-US" _istranslated="1">UID</span> for it</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="128" nowrap="" valign="bottom" style="width:96.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="101660" _msthash="417">summary</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:50.75pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="418">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="145665" _msthash="419">varchar(255)</span></p>
+  </td>
+  <td width="200" nowrap="" valign="bottom" style="width:150.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="2162082" _msthash="420">Abstract, the portion that exceeds the length is discarded</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="128" nowrap="" valign="bottom" style="width:96.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="63011" _msthash="421">topic</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:50.75pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="422">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="145665" _msthash="423">varchar(255)</span></p>
+  </td>
+  <td width="200" nowrap="" valign="bottom" style="width:150.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt"></td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="128" nowrap="" valign="bottom" style="width:96.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="82953" _msthash="424">ts_str</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:50.75pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="425">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="132574" _msthash="426">varchar(30)</span></p>
+  </td>
+  <td width="200" nowrap="" valign="bottom" style="width:150.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt"></td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="128" nowrap="" valign="bottom" style="width:96.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="33267" _msthash="427">uid</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:50.75pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="428">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133809" _msthash="429">varchar(45)</span></p>
+  </td>
+  <td width="200" nowrap="" valign="bottom" style="width:150.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="119470" _msthash="430">Message ID</span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal" _msttexthash="7683832" _msthash="431"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PK</span>：<span lang="EN-US">id</span></p>
+
+<p class="MsoNormal"><font _mstmutation="1" _msttexthash="26260949" _msthash="432"><span lang="EN-AU" _mstmutation="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Index:gw_sn,insert_time(</span>不唯一</font><span lang="EN-AU">)</span></p>
+
+<h2><a name="_Toc183096300"></a><a name="_Toc196827016" _msttexthash="121121" _msthash="433"><span lang="EN-US">4.6<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="EN-US">gw_key</span></a></h2>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="402662" _msthash="434">Gateway key sequence.</p>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="margin-left:5.4pt;border-collapse:collapse;border:none">
+ <tbody><tr style="height:13.9pt">
+  <td width="129" nowrap="" valign="bottom" style="width:96.9pt;border:solid windowtext 1.0pt;
+  background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="95953" _msthash="435">Listing</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="66014" _msthash="436">empty</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="49374" _msthash="437">type</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="163722" _msthash="438">illustrate</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="129" nowrap="" valign="bottom" style="width:96.9pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="80093" _msthash="439">gw_key</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="440">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="145509" _msthash="441">varchar(128)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="34398" _msthash="442">key</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="129" nowrap="" valign="bottom" style="width:96.9pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="160277" _msthash="443">gw_key_seq</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="15314" _msthash="444">NO</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="34567" _msthash="445">int</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal" _msttexthash="234494" _msthash="446"><span lang="EN-US" style="line-height:115%;color:black" _istranslated="1">key</span> <span style="line-height:115%;color:black" _istranslated="1">identifier</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="129" nowrap="" valign="bottom" style="width:96.9pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="63544" _msthash="447">gw_sn</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="15314" _msthash="448">NO</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="132574" _msthash="449">varchar(30)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="422344" _msthash="450">Gateway serial number</span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal" _msttexthash="400595" _msthash="451"><span lang="EN-US" _istranslated="1"> PK:</span><span lang="EN-US" _istranslated="1">gw_sn,gw_key_seq</span></p>
+
+<h2><a name="_Toc196827017" _msttexthash="244426" _msthash="452"><span lang="EN-AU" _istranslated="1">4.7<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span><span lang="EN-AU" _istranslated="1">tenant_info</span></a></h2>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="margin-left:5.4pt;border-collapse:collapse;border:none">
+ <tbody><tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="95953" _msthash="453">Listing</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="66014" _msthash="454">empty</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="49374" _msthash="455">type</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="163722" _msthash="456">illustrate</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="261911" _msthash="457">tenant_contact</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="458">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133809" _msthash="459">varchar(45)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="94510" _msthash="460">Contact</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="180349" _msthash="461">tenant_name</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="15314" _msthash="462">NO</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133991" _msthash="463">varchar(64)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="155961" _msthash="464">Tenant name</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="421161" _msthash="465">tenant_phone_number</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="466">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133809" _msthash="467">varchar(45)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="59826" _msthash="468">Phone</span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h2><a name="_Toc196827018" _msttexthash="192153" _msthash="469"><span lang="EN-US">4.8<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="EN-US">tenant_gw</span></a></h2>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="margin-left:5.4pt;border-collapse:collapse;border:none">
+ <tbody><tr style="height:13.9pt">
+  <td width="191" nowrap="" valign="bottom" style="width:143.2pt;border:solid windowtext 1.0pt;
+  background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="95953" _msthash="470">Listing</span></p>
+  </td>
+  <td width="62" nowrap="" valign="bottom" style="width:46.3pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="66014" _msthash="471">empty</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.2pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="49374" _msthash="472">type</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.0pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="163722" _msthash="473">illustrate</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="191" nowrap="" valign="bottom" style="width:143.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="180349" _msthash="474">tenant_name</span></p>
+  </td>
+  <td width="62" nowrap="" valign="bottom" style="width:46.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="15314" _msthash="475">NO</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.2pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133991" _msthash="476">varchar(64)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="155961" _msthash="477">Tenant name</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="191" nowrap="" valign="bottom" style="width:143.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="559676" _msthash="478">gw_hardware_config_name</span></p>
+  </td>
+  <td width="62" nowrap="" valign="bottom" style="width:46.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="479">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.2pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133991" _msthash="480">varchar(64)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="799201" _msthash="481">Gateway hardware configuration</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="191" nowrap="" valign="bottom" style="width:143.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="449241" _msthash="482">gw_north_config_name</span></p>
+  </td>
+  <td width="62" nowrap="" valign="bottom" style="width:46.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="483">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.2pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133991" _msthash="484">varchar(64)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="1174329" _msthash="485">Northbound configuration of the gateway</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="191" nowrap="" valign="bottom" style="width:143.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="63544" _msthash="486">gw_sn</span></p>
+  </td>
+  <td width="62" nowrap="" valign="bottom" style="width:46.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="15314" _msthash="487">NO</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.2pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="132574" _msthash="488">varchar(30)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="422344" _msthash="489">Gateway serial number</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="191" nowrap="" valign="bottom" style="width:143.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="484887" _msthash="490">gw_source_config_name</span></p>
+  </td>
+  <td width="62" nowrap="" valign="bottom" style="width:46.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="491">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.2pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133991" _msthash="492">varchar(64)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="906178" _msthash="493">Gateway southbound configuration</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="191" nowrap="" valign="bottom" style="width:143.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="180349" _msthash="494">tenant_name</span></p>
+  </td>
+  <td width="62" nowrap="" valign="bottom" style="width:46.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="15314" _msthash="495">NO</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.2pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133991" _msthash="496">varchar(64)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="155961" _msthash="497">Tenant name</span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h2><a name="_Toc196827019" _msttexthash="514631" _msthash="498"><span lang="EN-US">4.9<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="EN-US">tenant_north_config</span></a></h2>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="margin-left:5.4pt;border-collapse:collapse;border:none">
+ <tbody><tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="95953" _msthash="499">Listing</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="66014" _msthash="500">empty</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="49374" _msthash="501">type</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="163722" _msthash="502">illustrate</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="180349" _msthash="503">tenant_name</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="15314" _msthash="504">NO</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133991" _msthash="505">varchar(64)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="155961" _msthash="506">Tenant name</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="49543" _msthash="507">host</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="508">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133809" _msthash="509">varchar(45)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="97565" _msthash="510">address</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="346489" _msthash="511">north_config_name</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="15314" _msthash="512">NO</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="132990" _msthash="513">varchar(32)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="351221" _msthash="514">Configuration name</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="164138" _msthash="515">north_type</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="516">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133809" _msthash="517">varchar(45)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="117533" _msthash="518">MQTT/MQTTS</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="120588" _msthash="519">passowrd</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="520">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133809" _msthash="521">varchar(45)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="120484" _msthash="522">password</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="50154" _msthash="523">port</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="524">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="34567" _msthash="525">int</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="50154" _msthash="526">port</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="49244" _msthash="527">user</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="528">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133809" _msthash="529">varchar(45)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="113997" _msthash="530">Username</span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h2><a name="_Toc196827020" _msttexthash="591617" _msthash="531"><span lang="EN-US">4.10<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+</span></span><span lang="EN-US">tenant_sourth_config</span></a></h2>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="margin-left:5.4pt;border-collapse:collapse;border:none">
+ <tbody><tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="95953" _msthash="532">Listing</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="66014" _msthash="533">empty</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="49374" _msthash="534">type</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="163722" _msthash="535">illustrate</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="345501" _msthash="536">south_config_data</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="537">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="162110" _msthash="538">Medium text</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="349427" _msthash="539">Configuration data</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="347295" _msthash="540">south_config_name</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="15314" _msthash="541">NO</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133991" _msthash="542">varchar(64)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black">&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="180349" _msthash="543">tenant_name</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="15314" _msthash="544">NO</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133991" _msthash="545">varchar(64)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="155961" _msthash="546">Tenant name</span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<h2><a name="_Toc196827021" _msttexthash="667121" _msthash="547"><span lang="EN-US">4.11<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+</span></span><span lang="EN-US">tenant_hardware_config</span></a></h2>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="margin-left:5.4pt;border-collapse:collapse;border:none">
+ <tbody><tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="95953" _msthash="548">Listing</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="66014" _msthash="549">empty</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="49374" _msthash="550">type</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#0F9ED5;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="163722" _msthash="551">illustrate</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="442182" _msthash="552">hardware_cinfig_data</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="24986" _msthash="553">YES</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="168727" _msthash="554">varchar(16000)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black">&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="445575" _msthash="555">hardware_config_name</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="15314" _msthash="556">NO</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133991" _msthash="557">varchar(64)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black">&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style="height:13.9pt">
+  <td width="157" nowrap="" valign="bottom" style="width:117.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="180349" _msthash="558">tenant_name</span></p>
+  </td>
+  <td width="68" nowrap="" valign="bottom" style="width:51.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="15314" _msthash="559">NO</span></p>
+  </td>
+  <td width="92" nowrap="" valign="bottom" style="width:69.25pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span lang="EN-US" style="line-height:115%;color:black" _msttexthash="133991" _msthash="560">varchar(64)</span></p>
+  </td>
+  <td width="201" nowrap="" valign="bottom" style="width:151.1pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.9pt">
+  <p class="MsoNormal"><span style="line-height:115%;color:black" _msttexthash="155961" _msthash="561">Tenant name</span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<h1><a name="_Toc196827022" _msttexthash="258440" _msthash="562"><span lang="EN-US" _istranslated="1"><span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span>5</span> Examples of use</a></h1>
+
+<h2><a name="_Toc196827023" _msttexthash="9614098" _msthash="563"><span lang="EN-US">5.1<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span>编译<span lang="EN-US">ServerDemon</span></a></h2>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="7952555" _msthash="564">Note that <span lang="EN-US" _istranslated="1">ServerDemon</span> and <span lang="EN-US" _istranslated="1">ManageTools</span> have two identical <span lang="EN-US" _istranslated="1">nuget</span> dependencies, and the <span lang="EN-US" _istranslated="1">MySQL</span> related parts are identical.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="5060393" _msthash="565">It can be run directly in <span lang="EN-US" _istranslated="1">Visual Studio</span>, or it can be packaged and run on <span lang="EN-US" _istranslated="1">a Windows</span> or <span lang="EN-US" _istranslated="1">Linux</span> server.</p>
+
+<h2><a name="_Toc196827024" _msttexthash="10042032" _msthash="566"><span lang="EN-US">5.2<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span>运行<span lang="EN-US">ServerDemon</span></a></h2>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="4172805" _msthash="567">If there is nothing wrong with the connection parameters, everything should be fine.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="108472" _msthash="568">Run logs:</p>
+
+<p class="MsoNormal"><span lang="EN-US"><img width="554" height="93" src="./ctGateway_ServerDemonAndMySql_files/image002.jpg" alt="graphical user interface, text
+
+The AI-generated content may not be correct." _mstalt="112926866" _msthash="569"></span></p>
+
+<p class="MsoNormal" _msttexthash="89549941" _msthash="570"><span lang="EN-US" style="color:#0F9ED5">2025-04-29
+13:28:25.620 tid </span><span style="color:#0F9ED5">主线程<span lang="EN-US"> [Info
+]C:\working\ctGateway\ManageTools\ServerDemon\Program.cs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :55</span>行<span lang="EN-US">&nbsp;&nbsp; :ServerDemon 2024.09.13 16:39</span></span></p>
+
+<p class="MsoNormal" _msttexthash="87571328" _msthash="571"><span lang="EN-US" style="color:#0F9ED5">2025-04-29
+13:28:25.633 tid </span><span style="color:#0F9ED5">主线程<span lang="EN-US"> [Info
+]C:\working\ctGateway\ManageTools\ServerDemon\Program.cs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :58</span>行<span lang="EN-US">&nbsp;&nbsp; :-debug</span></span></p>
+
+<p class="MsoNormal" _msttexthash="340337166" _msthash="572"><span lang="EN-US" style="color:#0F9ED5">2025-04-29
+13:28:25.633 tid </span><span style="color:#0F9ED5">主线程<span lang="EN-US"> [Info
+]C:\working\ctGateway\ManageTools\ServerDemon\Program.cs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :71</span>行<span lang="EN-US">&nbsp;&nbsp; :</span>调试模式：<span lang="EN-US">True</span></span></p>
+
+<p class="MsoNormal" _msttexthash="89875331" _msthash="573"><span lang="EN-US" style="color:#0F9ED5">2025-04-29
+13:28:25.634 tid </span><span style="color:#0F9ED5">主线程<span lang="EN-US"> [Info
+]C:\working\ctGateway\ManageTools\ServerDemon\Program.cs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :72</span>行<span lang="EN-US">&nbsp;&nbsp; :BaseInfluxDBTools.url =</span></span></p>
+
+<p class="MsoNormal" _msttexthash="88017943" _msthash="574"><span lang="EN-US" style="color:#0F9ED5">2025-04-29
+13:28:26.546 tid </span><span style="color:#0F9ED5">主线程<span lang="EN-US"> [Info
+]C:\working\ctGateway\ManageTools\ServerDemon\Program.cs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :19</span>行<span lang="EN-US">&nbsp;&nbsp; :GW-5G-VM-DELL</span></span></p>
+
+<p class="MsoNormal" _msttexthash="88018307" _msthash="575"><span lang="EN-US" style="color:#0F9ED5">2025-04-29
+13:28:26.547 tid </span><span style="color:#0F9ED5">主线程<span lang="EN-US"> [Info
+]C:\working\ctGateway\ManageTools\ServerDemon\Program.cs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :19</span>行<span lang="EN-US">&nbsp;&nbsp; :GW-5G-VM-DELL</span></span></p>
+
+<p class="MsoNormal" _msttexthash="88018307" _msthash="576"><span lang="EN-US" style="color:#0F9ED5">2025-04-29
+13:28:26.547 tid </span><span style="color:#0F9ED5">主线程<span lang="EN-US"> [Info
+]C:\working\ctGateway\ManageTools\ServerDemon\Program.cs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :19</span>行<span lang="EN-US">&nbsp;&nbsp; :GW-5G-VM-DELL</span></span></p>
+
+<p class="MsoNormal" _msttexthash="239015023" _msthash="577"><span lang="EN-US" style="color:#0F9ED5">2025-04-29
+13:28:26.624 tid </span><span style="color:#0F9ED5">主线程<span lang="EN-US"> [Info
+]C:\working\ctGateway\ManageTools\ServerDemon\Program.cs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :27</span>行<span lang="EN-US">&nbsp;&nbsp; :mysql</span>连接成功</span></p>
+
+<p class="MsoNormal" _msttexthash="4305249" _msthash="578"><span lang="EN-US" style="color:#0F9ED5" _istranslated="1">2025-04-29
+13:28:26.626 tid </span><span style="color:#0F9ED5" _istranslated="1">main thread<span lang="EN-US" _istranslated="1"> [info.]
+]: 0</span> rows<span lang="EN-US" _istranslated="1">:</span> total number of records<span lang="EN-US" _istranslated="1"> 3 </span>error<span lang="EN-US" _istranslated="1"> 0</span></span></p>
+
+<p class="MsoNormal" _msttexthash="357916091" _msthash="579"><span lang="EN-US" style="color:#0F9ED5">2025-04-29
+13:28:26.650 tid </span><span style="color:#0F9ED5">主线程<span lang="EN-US"> [Info
+]C:\working\ctGateway\ManageTools\ServerDemon\Program.cs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :48</span>行<span lang="EN-US">&nbsp;&nbsp; :Mqtt</span>客户端正在连接<span lang="EN-US">......</span></span></p>
+
+<p class="MsoNormal" _msttexthash="263055572" _msthash="580"><span lang="EN-US" style="color:#0F9ED5">2025-04-29
+13:28:26.657 tid </span><span style="color:#0F9ED5">主线程<span lang="EN-US"> [Info
+]C:\working\ctGateway\ManageTools\ServerDemon\Program.cs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :91</span>行<span lang="EN-US">&nbsp;&nbsp; :</span>成功连接到<span lang="EN-US">&nbsp; localtest MQTTS 127.0.0.1</span></span></p>
+
+<p class="MsoNormal" _msttexthash="313335841" _msthash="581"><span lang="EN-US" style="color:#0F9ED5">2025-04-29
+13:28:26.706 tid 11 [Info
+]C:\working\ctGateway\ManageTools\ServerDemon\Program.cs&nbsp;&nbsp; :48</span><span style="color:#0F9ED5">行<span lang="EN-US">&nbsp;&nbsp; :Mqtt</span>客户端连接成功<span lang="EN-US">(1).</span></span></p>
+
+<p class="MsoNormal" _msttexthash="2017431" _msthash="582"><span lang="EN-US" style="color:#0F9ED5" _istranslated="1">2025-04-29
+13:28:26.717 tid 11 [Info] :0</span><span style="color:#0F9ED5" _istranslated="1">:d<span lang="EN-US" _istranslated="1"> evice_gateway/reg </span></span></p>
+
+<p class="MsoNormal" _msttexthash="1800422" _msthash="583"><span lang="EN-US" style="color:#0F9ED5" _istranslated="1">2025-04-29
+13:28:26.718 tid 11 [Info] :0</span><span style="color:#0F9ED5" _istranslated="1">:d<span lang="EN-US" _istranslated="1"> evice_gateway/# </span></span></p>
+
+<p class="MsoNormal" _msttexthash="3606863" _msthash="584"><span lang="EN-US" style="color:#0F9ED5" _istranslated="1">2025-04-29
+13:28:40.794 tid 06 [Debug]: Line 0</span>: <span style="color:#0F9ED5" _istranslated="1">Message received<span lang="EN-US" _istranslated="1"> </span>from <span lang="EN-US" _istranslated="1">[GW-5G-VM-DELL].</span></span></p>
+
+<p class="MsoNormal" _msttexthash="51454689" _msthash="585"><span lang="EN-US" style="color:#0F9ED5">2025-04-29
+13:28:40.796 tid 06 [Info
+]C:\working\ctGateway\ManageTools\ServerDemon\Program.cs&nbsp;&nbsp; :37</span><span style="color:#0F9ED5">行<span lang="EN-US">&nbsp;&nbsp; :GW-5G-VM-DELL</span></span></p>
+
+<h2><a name="_Toc196827025" _msttexthash="501891" _msthash="586"><span lang="EN-US" _istranslated="1">5.3<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>View from <span lang="EN-US" _istranslated="1">ManageTools</span></a></h2>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="1178567" _msthash="587">There is a <span lang="EN-US" _istranslated="1">MySql</span> icon on the main interface:</p>
+
+<p class="MsoNormal"><span lang="EN-US"><img width="553" height="332" src="./ctGateway_ServerDemonAndMySql_files/image003.jpg" alt="The image contains the graphical user interface
+
+The AI-generated content may not be correct." _mstalt="125842184" _msthash="588"></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="430404" _msthash="589">Click on the <span lang="EN-US" _mstmutation="1" _istranslated="1">MySql</span> icon:</font></p>
+
+<p class="MsoNormal"><span lang="EN-US"><img width="554" height="414" src="./ctGateway_ServerDemonAndMySql_files/image004.jpg" alt="Graphical user interfaces, applications
+
+The AI-generated content may not be correct." _mstalt="132299869" _msthash="590"></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="4767061" _msthash="591">The function is actually quite messy, and it hasn't been seriously designed, which means it.</font></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="826891" _msthash="592">View all messages for the gateway:</font></p>
+
+<p class="MsoNormal"><span lang="EN-US"><img width="555" height="305" src="./ctGateway_ServerDemonAndMySql_files/image005.jpg" alt="Graphical user interface, application, table
+
+The AI-generated content may not be correct." _mstalt="158598830" _msthash="593"></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="16762512" _msthash="594">If the gateway is not in the <span lang="EN-US" _mstmutation="1" _istranslated="1">gw_config</span>, you can use the menu "Gateway Management" <span lang="EN-US" _mstmutation="1" _istranslated="1">-</span> "Update Registration Information to Configuration" to add the selected gateway to <span lang="EN-US" _mstmutation="1" _istranslated="1">the gw_config</span>.</font></p>
+
+<h2 _msttexthash="296946" _msthash="595"><span lang="EN-US" _istranslated="1">5.4<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span><span lang="EN-US" _istranslated="1"> </span><a name="_Toc196827026" _istranslated="1">View from <span lang="EN-US" _istranslated="1">MySql</span></a></h2>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="1710163" _msthash="596">The main thing is the message list <span lang="EN-US" _istranslated="1">gw_message_list</span>:</p>
+
+<p class="MsoNormal"><span lang="EN-US"><img width="554" height="406" id="图片 1" src="./ctGateway_ServerDemonAndMySql_files/image006.png"></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+</div>
+
+
+
+
+</body></html>

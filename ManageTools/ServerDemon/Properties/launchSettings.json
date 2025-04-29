@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ServerDemon": {
+      "commandName": "Project",
+      "commandLineArgs": "-debug"
+    }
+  }
+}

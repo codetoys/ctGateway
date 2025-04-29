@@ -13,6 +13,8 @@ Log files and data files are limited in size to ensure that there is no disk ful
 The data is saved instantly to ensure not lost data when power lost.<br>
 The data sequence number and confirmation mechanism ensure that there is no data loss from the gateway to the platform.<br>
 The storage capacity of the network is different depending on the amount of data, and the gateway supports data compression.<br>
+This program has been tested in harsh production environments in large quantities，<br>
+Performance, stability, reliability, and environmental adaptability have all been verified.<br>
 
 网关程序以C++实现，使用utf-8字符集。<br>
 支持Modbus和透传，支持MQTT和MQTTS。<br>
@@ -20,6 +22,8 @@ The storage capacity of the network is different depending on the amount of data
 数据即时存盘，确保断电不丢失。<br>
 数据序号和确认机制保证网关到平台不存在数据丢失。<br>
 断网存储能力取决于数据量，网关支持数据压缩。<br>
+这个程序已经经过了大批量恶劣生产环境的考验。<br>
+性能、稳定性、可靠性、环境适应性均经过了验证。<br>
 
 ### Source 源码
 subdirectory ctGateway<br>
@@ -56,6 +60,20 @@ C# .Net 8.0<br>
 基本功能仅仅依赖 MQTT 。<br>
 
 这个程序仅用作测试目的<br>
+
+## ServerDemon
+### introduction 介绍
+Simple server to insert all mqtt message into MySql database.<br>
+C# .Net 8.0<br>
+It also supported InfluxDB(in source code).
+
+The program is just a demo.<br>
+
+用来把mqtt消息插入MySql数据库的服务程序。<br>
+C# .Net 8.0<br>
+也支持InfluxDB（在源码里）。
+
+这个程序只是个演示<br>
 
 ## Document 文档
 Please see the file [index.html](https://codetoys.github.io/ctGateway/index.html) , English and Chinese.<br>
@@ -227,3 +245,13 @@ QJ57B_1A 是一款测量电缆电阻的仪器.<br>
 Some of the adapted protocols will be available in an extended manner<br>
 部分适配过的协议将以扩展的方式提供<br>
 DLT645,Siemens S7,OPC-UA<br>
+
+7. ServerDemon and MySql<br>
+Connection info just in source code.<br>
+连接信息就在源码里。
+
+8. ManageTools and MySql<br>
+Connection info is ("127.0.0.1", "user1", "user1", "gateway").<br>
+Of course, I could change to parameterization.<br>
+连接信息是("127.0.0.1", "user1", "user1", "gateway")。<br>
+当然，我可以改成参数化的。<br>
