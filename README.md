@@ -71,13 +71,17 @@ The program is just a demo.<br>
 
 用来把mqtt消息插入MySql数据库的服务程序。<br>
 C# .Net 8.0<br>
-也支持InfluxDB（在源码里）。
+也支持InfluxDB（在源码里）。<br>
 
 这个程序只是个演示<br>
+
+------------------
 
 ## Document 文档
 Please see the file [index.html](https://codetoys.github.io/ctGateway/index.html) , English and Chinese.<br>
 请看文件 [index.html](https://codetoys.github.io/ctGateway/index.html) ，英文和中文。<br>
+
+------------------
 
 ### Quick Guide 快速指南
 1. Compile and run 编译和运行<br>

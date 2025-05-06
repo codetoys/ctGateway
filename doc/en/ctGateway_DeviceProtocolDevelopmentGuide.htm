@@ -1,0 +1,1408 @@
+
+<!-- saved from url=(0080)file:///C:/working/ctGateway/doc/zh/ctGateway_DeviceProtocolDevelopmentGuide.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:等线;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"等线 Light";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@等线 Light";}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:等线;}
+h1
+	{mso-style-link:"标题 1 字符";
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:21.6pt;
+	text-indent:-21.6pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:24.0pt;
+	font-family:"等线 Light";
+	color:#0F4761;
+	font-weight:normal;}
+h2
+	{mso-style-link:"标题 2 字符";
+	margin-top:8.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:28.8pt;
+	text-indent:-28.8pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:20.0pt;
+	font-family:"等线 Light";
+	color:#0F4761;
+	font-weight:normal;}
+h3
+	{mso-style-link:"标题 3 字符";
+	margin-top:8.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:36.0pt;
+	text-indent:-36.0pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"等线 Light";
+	color:#0F4761;
+	font-weight:normal;}
+h4
+	{mso-style-link:"标题 4 字符";
+	margin-top:4.0pt;
+	margin-right:0cm;
+	margin-bottom:2.0pt;
+	margin-left:43.2pt;
+	text-indent:-43.2pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:等线;
+	color:#0F4761;
+	font-weight:normal;}
+h5
+	{mso-style-link:"标题 5 字符";
+	margin-top:4.0pt;
+	margin-right:0cm;
+	margin-bottom:2.0pt;
+	margin-left:50.4pt;
+	text-indent:-50.4pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:等线;
+	color:#0F4761;
+	font-weight:normal;}
+h6
+	{mso-style-link:"标题 6 字符";
+	margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:57.6pt;
+	text-indent:-57.6pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:等线;
+	color:#0F4761;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-link:"标题 7 字符";
+	margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:64.8pt;
+	text-indent:-64.8pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:等线;
+	color:#595959;
+	font-weight:bold;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-link:"标题 8 字符";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:72.0pt;
+	text-indent:-72.0pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:等线;
+	color:#595959;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-link:"标题 9 字符";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:79.2pt;
+	text-indent:-79.2pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:等线;
+	color:#595959;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:等线;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:21.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:等线;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:42.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:等线;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"标题 字符";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	text-align:center;
+	font-size:28.0pt;
+	font-family:"等线 Light";
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"标题 字符";
+	margin:0cm;
+	text-align:center;
+	font-size:28.0pt;
+	font-family:"等线 Light";
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"标题 字符";
+	margin:0cm;
+	text-align:center;
+	font-size:28.0pt;
+	font-family:"等线 Light";
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"标题 字符";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	text-align:center;
+	font-size:28.0pt;
+	font-family:"等线 Light";
+	letter-spacing:-.5pt;}
+a:link, span.MsoHyperlink
+	{color:#467886;
+	text-decoration:underline;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"等线 Light";
+	color:#0F4761;}
+span.1
+	{mso-style-name:"标题 1 字符";
+	mso-style-link:"标题 1";
+	font-family:"等线 Light";
+	color:#0F4761;}
+span.2
+	{mso-style-name:"标题 2 字符";
+	mso-style-link:"标题 2";
+	font-family:"等线 Light";
+	color:#0F4761;}
+span.3
+	{mso-style-name:"标题 3 字符";
+	mso-style-link:"标题 3";
+	font-family:"等线 Light";
+	color:#0F4761;}
+span.a
+	{mso-style-name:"标题 字符";
+	mso-style-link:标题;
+	font-family:"等线 Light";
+	letter-spacing:-.5pt;}
+.MsoChpDefault
+	{font-size:11.0pt;
+	font-family:等线;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang="ZH-CN" link="#467886" vlink="#96607D" style="word-wrap:break-word;
+text-justify-trim:punctuation">
+
+<div class="WordSection1" style="layout-grid:15.6pt">
+
+<p class="MsoTitle" _msttexthash="869778" _msthash="0">Device Protocol Development Guide</p>
+
+<p class="MsoTocHeading" _msttexthash="141843" _msthash="1">directory</p>
+
+<p class="MsoToc1"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_DeviceProtocolDevelopmentGuide.htm#_Toc197459672"><font _mstmutation="1" _msttexthash="196131" _msthash="2"><span style="color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span> 1 <span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Basic design</span></span></font><span style="color:windowtext;display:none;
+text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="3">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4459" _msthidden="1" _msthash="4">1</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_DeviceProtocolDevelopmentGuide.htm#_Toc197459673"><font _mstmutation="1" _msttexthash="1241994" _msthash="5">1.1<span style="color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Device Interface and Protocol Pointers</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="6">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4459" _msthidden="1" _msthash="7">1</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_DeviceProtocolDevelopmentGuide.htm#_Toc197459674"><font _mstmutation="1" _msttexthash="1375621" _msthash="8">1.2<span style="color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Discovery and Loading of Custom Protocols</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="9">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4459" _msthidden="1" _msthash="10">1</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_DeviceProtocolDevelopmentGuide.htm#_Toc197459675"><font _mstmutation="1" _msttexthash="201968" _msthash="11">1.3<span style="color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Sample Code</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="12">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4550" _msthidden="1" _msthash="13">2</span></a></span></p>
+
+<p class="MsoToc1"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_DeviceProtocolDevelopmentGuide.htm#_Toc197459676"><font _mstmutation="1" _msttexthash="173199" _msthash="14"><span style="color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span> 2 <span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">References</span></span></font><span style="color:windowtext;display:none;
+text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="15">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4550" _msthidden="1" _msthash="16">2</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_DeviceProtocolDevelopmentGuide.htm#_Toc197459677"><font _mstmutation="1" _msttexthash="1412294" _msthash="17">2.1<span style="color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Configuration structure of the framework</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="18">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4550" _msthidden="1" _msthash="19">2</span></a></span></p>
+
+<p class="MsoToc3" style="margin-left:44.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_DeviceProtocolDevelopmentGuide.htm#_Toc197459678"><font _mstmutation="1" _msttexthash="630643" _msthash="20">2.1.1<span style="color:windowtext;text-decoration:none" _mstmutation="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>InterfaceDeviceConfig</font><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4186" _msthidden="1" _msthash="21">. </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4550" _msthidden="1" _msthash="22">2</span></a></span></p>
+
+<p class="MsoToc3" style="margin-left:44.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_DeviceProtocolDevelopmentGuide.htm#_Toc197459679"><font _mstmutation="1" _msttexthash="286780" _msthash="23">2.1.2<span style="color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">ProtocolSvr</span></span></font><span style="color:windowtext;display:none;text-decoration:none"> </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4641" _msthidden="1" _msthash="24">3</span></a></span></p>
+
+<p class="MsoToc3" style="margin-left:44.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_DeviceProtocolDevelopmentGuide.htm#_Toc197459680"><font _mstmutation="1" _msttexthash="140881" _msthash="25">2.1.3<span style="color:windowtext;text-decoration:none" _mstmutation="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Device</font><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4186" _msthidden="1" _msthash="26">. </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="4732" _msthidden="1" _msthash="27">4</span></a></span></p>
+
+<p class="MsoToc3" style="margin-left:44.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_DeviceProtocolDevelopmentGuide.htm#_Toc197459681"><font _mstmutation="1" _msttexthash="166088" _msthash="28">2.1.4<span style="color:windowtext;text-decoration:none" _mstmutation="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Channel</font><span style="color:windowtext;display:none;text-decoration:none"> </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="5096" _msthidden="1" _msthash="29">8</span></a></span></p>
+
+<p class="MsoToc2" style="margin-left:22.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_DeviceProtocolDevelopmentGuide.htm#_Toc197459682"><font _mstmutation="1" _msttexthash="822965" _msthash="30">2.2<span style="color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span>IProtocol <span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">protocol interface</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="31">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="9971" _msthidden="1" _msthash="32">15</span></a></span></p>
+
+<p class="MsoToc3" style="margin-left:44.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_DeviceProtocolDevelopmentGuide.htm#_Toc197459683"><font _mstmutation="1" _msttexthash="201825" _msthash="33">2.2.1<span style="color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Overview</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="34">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="9971" _msthidden="1" _msthash="35">15</span></a></span></p>
+
+<p class="MsoToc3" style="margin-left:44.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_DeviceProtocolDevelopmentGuide.htm#_Toc197459684"><font _mstmutation="1" _msttexthash="464841" _msthash="36">2.2.2<span style="color:windowtext;text-decoration:none" _mstmutation="1" _istranslated="1"> </span><span lang="EN-US" _mstmutation="1" _istranslated="1"><span lang="EN-US" _istranslated="1">Custom parameters</span></span></font><span style="color:windowtext;
+display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="37">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="10075" _msthidden="1" _msthash="38">16</span></a></span></p>
+
+<p class="MsoToc3" style="margin-left:44.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_DeviceProtocolDevelopmentGuide.htm#_Toc197459685"><font _mstmutation="1" _msttexthash="372437" _msthash="39">2.2.3<span style="color:windowtext;text-decoration:none" _mstmutation="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>IProtocolParam</font><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="40">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="10179" _msthidden="1" _msthash="41">17</span></a></span></p>
+
+<p class="MsoToc3" style="margin-left:44.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_DeviceProtocolDevelopmentGuide.htm#_Toc197459686"><font _mstmutation="1" _msttexthash="296660" _msthash="42">2.2.4<span style="color:windowtext;text-decoration:none" _mstmutation="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>IDeviceParam</font><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="43">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="10283" _msthidden="1" _msthash="44">18</span></a></span></p>
+
+<p class="MsoToc3" style="margin-left:44.0pt"><span lang="EN-US"><a href="file:///C:/working/ctGateway/doc/zh/ctGateway_DeviceProtocolDevelopmentGuide.htm#_Toc197459687"><font _mstmutation="1" _msttexthash="329693" _msthash="45">2.2.5<span style="color:windowtext;text-decoration:none" _mstmutation="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>IChannelParam</font><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="14352" _msthidden="1" _msthash="46">... </span><span style="color:windowtext;display:none;text-decoration:none" _msttexthash="10283" _msthidden="1" _msthash="47">18</span></a></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<h1><a name="_Toc197459672" _msttexthash="196131" _msthash="48"><span lang="EN-US" _istranslated="1"><span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span>1</span> Basic design</a></h1>
+
+<h2><a name="_Toc197459673" _msttexthash="1241994" _msthash="49"><span lang="EN-US" _istranslated="1">1.1<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Device Interface and Protocol Pointers</a></h2>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="22786764" _msthash="50">Each device interface (referred to as <span lang="EN-US" _istranslated="1">an Interface</span> in code) contains a protocol pointer that points to a <span lang="EN-US" _istranslated="1">ProtocolSvr</span> object, which is created based on the configured protocol when the configuration is loaded.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="55876457" _msthash="51">Currently, if multiple device interfaces use the same protocol, the built-in protocol does not share the protocol object. Of course, this is only because these protocols don't have much data to share, and if necessary, multiple device interfaces can share a protocol object or even different protocols can share protocol objects.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="102420214" _msthash="52">Each device interface has only one protocol pointer, so all devices under this device interface can only be the same protocol. In the case of multiple devices under a device interface, a bus structure such as a serial port is usually used, and all devices on the bus have the same protocol and communication parameters. In special cases, it is also possible to write a complex protocol that alternately reads different devices with different parameters.</p>
+
+<h2><a name="_Toc197459674" _msttexthash="1375621" _msthash="53"><span lang="EN-US" _istranslated="1">1.2<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Discovery and Loading of Custom Protocols</a></h2>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="16236636" _msthash="54">Custom protocols are implemented in the form of dynamic libraries, where the program scans for all the protocols required for dynamic library loading for specific prefixes.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="13820820" _msthash="55">The entry point required for the dynamic library is "<span lang="EN-US" _istranslated="1">CreateIProtocol</span>", the declaration is located in "<span lang="EN-US" _istranslated="1">interface/IProtocol.h</span>", and the declaration is as follows:</p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="106405" _msthash="56">extern "C"</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="6372691" _msthash="57">The protocol driver provides this interface so that the main program obtains the protocol object pointer</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="2718781" _msthash="58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DLL_PUBLIC
+IProtocol* CreateIProtocol(char const* ProtocolCode);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">}</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="1877083" _msthash="59">Obviously, all the secrets are hidden in <span lang="EN-US" _istranslated="1">the IProtocol</span>.</p>
+
+<h2><a name="_Toc197459675" _msttexthash="201968" _msthash="60"><span lang="EN-US" _istranslated="1">1.3<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Sample Code</a></h2>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="6056466" _msthash="61">Below the <span lang="EN-US" _istranslated="1">gwprocotol</span> directory is an example protocol that functions the same as a tunneling protocol.</p>
+
+<p class="MsoNormal"><span lang="EN-US"><img width="372" height="201" id="图片 1" src="./ctGateway_DeviceProtocolDevelopmentGuide_files/image001.png" alt="Graphical user interface, text, applications
+
+The AI-generated content may not be correct." _mstalt="157191814" _msthash="62"></span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="2181972" _msthash="63">Refer to or modify this code to implement a custom protocol.</p>
+
+<h1><a name="_Toc197459676" _msttexthash="173199" _msthash="64"><span lang="EN-US" _istranslated="1"><span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span>2</span> References</a></h1>
+
+<h2><a name="_Toc197459677" _msttexthash="1412294" _msthash="65"><span lang="EN-US" _istranslated="1">2.1<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Configuration structure of the framework</a></h2>
+
+<h3><a name="_Toc197459678" _msttexthash="630643" _msthash="66"><span lang="EN-US">2.1.1<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="EN-US">InterfaceDeviceConfig</span></a></h3>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="5598970" _msthash="67">A configuration of a device interface that contains multiple devices. The structure is as follows:</p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="713258" _msthash="68">struct
+InterfaceDeviceConfig</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">{</span></p>
+
+<p class="MsoNormal" _msttexthash="103804259" _msthash="69"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> string
+protocolCode; //MODBUS</span><span style="color:#00B0F0" _istranslated="1">，<span lang="EN-US" _istranslated="1">OPCUA</span>，<span lang="EN-US" _istranslated="1">DLT645</span>，<span lang="EN-US" _istranslated="1">S7</span></span></p>
+
+<p class="MsoNormal" _msttexthash="1478256" _msthash="70"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> string
+interfaceCode; </span><span style="color:#00B0F0" _istranslated="1">The name of the interface</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="510237" _msthash="71">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vector&lt;Device*
+&gt; devices;</span></p>
+
+<p class="MsoNormal" _msttexthash="2524977" _msthash="72"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> ProtocolSvr*
+_ProtocolSvr = nullptr; </span><span style="color:#00B0F0" _istranslated="1">Runtime Protocol Service</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="2144597" _msthash="73">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; InterfaceState
+_InterfaceState = InterfaceState::DEFAULT;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1438827" _msthash="74">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; string
+ToString(bool withDetail = true)const;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="637780" _msthash="75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; string
+AllDeviceName()const</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="286455" _msthash="76">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stringstream
+ss;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="371475" _msthash="77">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for
+(auto&amp; v : devices)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="416936" _msthash="78">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ss
+&lt;&lt; v-&gt;deviceCode &lt;&lt; ";";</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="245336" _msthash="79">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return
+ss.str();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">};</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="6146790" _msthash="80">The structure is fairly simple, consisting mainly of an array of devices and protocol service pointers.</font></p>
+
+<h3><a name="_Toc197459679" _msttexthash="286780" _msthash="81"><span lang="EN-US" _istranslated="1">2.1.2<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span><span lang="EN-US" _istranslated="1">ProtocolSvr</span></a></h3>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="17790227" _msthash="82">The protocol service is not an interface, but an execution framework, which uses a protocol interface as a parameter and calls the protocol interface to perform protocol processing.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="1307228" _msthash="83">The Agreement Service is defined as follows:</p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1119144" _msthash="84">class ProtocolSvr :
+private IWorkThread</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="442364" _msthash="85">private://IWorkThread</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="3564912" _msthash="86">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual void
+worker_job()override { pIProtocol-&gt;protocol_process_job(); }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="4086836" _msthash="87">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual void
+timer_job()override { pIProtocol-&gt;protocol_process_timer_job(); }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="652106" _msthash="88">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CWorkerThread
+m_WorkThread;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="109265" _msthash="89">private:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="455442" _msthash="90">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IProtocol*
+pIProtocol;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="88127" _msthash="91">public:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1315509" _msthash="92">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ProtocolSvr(IProtocol
+* p):pIProtocol(p){}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="540098" _msthash="93">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IProtocol*
+getIProtocol()</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="338312" _msthash="94">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return
+pIProtocol;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="3125798" _msthash="95">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; string
+getProtocolCode()const { return pIProtocol-&gt;m_ProtocolCode; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="2704650" _msthash="96">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bool
+isSerialPort()const { return pIProtocol-&gt;m_isSerialPort; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="116493" _msthash="97">initiate</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="507585" _msthash="98">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bool
+StartProtocolSvr();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="161590" _msthash="99">activation</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="405470" _msthash="100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void
+ProtoSvrActive()</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="964262" _msthash="101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_WorkThread.ActiveWorkerThread();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">};</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="3014700" _msthash="102">This is a threading framework with a timed loop plus manual triggering.</font></p>
+
+<h3><a name="_Toc197459680" _msttexthash="140881" _msthash="103"><span lang="EN-US">2.1.3<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="EN-US">Device</span></a></h3>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="9210123" _msthash="104">The device object, which is the primary object, has a lot of properties and contains a set of channels. The definition is as follows:</p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">//</span><span style="color:#00B0F0" _msttexthash="141011" _msthash="105">equipment</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="203567" _msthash="106">struct Device</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1228084" _msthash="107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Device(IDeviceParam*
+p) :deviceParam(p) {}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal" _msttexthash="6492421" _msthash="108"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> string deviceCode; </span><span style="color:#00B0F0" _istranslated="1">The code of a device, which uniquely identifies a device and is unique across interfaces</span></p>
+
+<p class="MsoNormal" _msttexthash="6571838" _msthash="109"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> int rate =
+0; </span><span style="color:#00B0F0" _istranslated="1">This value cannot be higher than the value set for all channels every millisecond of acquisition</span></p>
+
+<p class="MsoNormal" _msttexthash="2698787" _msthash="110"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> IDeviceParam*
+deviceParam; </span><span style="color:#00B0F0" _istranslated="1">Device parameters, protocol-related</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal" _msttexthash="1783535" _msthash="111"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> vector&lt;Channel*&gt;
+channels; </span><span style="color:#00B0F0" _istranslated="1">The channel of the device</span></p>
+
+<p class="MsoNormal" _msttexthash="1830608" _msthash="112"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> LockedList&lt;WriteInfo
+&gt; writeList; </span><span style="color:#00B0F0" _istranslated="1">List to be written</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1506947" _msthash="113">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DeviceState
+_DeviceState = DeviceState::DEFAULT;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal" _msttexthash="1201304" _msthash="114"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> int _rate =
+0; </span> The <span style="color:#00B0F0" _istranslated="1">value to be used is set by DAQ</span></p>
+
+<p class="MsoNormal" _msttexthash="1912534" _msthash="115"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> CMyTime
+_allTime; </span><span style="color:#00B0F0" _istranslated="1">The time when all were last collected</span></p>
+
+<p class="MsoNormal" _msttexthash="3915067" _msthash="116"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> string
+_events; </span><span style="color:#00B0F0" _istranslated="1">For unprocessed events, only the changes are currently uploaded</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1149928" _msthash="117">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Channel*
+FindByChannelNo(int channelNo)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="402805" _msthash="118">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for
+(auto&amp; c : channels)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1045603" _msthash="119">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if
+(c-&gt;channelNo == channelNo)return c;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="155441" _msthash="120">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return
+NULL;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1551381" _msthash="121">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Channel*
+FindByParamCode(char const* paramCode)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="402805" _msthash="122">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for
+(auto&amp; c : channels)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1038349" _msthash="123">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if
+(c-&gt;paramCode == paramCode)return c;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="155441" _msthash="124">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return
+NULL;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="4596059" _msthash="125">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void
+ToTable(string const&amp; protocolCode, CHtmlDoc::CHtmlTable2&amp; table, bool
+bEdit)const</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1266785" _msthash="126"> table. SetTitle(this-&gt;deviceCode.c_str());</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="421863" _msthash="127">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (0
+== channels.size())</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="3611504" _msthash="128">Since the actual structure is not known, only the standard header is displayed</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="275925" _msthash="129">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Channel
+tmp(NULL);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1700816" _msthash="130"> tmp. AddHtmlTalbeCols(protocolCode,
+table, bEdit);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="47008" _msthash="131">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="2324660" _msthash="132">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; channels[0]-&gt;AddHtmlTalbeCols(protocolCode,
+table, bEdit);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="385554" _msthash="133">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for
+(auto v : channels)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="244621" _msthash="134"> table. AddLine();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1759498" _msthash="135">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; v-&gt;AddToHtmlTableLine(protocolCode,
+table, bEdit);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="3350321" _msthash="136">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; string
+ToString(string const&amp; protocolCode, bool withDetail = true)const</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="286455" _msthash="137">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stringstream
+ss;</span></p>
+
+<p class="MsoNormal" _msttexthash="12802569" _msthash="138"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> ss
+&lt;&lt; "\</span><span style="color:#00B0F0" _istranslated="1">tDevice<span lang="EN-US" _istranslated="1">["
+&lt;&lt; deviceCode &lt;&lt; "] deviceParam:" &lt;&lt;
+deviceParam-&gt;ToString() &lt;&lt; " rate: " &lt;&lt; rate &lt;&lt;
+" _rate:" &lt;&lt; _rate &lt;&lt; " _DeviceState:" &lt;&lt;
+(int)_DeviceState &lt;&lt; endl; </span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="248872" _msthash="139">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if
+(!withDetail)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal" _msttexthash="1720498" _msthash="140"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> ss
+&lt;&lt; "\tcommon</span> <span style="color:#00B0F0" _istranslated="1">channels<span lang="EN-US" _istranslated="1">" &lt;&lt; channels.size() &lt;&lt; " </span><span lang="EN-US" _istranslated="1">
+&lt;&lt; endl; </span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="47008" _msthash="141">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal" _msttexthash="2296710" _msthash="142"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> ss
+&lt;&lt; "\tcommon</span> <span style="color:#00B0F0" _istranslated="1">channels<span lang="EN-US" _istranslated="1">" &lt;&lt; channels.size() &lt;&lt; " </span>counts:<span lang="EN-US" _istranslated="1">"
+&lt;&lt; endl; </span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="643916" _msthash="143">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CHtmlDoc::CHtmlTable2
+table;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="963027" _msthash="144">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ToTable(protocolCode,
+table, false);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="828022" _msthash="145"> ss
+&lt;&lt; table. MakeTextTable() &lt;&lt; endl;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="3352297" _msthash="146">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LockedList&lt;WriteInfo
+&gt;* pWriteList = (LockedList&lt;WriteInfo &gt;*) &amp; writeList;</span></p>
+
+<p class="MsoNormal" _msttexthash="2865993" _msthash="147"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> ss
+&lt;&lt; "\tTo</span> <span style="color:#00B0F0" _istranslated="1">be written<span lang="EN-US" _istranslated="1"> "
+&lt;&lt; pWriteList-&gt;locked_size() &lt;&lt; " </span>counts:<span lang="EN-US" _istranslated="1">" &lt;&lt; endl; </span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="766103" _msthash="148">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if
+(pWriteList-&gt;locked_size() &gt; 0)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="643916" _msthash="149">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CHtmlDoc::CHtmlTable2
+table;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="334659" _msthash="150"> table. AddCol("uid");</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="266331" _msthash="151"> table. AddCol("c");</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="271518" _msthash="152"> table. AddCol("v");</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="338624" _msthash="153">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pWriteList-&gt;lock();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1142843" _msthash="154">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for
+(auto v : pWriteList-&gt;getForForeach())</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="244621" _msthash="155"> table. AddLine();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="393718" _msthash="156"> table. AddData(v.uid);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="623272" _msthash="157"> table. AddData(v.channelNo);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="471718" _msthash="158"> table. AddData(v.value);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="410813" _msthash="159">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pWriteList-&gt;unlock();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="828022" _msthash="160"> ss
+&lt;&lt; table. MakeTextTable() &lt;&lt; endl;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="245336" _msthash="161">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return ss.str();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">};</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="13433628" _msthash="162">The list to be written is generated by the instructions issued by the platform, and the protocol needs to interpret the data and send it to the device correctly.</font></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="15988596" _msthash="163">The time of the last full acquisition and unprocessed events are handled at the discretion of the protocol, with <span lang="EN-US" _mstmutation="1" _istranslated="1">the Modbus</span> protocol being an example of complete processing.</font></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="1013844" _msthash="164">Each device contains a set of channels.</font></p>
+
+<h3><a name="_Toc197459681" _msttexthash="166088" _msthash="165"><span lang="EN-US">2.1.4<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="EN-US">Channel</span></a></h3>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="11497785" _msthash="166">The channel corresponds to a collectible data with multiple attributes such as data type, length, and multiple acquisition control parameters.</p>
+
+<p class="MsoNormal" style="text-indent:21.0pt" _msttexthash="821990" _msthash="167">The channel is defined as follows:</p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="200590" _msthash="168">class Channel</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="88127" _msthash="169">public:</span></p>
+
+<p class="MsoNormal" _msttexthash="12683190" _msthash="170"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> int channelNo
+= 0; </span><span style="color:#00B0F0" _istranslated="1">The channel number, which uniquely identifies a channel, may be identified by <span lang="EN-US" _istranslated="1">channelNo</span> or <span lang="EN-US" _istranslated="1">paramCode</span> when interacting with the outside</span></p>
+
+<p class="MsoNormal" _msttexthash="1378650" _msthash="171"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> string
+channelComment; </span><span style="color:#00B0F0" _istranslated="1">Channel annotations</span></p>
+
+<p class="MsoNormal" _msttexthash="2702947" _msthash="172"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> string
+paramCode; </span><span style="color:#00B0F0" _istranslated="1">Point code, which uniquely identifies a channel</span></p>
+
+<p class="MsoNormal" _msttexthash="422539" _msthash="173"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> string
+paramName; </span><span style="color:#00B0F0" _istranslated="1">Name</span></p>
+
+<p class="MsoNormal" _msttexthash="4734847" _msthash="174"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> string
+dataType; </span><span style="color:#00B0F0" _istranslated="1">There is <span lang="EN-US" _istranslated="1">ushort short
+ubyte byte uint int ulong long float double boolean</span></span></p>
+
+<p class="MsoNormal" _msttexthash="3085524" _msthash="175"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> int dataLength
+= 0; </span><span style="color:#00B0F0" _istranslated="1">String and array usage (arrays are not yet supported).</span></p>
+
+<p class="MsoNormal" _msttexthash="47437013" _msthash="176"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> string
+charsetCode; </span><span style="color:#00B0F0" _istranslated="1">String-encoded<span lang="EN-US" _istranslated="1"> GBK
+utf-8</span>, <span lang="EN-US" _istranslated="1">ChannelValue</span> stores the original data, that is, the encoded data, which needs to be converted into the encoding required by the program when displayed, and the encoding that needs to be negotiated when interacting with the platform, which is generally <span lang="EN-US" _istranslated="1">utf-8</span></span></p>
+
+<p class="MsoNormal" _msttexthash="3038165" _msthash="177"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> int
+processType = 0; </span><span style="color:#00B0F0" _istranslated="1">Operation Type <span lang="EN-US" _istranslated="1">1 -</span><span lang="EN-US" _istranslated="1"> Readable 2 -</span> Writable<span lang="EN-US" _istranslated="1"> 3 - Read and</span> Write</span></p>
+
+<p class="MsoNormal" _msttexthash="6052007" _msthash="178"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> int
+collectorRate = 0; </span><span style="color:#00B0F0" _istranslated="1">Acquisition frequency, milliseconds, or percent change, or dependent <span lang="EN-US" _istranslated="1">channelNo</span></span></p>
+
+<p class="MsoNormal" _msttexthash="36364133" _msthash="179"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> ReportStrategy
+reportStrategy; </span><span style="color:#00B0F0" _istranslated="1">Escalation Policy<span lang="EN-US" _istranslated="1"> 1 -</span> Report by collection frequency<span lang="EN-US" _istranslated="1"> 2 -</span> Report change 3<span lang="EN-US" _istranslated="1"> -</span> Listen report <span lang="EN-US" _istranslated="1">(</span>not yet supported<span lang="EN-US" _istranslated="1">) 4 -</span> Conditional report (not yet supported) <span lang="EN-US" _istranslated="1">5 -</span> Dependency report (report with <span lang="EN-US" _istranslated="1">dependParam</span>) <span lang="EN-US" _istranslated="1">6- </span>The change triggers the full amount</span></p>
+
+<p class="MsoNormal" _msttexthash="7034196" _msthash="180"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> string
+dependParamCode = ""; </span><span style="color:#00B0F0" _istranslated="1">The dependent point code will be converted to <span lang="EN-US" _istranslated="1">channelNo</span> and placed in <span lang="EN-US" _istranslated="1">collectorRate</span></span></p>
+
+<p class="MsoNormal" _msttexthash="1057758" _msthash="181"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> string
+transferRuleStr; </span><span style="color:#00B0F0" _istranslated="1">Byte order <span lang="EN-US" _istranslated="1">ABCD</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal" _msttexthash="2683135" _msthash="182"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> IChannelParam*
+pChannelParam; </span><span style="color:#00B0F0" _istranslated="1">Custom parameters for the channel</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal" _msttexthash="5755542" _msthash="183"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> bool _changed
+= false; </span><span style="color:#00B0F0" _istranslated="1">Data changes are detected (only for the type of change that needs to be detected).</span></p>
+
+<p class="MsoNormal" _msttexthash="6966076" _msthash="184"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> bool
+_new_report = false; </span><span style="color:#00B0F0" _istranslated="1">The new reported value (that is, the data needs to be put into the reported data package).</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="109265" _msthash="185">private:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="396006" _msthash="186">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ChannelValue
+_value;</span></p>
+
+<p class="MsoNormal" _msttexthash="1059851" _msthash="187"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> CMyTime
+_valueTime; </span><span style="color:#00B0F0" _istranslated="1">The time of the read</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1707810" _msthash="188">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ChannelState
+_ChannelState = ChannelState::DEFAULT;</span></p>
+
+<p class="MsoNormal" _msttexthash="11693643" _msthash="189"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> ChannelValue
+_writeValue; </span><span style="color:#00B0F0" _istranslated="1">Writes are performed when this value is valid, and the state writes to <span lang="EN-US" _istranslated="1">_ChannelWriteState</span> when the writes are complete</span></p>
+
+<p class="MsoNormal" _msttexthash="1730027" _msthash="190"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> CMyTime
+_writeTime; </span><span style="color:#00B0F0" _istranslated="1">The time at which it was written</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="2887508" _msthash="191">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ChannelWriteState
+_ChannelWriteState = ChannelWriteState::DEFAULT;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="88127" _msthash="192">public:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1465217" _msthash="193">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Channel(IChannelParam*
+p) :pChannelParam(p) {}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="2845778" _msthash="194">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void
+SetChannelState(ChannelState state) { _ChannelState = state; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="2175979" _msthash="195">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int
+GetChannelState()const { return (int)_ChannelState; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1631604" _msthash="196">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bool
+HasValue()const { return _value.bHasValue; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1255579" _msthash="197">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ChannelValue&amp;
+GetValue() { return _value; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="2152462" _msthash="198">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CMyTime
+const&amp; GetValueTime()const { return _valueTime; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="879593" _msthash="199">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void
+SetValue(string const&amp; value)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="531752" _msthash="200">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _value._strValue
+= value;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="484978" _msthash="201">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _value.bHasValue
+= true;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="684866" _msthash="202">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _valueTime.SetCurrentTime();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1416623" _msthash="203">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void
+SetValueFromBuffer(uint16_t* regBuffer)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="4899609" _msthash="204"> _value. ChannelValue_LoadFromBuffer(dataType,
+transferRuleStr, dataLength, regBuffer);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="684866" _msthash="205">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _valueTime.SetCurrentTime();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="3022448" _msthash="206">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int
+GetChannelWriteState()const { return (int)_ChannelWriteState; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="2365922" _msthash="207">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bool
+HasWriteValue()const { return _writeValue.bHasValue; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1920659" _msthash="208">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ChannelValue&amp;
+GetWriteValue() { return _writeValue; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="4537013" _msthash="209">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void
+SetWriteValue(string const&amp; dataType, string const&amp; charset, string
+const&amp; value)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="3357536" _msthash="210">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _writeValue.ChannelValue_SetWriteValue(dataType,
+charsetCode, value);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1592123" _msthash="211">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _ChannelWriteState
+= ChannelWriteState::DEFAULT;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="975988" _msthash="212">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void
+FinishWriteValue(bool succeed)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="156637" _msthash="213">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if
+(succeed)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="718653" _msthash="214">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _writeValue.bHasValue
+= false;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="686426" _msthash="215">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _writeTime.SetCurrentTime();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1355744" _msthash="216">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _ChannelWriteState
+= ChannelWriteState::OK;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="47008" _msthash="217">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1846000" _msthash="218">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _ChannelWriteState
+= ChannelWriteState::WRITE_ERROR;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="706199" _msthash="219">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; string
+ProcessTypeStr()const</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal" _msttexthash="1068899" _msthash="220"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> if (1
+== processType)return "</span><span style="color:#00B0F0" _istranslated="1">read-only<span lang="EN-US" _istranslated="1">"; </span></span></p>
+
+<p class="MsoNormal" _msttexthash="1371110" _msthash="221"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> else if
+(2 == processType)return "</span><span style="color:#00B0F0" _istranslated="1">write-only<span lang="EN-US" _istranslated="1">"; </span></span></p>
+
+<p class="MsoNormal" _msttexthash="1509794" _msthash="222"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> else if
+(3 == processType)return "</span><span style="color:#00B0F0" _istranslated="1">read and write<span lang="EN-US" _istranslated="1">"; </span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="47008" _msthash="223">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="286455" _msthash="224">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stringstream
+ss;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="299962" _msthash="225">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ss
+&lt;&lt; processType;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="245336" _msthash="226">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return
+ss.str();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="345254" _msthash="227">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bool
+CanRead()const</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1195857" _msthash="228">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return
+1 == processType || 3 == processType;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="385749" _msthash="229">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bool
+CanWrite()const</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1196026" _msthash="230">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return
+2 == processType || 3 == processType;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="461955" _msthash="231">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; string
+ToString()const</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="286455" _msthash="232">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stringstream
+ss;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="14027234" _msthash="233">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ss
+&lt;&lt; "\t\t" &lt;&lt; channelNo &lt;&lt; " : " &lt;&lt;
+channelComment &lt;&lt; " : " &lt;&lt; paramCode &lt;&lt; " :
+" &lt;&lt; dataType &lt;&lt; " " &lt;&lt; dataLength &lt;&lt;
+" " &lt;&lt; pChannelParam-&gt;_ToString() &lt;&lt; "
+processType: " &lt;&lt; processType</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="6638177" _msthash="234"> &lt;&lt;
+" s:" &lt;&lt; static_cast&lt;int&gt;(_ChannelState) &lt;&lt; "
+v:" &lt;&lt; _value. ChannelValue_ShowValue(dataType, charsetCode)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="8217573" _msthash="235">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;&lt;
+" w:" &lt;&lt; _writeValue.ChannelValue_ShowValue(dataType,
+charsetCode) &lt;&lt; " ws:" &lt;&lt;
+static_cast&lt;int&gt;(_ChannelWriteState);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="245336" _msthash="236">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return
+ss.str();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="4954573" _msthash="237">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void
+AddHtmlTalbeCols(string const&amp; protocolCode, CHtmlDoc::CHtmlTable2&amp;
+table, bool bEdit)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="5103098" _msthash="238"> table. SetColFormInput(table. AddCol("channelNo",
+CHtmlDoc::CHtmlDoc_DATACLASS_RIGHT), 4, true);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1807091" _msthash="239"> table. SetColFormInput(table. AddCol("paramCode"),
+16);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1810887" _msthash="240"> table. SetColFormInput(table. AddCol("paramName"),
+16);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="782990" _msthash="241"> table. AddCol("channelComment");</span></p>
+
+<p class="MsoNormal" _msttexthash="4727892" _msthash="242"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> table. SetColFormInput2(table. AddCol("</span><span style="color:#00B0F0" _istranslated="1">Data Type<span lang="EN-US" _istranslated="1">"), 8, "float uint boolean
+string ushort"); </span></span></p>
+
+<p class="MsoNormal" _msttexthash="4193995" _msthash="243"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> table. SetColFormInput(table. AddCol("</span><span style="color:#00B0F0" _istranslated="1"><span lang="EN-US" _istranslated="1">length",
+CHtmlDoc::CHtmlDoc_DATACLASS_RIGHT), 2); </span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="4009447" _msthash="244">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if
+(pChannelParam)pChannelParam-&gt;AddHtmlTalbeCols(protocolCode, table, bEdit);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="121069" _msthash="245">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if
+(!bEdit)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1806883" _msthash="246"> table. AddCol("s",
+CHtmlDoc::CHtmlDoc_DATACLASS_RIGHT);</span></p>
+
+<p class="MsoNormal" _msttexthash="2094209" _msthash="247"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> table. AddCol("</span><span style="color:#00B0F0" _istranslated="1">value<span lang="EN-US" _istranslated="1">",
+CHtmlDoc::CHtmlDoc_DATACLASS_RIGHT); </span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1807702" _msthash="248"> table. AddCol("v",
+CHtmlDoc::CHtmlDoc_DATACLASS_RIGHT);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal" _msttexthash="4872309" _msthash="249"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> table. SetColFormInput(table. AddCol("</span><span style="color:#00B0F0" _istranslated="1">character set<span lang="EN-US" _istranslated="1">",
+CHtmlDoc::CHtmlDoc_DATACLASS_RIGHT), 8); </span></span></p>
+
+<p class="MsoNormal" _msttexthash="8164819" _msthash="250"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> table. SetColFormInput2(table. AddCol("pT",
+CHtmlDoc::CHtmlDoc_DATACLASS_RIGHT), 4, "</span><span style="color:#00B0F0" _istranslated="1">Read-only
+Read and write only write<span lang="EN-US" _istranslated="1">"); </span></span></p>
+
+<p class="MsoNormal" _msttexthash="5707494" _msthash="251"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> table. SetColFormInput(table. AddCol("</span><span style="color:#00B0F0" _istranslated="1">Acquisition Interval<span lang="EN-US" _istranslated="1">",
+CHtmlDoc::CHtmlDoc_DATACLASS_RIGHT), 6); </span></span></p>
+
+<p class="MsoNormal" _msttexthash="16951038" _msthash="252"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> table. SetColFormInput2(table. AddCol("</span><span style="color:#00B0F0" _istranslated="1">Escalation Policy<span lang="EN-US" _istranslated="1">",
+CHtmlDoc::CHtmlDoc_DATACLASS_RIGHT), 4, "1-Cycle</span> Acquisition<span lang="EN-US" _istranslated="1"> 2-Change</span> Report<span lang="EN-US" _istranslated="1"> 5-Dependent</span> Report<span lang="EN-US" _istranslated="1"> 6-Change</span> Full Report<span lang="EN-US" _istranslated="1">"); </span></span></p>
+
+<p class="MsoNormal" _msttexthash="2690207" _msthash="253"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> table. SetColFormInput2(table. AddCol("</span><span style="color:#00B0F0" _istranslated="1"><span lang="EN-US" _istranslated="1">endian"), 4, "ABCD CDAB BADC."
+DCBA"); </span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="121069" _msthash="254">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if
+(!bEdit)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1806883" _msthash="255"> table. AddCol("s",
+CHtmlDoc::CHtmlDoc_DATACLASS_RIGHT);</span></p>
+
+<p class="MsoNormal" _msttexthash="2098135" _msthash="256"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> table. AddCol("</span><span style="color:#00B0F0" _istranslated="1">write<span lang="EN-US" _istranslated="1">",
+CHtmlDoc::CHtmlDoc_DATACLASS_RIGHT); </span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1807975" _msthash="257"> table. AddCol("w",
+CHtmlDoc::CHtmlDoc_DATACLASS_RIGHT);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="5178615" _msthash="258">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void
+AddToHtmlTableLine(string const&amp; protocolCode, CHtmlDoc::CHtmlTable2&amp;
+table, bool bEdit)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="551434" _msthash="259"> table. AddData(channelNo);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="547482" _msthash="260"> table. AddData(paramCode);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="549562" _msthash="261"> table. AddData(paramName);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="9492691" _msthash="262"> table. AddData(ReportStrategy_DEPEND
+== reportStrategy.reportStrategy ? channelComment + " " + dependParamCode
+: channelComment);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="516269" _msthash="263"> table. AddData(dataType);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="593827" _msthash="264"> table. AddData(dataLength);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="2649348" _msthash="265">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pChannelParam-&gt;AddToHtmlTableLine(protocolCode,
+table, bEdit);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="121069" _msthash="266">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if
+(!bEdit)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1673412" _msthash="267"> table. AddData(static_cast&lt;int&gt;(_ChannelState));</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="3273504" _msthash="268"> table. AddData(_value. ChannelValue_ShowValue(dataType,
+charsetCode));</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="2819011" _msthash="269"> table. AddData(_valueTime.hasTime()
+? _valueTime.GetTimeSpanS() : -1);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="635414" _msthash="270"> table. AddData(charsetCode);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="825630" _msthash="271"> table. AddData(ProcessTypeStr());</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="736307" _msthash="272"> table. AddData(collectorRate);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1310283" _msthash="273"> table. AddData(reportStrategy.ToString());</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="838331" _msthash="274"> table. AddData(transferRuleStr);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="121069" _msthash="275">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if
+(!bEdit)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="2042664" _msthash="276"> table. AddData(static_cast&lt;int&gt;(_ChannelWriteState));</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="3759470" _msthash="277"> table. AddData(_writeValue.ChannelValue_ShowValue(dataType,
+charsetCode));</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="2831049" _msthash="278"> table. AddData(_writeTime.hasTime()
+? _writeTime.GetTimeSpanS() : -1);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">};</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="32207149" _msthash="279">The channel number is a sequence number, some devices can export configurations, such as Kunlun's touch screen can export <span lang="EN-US" _mstmutation="1" _istranslated="1">CSV</span> files, the gateway can directly read the exported <span lang="EN-US" _mstmutation="1" _istranslated="1">CSV</span> files, and the sequence number can correspond to the rows of the <span lang="EN-US" _mstmutation="1" _istranslated="1">CSV</span> file.</font></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="5042180" _msthash="280">When interacting with the platform<span lang="EN-US" _mstmutation="1" _istranslated="1">, paramCode</span> is used as the unique identifier of the channel.</font></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="11069747" _msthash="281">Most of this class is designed for <span lang="EN-US" _mstmutation="1" _istranslated="1">the Modbus</span> protocol, and other protocols can use <span lang="EN-US" _mstmutation="1" _istranslated="1">"IChannelParam* pChannelParam</span>" to handle custom parameters.</font></p>
+
+<h2><a name="_Toc197459682" _msttexthash="822965" _msthash="282"><span lang="EN-US" _istranslated="1">2.2<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span><span lang="EN-US" _istranslated="1">IProtocol</span> protocol interface</a></h2>
+
+<h3><a name="_Toc197459683" _msttexthash="201825" _msthash="283"><span lang="EN-US" _istranslated="1">2.2.1<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Overview</a></h3>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="6251882" _msthash="284">This interface is returned to the main program by the entry point of the protocol-driven dynamic library.</p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">//</span><span style="color:#00B0F0" _msttexthash="385112" _msthash="285">Protocol interfaces</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="257608" _msthash="286">class IProtocol</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="88127" _msthash="287">public:</span></p>
+
+<p class="MsoNormal" _msttexthash="1285791" _msthash="288"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> std::string
+m_ProtocolCode; </span><span style="color:#00B0F0" _istranslated="1">Protocol code</span></p>
+
+<p class="MsoNormal" _msttexthash="1816321" _msthash="289"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> std::string
+m_DriverFile; </span><span style="color:#00B0F0" _istranslated="1">The name of the driver file</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="398606" _msthash="290">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bool
+m_isSerialPort;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1968330" _msthash="291">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; InterfaceDeviceConfig*
+m_pInertfaceDevice = nullptr;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="88127" _msthash="292">public:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="6402630" _msthash="293">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IProtocol(char
+const* code, bool isSerialPort) :m_ProtocolCode(code),
+m_isSerialPort(isSerialPort) {}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="3258073" _msthash="294">Returns protocol parameter interface pointers for the framework to call</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1490489" _msthash="295">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual
+IProtocolParam* getIProtocolParam() = 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="11409255" _msthash="296">Returns device parameter interface pointers for the framework to call, and each protocol service object instance may contain multiple devices</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="2635048" _msthash="297">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual
+IDeviceParam* getIDeviceParam(char const* deviceCode) = 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="7623642" _msthash="298">Returns a channel parameter interface pointer for the framework to call, and each device contains multiple channels</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="4039945" _msthash="299">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual
+IChannelParam* getIChannelParam(char const* deviceCode, int channelNo) = 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="160667" _msthash="300">initialize</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1963949" _msthash="301">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual bool
+ProtoSvrInit(InterfaceDeviceConfig* p) = 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="1657539" _msthash="302">Executed after the device configuration is loaded</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="2068313" _msthash="303">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual bool
+OnAfterLoadDeviceConfig(Device* pDevice) = 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="78624" _msthash="304">unload</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="758186" _msthash="305">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual bool
+ProtoSvrUnInit() = 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="117624" _msthash="306">Destruct</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="464997" _msthash="307">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual
+~IProtocol() {}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="13788983" _msthash="308">The working function, which is activated by a timer, will not exit if the function does its own loop internally, and the activation action has no practical effect</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1083849" _msthash="309">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual void
+protocol_process_job() = 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="2586727" _msthash="310">Timer function, which is executed before the worker is activated</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1439282" _msthash="311">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual void
+protocol_process_timer_job() = 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="109265" _msthash="312">private:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="2612428" _msthash="313">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map&lt;string,
+map&lt;int, IChannelParam*&gt; &gt; m_device_channelparams;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">};</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="1857375" _msthash="314">All undefined virtual functions must be implemented.</font></p>
+
+<h3><a name="_Toc197459684" _msttexthash="464841" _msthash="315"><span lang="EN-US" _istranslated="1">2.2.2<span style="font:7.0pt &quot;Times New Roman&quot;" _istranslated="1"> </span></span>Custom parameters</a></h3>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-size:16.0pt;
+line-height:115%;font-family:&quot;等线 Light&quot;;color:#0F4761" _msttexthash="59887074" _msthash="316">The three-level parameters: protocol, device, and channel, are defined by <span lang="EN-US" _istranslated="1">IProtocolParam</span>, <span lang="EN-US" _istranslated="1">IDeviceParam</span>, and <span lang="EN-US" _istranslated="1">IChannelParam</span>, respectively, and the interface structure is similar, mainly including a loading configuration interface and an output text description interface. <span lang="EN-US" _istranslated="1">IChannelParam</span> also includes an interface for output to tables.</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-size:16.0pt;
+line-height:115%;font-family:&quot;等线 Light&quot;;color:#0F4761" _msttexthash="12781158" _msthash="317">The framework's handling of custom parameters consists only of loading the configuration and outputting the text (for console or <span lang="EN-US" _istranslated="1">show</span> command display).</span></p>
+
+<h3><a name="_Toc197459685" _msttexthash="372437" _msthash="318"><span lang="EN-US">2.2.3<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="EN-US">IProtocolParam</span></a></h3>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="1596998" _msthash="319">Protocol parameter interfaces, as defined below:</p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="445770" _msthash="320">struct IProtocolParam</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="629135" _msthash="321">Output of custom parameters</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1652131" _msthash="322">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual
+std::string _ToString()const { return ""; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="902642" _msthash="323">Loaded from the configuration <span lang="EN-US" _istranslated="1">json</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="7264270" _msthash="324">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual bool
+LoadConfig(InterfaceDeviceConfig* pInterface, cJSON* cjson_resolvePropertyMap) {
+return true; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="95563" _msthash="325">general</span></p>
+
+<p class="MsoNormal" _msttexthash="6571838" _msthash="326"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> int rate =
+0; </span><span style="color:#00B0F0" _istranslated="1">This value cannot be higher than the value set for all channels every millisecond of acquisition</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal" _msttexthash="1201304" _msthash="327"><span lang="EN-US" style="color:#00B0F0" _istranslated="1"> int _rate =
+0; </span> The <span style="color:#00B0F0" _istranslated="1">value to be used is set by DAQ</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="649883" _msthash="328">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; std::string
+ToString()const</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="440778" _msthash="329">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; std::stringstream
+ss;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1516749" _msthash="330">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ss
+&lt;&lt; " rate:" &lt;&lt; rate &lt;&lt; " _rate:" &lt;&lt;
+_rate &lt;&lt; std::endl;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="615576" _msthash="331">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ss
+&lt;&lt; _ToString() &lt;&lt; std::endl;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="245336" _msthash="332">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return
+ss.str();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">};</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="24961703" _msthash="333">When configuring the loading, pass in the device interface object pointer to read or modify the properties of the object, and the <span lang="EN-US" _mstmutation="1" _istranslated="1">json</span> passed in corresponds to the <span lang="EN-US" _mstmutation="1" _istranslated="1">"resolvePropertyMap</span>" object of the configuration file.</font></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="48167067" _msthash="334">If the protocol handler does its own loop processing and does not exit, it can ignore the common parameter <span lang="EN-US" _mstmutation="1" _istranslated="1">rate</span>. The common parameters have been processed by the framework, so please note that the names of the configuration items used by the custom parameters should not conflict with the common parameters.</font></p>
+
+<h3><a name="_Toc197459686" _msttexthash="296660" _msthash="335"><span lang="EN-US">2.2.4<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="EN-US">IDeviceParam</span></a></h3>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="981682" _msthash="336">The device parameters are as follows:</p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="331045" _msthash="337">class IDeviceParam</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="88127" _msthash="338">public:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="629135" _msthash="339">Output of custom parameters</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1652131" _msthash="340">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual
+std::string _ToString()const { return ""; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="902642" _msthash="341">Loaded from the configuration <span lang="EN-US" _istranslated="1">json</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="6505408" _msthash="342">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual bool
+LoadConfig(InterfaceDeviceConfig* pInterface, cJSON* cjson_confTabs_item) {
+return true; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="649883" _msthash="343">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; std::string
+ToString()const</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="440778" _msthash="344">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; std::stringstream
+ss;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="615576" _msthash="345">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ss
+&lt;&lt; _ToString() &lt;&lt; std::endl;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="245336" _msthash="346">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return
+ss.str();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">};</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="1806272" _msthash="347">It's simpler, and there's not even a common parameter.</font></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="10887825" _msthash="348">The parameter passed in when loading the configuration is the device object pointer, and <span lang="EN-US" _mstmutation="1" _istranslated="1">json</span> is a member of the <span lang="EN-US" _mstmutation="1" _istranslated="1">corresponding confTabs</span> array.</font></p>
+
+<h3><a name="_Toc197459687" _msttexthash="329693" _msthash="349"><span lang="EN-US">2.2.5<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="EN-US">IChannelParam</span></a></h3>
+
+<p class="MsoNormal" style="margin-left:21.0pt" _msttexthash="1447173" _msthash="350">The channel parameter interface is as follows:</p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="363935" _msthash="351">class IChannelParam</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="88127" _msthash="352">public:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="601848" _msthash="353">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual
+~IChannelParam() {}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="629135" _msthash="354">Output of custom parameters</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="1125293" _msthash="355">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual
+std::string _ToString()const = 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="902642" _msthash="356">Loaded from the configuration <span lang="EN-US" _istranslated="1">json</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="6028516" _msthash="357">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual bool
+LoadConfig(string const&amp; protocolCode, cJSON*
+cjson_resolveParamConfigVOList_item) = 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="348244" _msthash="358">Output table header</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="6001229" _msthash="359">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual void
+AddHtmlTalbeCols(string const&amp; protocolCode, CHtmlDoc::CHtmlTable2&amp;
+table, bool bEdit) = 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="color:#00B0F0" _msttexthash="352404" _msthash="360">Output tabular data</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0" _msttexthash="6246565" _msthash="361">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; virtual void
+AddToHtmlTableLine(string const&amp; protocolCode, CHtmlDoc::CHtmlTable2&amp;
+table, bool bEdit) = 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="color:#00B0F0">};</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="21158046" _msthash="362">The configuration loading interface only passes in the protocol code, which can be appropriately distinguished according to this, and the <span lang="EN-US" _mstmutation="1" _istranslated="1">json</span> passed in corresponds to the parameters of the channel.</font></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><font _mstmutation="1" _msttexthash="54712658" _msthash="363">The interface for outputting tables is used for table output, the framework first calls <span lang="EN-US" _mstmutation="1" _istranslated="1">AddHtmlTalbeCols</span> to output table headers, that is, add the corresponding columns, and then calls <span lang="EN-US" _mstmutation="1" _istranslated="1">AddToHtmlTableLine</span> line line by row to output column data, note that the number of table headers and output data must be strictly consistent.</font></p>
+
+</div>
+
+
+
+
+</body></html>
